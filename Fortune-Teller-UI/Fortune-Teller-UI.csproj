@@ -75,7 +75,6 @@
   
   <ItemGroup>
     <ProjectReference Include="..\Fortune-Service-Client\Fortune-Service-Client.csproj" />
-    <ProjectReference Include="..\Order-Manager-Client\Order-Manager-Client.csproj" />
     <ProjectReference Include="..\Pivotal-Utilities\Pivotal-Utilities.csproj" />
   </ItemGroup>
   
