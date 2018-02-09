@@ -1,0 +1,3410 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.EJ.Export</name>
+    </assembly>
+    <members>
+        <member name="P:Syncfusion.EJ.Export.ChartExcelExport.Chart">
+            <summary>
+            Gets or sets the Chart.	
+            </summary>
+            <value>Chart</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ChartExcelExport.Sheet">
+            <summary>
+            Gets or sets the Chart.	
+            </summary>
+            <value>Chart</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ChartExcelExport.FileName">
+            <summary>
+            Gets or sets the name of the file.	
+            </summary>
+            <value>The name of the file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ChartExcelExport.Query">
+            <summary>
+            Gets or sets the number of rows.	
+            </summary>
+            <value>Number of rows.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ChartExcelExport.DownloadType">
+            <summary>
+            Gets or sets the Excel download type of the file.	
+            </summary>
+            <value>DownloadType.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ChartExcelExport.Excelversion">
+            <summary>
+            Gets or sets the excel version.	
+            </summary>
+            <value>The excel version.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ChartExcelExport.ExportType">
+            <summary>
+            Gets or sets the MultipleExportType for the file.	
+            </summary>
+            <value>The MultipleExportType for file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ChartExcelExport.FilePath">
+            <summary>
+            Gets or sets the File Path for saving file.	
+            </summary>
+            <value>The File Path for saving file in local.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ChartExcelExport.DataSource">
+            <summary>
+            Gets or sets the datasource of the chart.	
+            </summary>
+            <value>The Datasource of the chart.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ChartExcelExport.SaveLocal">
+            <summary>
+            Gets or sets the is file locally saved.	
+            </summary>
+            <value>The LocalSave option for file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ChartExcelExport.ExcelRange">
+            <summary>
+            Gets or sets the is Data Range.	
+            </summary>
+            <value>The LocalSave option for file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ChartExcelExport.ChartPosition">
+            <summary>
+            Gets or sets position for chart.	
+            </summary>
+            <value>Position for chart.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ChartExcelExport.Ranges">
+            <summary>
+            List of ranges for each series in chart. If range is empty string, then chart with static values will be created
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GanttRowDetails.IsParnetRow">
+            <summary>
+            Gets or sets the isParentRow for particular record.	
+            </summary>
+            <value>isParentRow of particular record</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GanttRowDetails.RowLevel">
+            <summary>
+            Gets or sets the level of particular record.	
+            </summary>
+            <value>level of particular record</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GanttRowDetails.ParentId">
+            <summary>
+            Gets or sets the parent ID of the record.	
+            </summary>
+            <value>Parent ID of the record</value>
+            <remarks></remarks>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.GanttTableCellType">
+            <summary>
+            Defines cell types
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttTableCellType.IndentCell">
+            <summary>
+            Indent cell in group.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttTableCellType.TopLeftHeaderCell">
+            <summary>
+            The top-left header cell.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttTableCellType.RowHeaderCell">
+            <summary>
+            Any row header cell.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttTableCellType.ColumnHeaderCell">
+            <summary>
+            Column header cell.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttTableCellType.RecordPlusMinusCell">
+            <summary>
+            PlusMinus cell in a record row.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttTableCellType.RecordFieldCell">
+            <summary>
+            Field cell in a non-alternate record row.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttTableCellType.AlternateRecordFieldCell">
+            <summary>
+            Field cell in an alternate record row.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttTableCellType.AlternateRecordRowHeaderCell">
+            <summary>
+            Any header cell in an alternate record row.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttTableCellType.EmptyCell">
+            <summary>
+            Empty cell 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttTableCellType.CaptionCell">
+            <summary>
+            Caption Cell
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttExportTheme.FlatAzure">
+            <summary>
+            FlatAzure	
+            </summary>
+            <remarks></remarks>        
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttExportTheme.BootstrapTheme">
+            <summary>
+            BootstrapTheme 	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttExportTheme.FlatSaffron">
+            <summary>
+            FlatSaffron	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttExportTheme.FlatSaffronDark">
+            <summary>
+            FlatSaffronDark	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttExportTheme.FlatLime">
+            <summary>
+            FlatLime	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttExportTheme.FlatLimeDark">
+            <summary>
+            FlatLimeDark	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttExportTheme.FlatAzureDark">
+            <summary>
+            FlatAzureDark 	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttExportTheme.GradientAzure">
+            <summary>
+            GradientAzure	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttExportTheme.GradientAzureDark">
+            <summary>
+            GradientAzureDark	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttExportTheme.GradientLime">
+            <summary>
+            GradientLime	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttExportTheme.GradientLimeDark">
+            <summary>
+            GradientLimeDark	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttExportTheme.GradientSaffron">
+            <summary>
+            GradientSaffron 	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GanttExportTheme.GradientSaffronDark">
+            <summary>
+            GradientSaffronDark	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GanttPdfExportSettings.EnableHeaderInAllPages">
+            <summary>
+            Enable gantt header in every PDF page
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridExcelExport.FileName">
+            <summary>
+            Gets or sets the name of the file.	
+            </summary>
+            <value>The name of the file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridExcelExport.IsAutoFit">
+            <summary>
+            Gets or sets the IsAutoFit for grid.	
+            </summary>
+            <value>IsAutoFit in file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridExcelExport.Theme">
+            <summary>
+            Gets or sets the Theme of the file.	
+            </summary>
+            <value>The Theme of the file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridExcelExport.FontWeight">
+            <summary>
+            Gets or sets the FontWeight.	
+            </summary>
+            <value>FontWeight.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridExcelExport.FilePath">
+            <summary>
+            Gets or sets the File Path for saving file.	
+            </summary>
+            <value>The File Path for saving file in local.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridExcelExport.LocalSave">
+            <summary>
+            Gets or sets the is file locally saved.	
+            </summary>
+            <value>The LocalSave option for file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridExcelExport.AutoFormat">
+            <summary>
+            Gets or sets the AutoFormat of the file.	
+            </summary>
+            <value>The AutoFormat of the file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridExcelExport.EmptyText">
+            <summary>
+            Gets or sets the Empty record text of the file.	
+            </summary>
+            <value>The name of the file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridExcelExport.DownloadType">
+            <summary>
+            Gets or sets the Excel download type of the file.	
+            </summary>
+            <value>The name of the file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridExcelExport.DataSource">
+            <summary>
+            Gets or sets the datasource of the grid.	
+            </summary>
+            <value>The Datasource of the grid.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridExcelExport.GroupCaptionText">
+            <summary>
+            Gets or sets the group caption text of the grid.	
+            </summary>
+            <value>The group caption text of the grid.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridExcelExport.IsHideColumnIncude">
+            <summary>
+            Gets or sets the IsHideColumnInclude for grid.	
+            </summary>
+            <value>IsHideColumnInclude in file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridExcelExport.IsCustomCommandColumnIncude">
+            <summary>
+            Gets or sets the IsCustomCommandColumnIncude for grid.	
+            </summary>
+            <value>IsCustomCommandColumnIncude in file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridExcelExport.IsSummaryRow">
+            <summary>
+            Gets or sets the IsSummaryRow included in the file.	
+            </summary>
+            <value>IsSummaryRow in file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridExcelExport.HeaderText">
+            <summary>
+            Gets or sets the Header Text for multiple export.	
+            </summary>
+            <value>HeaderText for multiple export.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridExcelExport.IsTemplateColumnIncluded">
+            <summary>
+            Gets or sets the IsTemplateColumnIncluded included in the file.	
+            </summary>
+            <value>IsTemplateColumnIncluded included in file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridExcelExport.IncludeChildGrid">
+            <summary>
+            Gets or sets the IncludeChildGrid to either included/exclude the child Grid.	
+            </summary>
+            <value>true/false</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridExcelExport.Document">
+            <summary>
+            Gets or sets the Document.	
+            </summary>
+            <value>The Document for exporting.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridExcelExport.ExportType">
+            <summary>
+            Gets or sets the MultipleExportType for the file.	
+            </summary>
+            <value>The MultipleExportType for file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridExcelExport.DocumentOption">
+            <summary>
+            Gets or sets the documentoption of the file.	
+            </summary>
+            <value>The documentoption of the file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridExcelExport.Excelversion">
+            <summary>
+            Gets or sets the excel version.	
+            </summary>
+            <value>The excel version.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridExcelExport.WorkBook">
+            <summary>
+            Gets or sets the excel workbook.	
+            </summary>
+            <value>The excel workbook.</value>
+            <remarks></remarks>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.GridExcelExport.InitializeExcel(Syncfusion.JavaScript.Models.GridProperties,Syncfusion.XlsIO.IWorkbook)">
+            <summary>
+            Initializes the excel.	
+            </summary>
+            <param name="model">The model.</param>
+            <param name="book">The book.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.GridExcelExport.SetTableOptions(Syncfusion.EJ.Export.TableOptions,System.Int32,System.Int32)">
+            <summary>
+            Sets the table options.	
+            </summary>
+            <param name="tableOptions">The table options.</param>
+            <param name="Idx">The idx.</param>
+            <param name="value">The value.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.GridExcelExport.ExportRecordRow(System.String)">
+            <summary>
+            Exports the record row.	
+            </summary>
+            <param name="value">The value.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.GridExcelExport.CopyBorders(Syncfusion.EJ.Export.GridTableCellType,Syncfusion.XlsIO.IRange)">
+            <summary>
+            Copies the borders.	
+            </summary>
+            <param name="style">The style.</param>
+            <param name="range">The range.</param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.GridTableCellType">
+            <summary>
+            Defines cell types
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GridTableCellType.GroupCaptionCell">
+            <summary>
+            Group caption cell.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GridTableCellType.FirstRecord">
+            <summary>
+            Group caption cell.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GridTableCellType.GroupHeaderIndentCell">
+            <summary>
+            Indent cell in group header section.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GridTableCellType.SummaryFieldCell">
+            <summary>
+            Field cell in summary row.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GridTableCellType.IndentCell">
+            <summary>
+            Indent cell in group.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GridTableCellType.TopLeftHeaderCell">
+            <summary>
+            The top-left header cell.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GridTableCellType.RowHeaderCell">
+            <summary>
+            Any row header cell.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GridTableCellType.ColumnHeaderCell">
+            <summary>
+            Column header cell.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GridTableCellType.RecordPlusMinusCell">
+            <summary>
+            PlusMinus cell in a record row.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GridTableCellType.RecordFieldCell">
+            <summary>
+            Field cell in a non-alternate record row.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GridTableCellType.AlternateRecordFieldCell">
+            <summary>
+            Field cell in an alternate record row.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GridTableCellType.AlternateRecordRowHeaderCell">
+            <summary>
+            Any header cell in an alternate record row.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GridTableCellType.EmptyCell">
+            <summary>
+            Empty cell 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GridTableCellType.CaptionCell">
+            <summary>
+            Caption Cell
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GridTableCellType.MasterCell">
+            <summary>
+            Master Cell
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.GridTableCellType.MasterHeaderCell">
+            <summary>
+            Master Header Cell
+            </summary>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.TableOptions">
+            <summary>
+            Enum for TableOptions	
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.TableOptions.ColumnHeaderRowHeight">
+            <summary>
+            ColumnHeaderRowHeight	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.TableOptions.RecordRowHeight">
+            <summary>
+            RecordRowHeight 	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.TableOptions.CaptionRowHeight">
+            <summary>
+            CaptionRowHeight	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.TableOptions.IndentCellWidth">
+            <summary>
+            IndentCellWidth	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.TableOptions.ContentCellWidth">
+            <summary>
+            ContentCellWidth	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ExportTheme.FlatAzure">
+            <summary>
+            FlatAzure	
+            </summary>
+            <remarks></remarks>        
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ExportTheme.BootstrapTheme">
+            <summary>
+            BootstrapTheme 	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ExportTheme.FlatSaffron">
+            <summary>
+            FlatSaffron	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ExportTheme.FlatSaffronDark">
+            <summary>
+            FlatSaffronDark	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ExportTheme.FlatLime">
+            <summary>
+            FlatLime	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ExportTheme.FlatLimeDark">
+            <summary>
+            FlatLimeDark	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ExportTheme.FlatAzureDark">
+            <summary>
+            FlatAzureDark 	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ExportTheme.GradientAzure">
+            <summary>
+            GradientAzure	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ExportTheme.GradientAzureDark">
+            <summary>
+            GradientAzureDark	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ExportTheme.GradientLime">
+            <summary>
+            GradientLime	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ExportTheme.GradientLimeDark">
+            <summary>
+            GradientLimeDark	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ExportTheme.GradientSaffron">
+            <summary>
+            GradientSaffron 	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ExportTheme.GradientSaffronDark">
+            <summary>
+            GradientSaffronDark	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ExportTheme.None">
+            <summary>
+            None	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridPdfExport.FileName">
+            <summary>
+            Gets or sets the name of the file.	
+            </summary>
+            <value>The name of the file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridPdfExport.FontWeight">
+            <summary>
+            Gets or sets the FontWeight.	
+            </summary>
+            <value>FontWeight.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridPdfExport.Theme">
+            <summary>
+            Gets or sets the Theme of the file.	
+            </summary>
+            <value>The Theme of the file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridPdfExport.FilePath">
+            <summary>
+            Gets or sets the File Path for saving file.	
+            </summary>
+            <value>The File Path for saving file in local.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridPdfExport.LocalSave">
+            <summary>
+            Gets or sets the is file locally saved.	
+            </summary>
+            <value>The LocalSave option for file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridPdfExport.AutoFormat">
+            <summary>
+            Gets or sets the AutoFormat of the file.	
+            </summary>
+            <value>The AutoFormat of the file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridPdfExport.EmptyText">
+            <summary>
+            Gets or sets the Empty record text of the file.	
+            </summary>
+            <value>The name of the file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridPdfExport.DataSource">
+            <summary>
+            Gets or sets the datasource of the grid.	
+            </summary>
+            <value>The Datasource of the grid.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridPdfExport.GroupCaptionText">
+            <summary>
+            Gets or sets the group caption text of the grid.	
+            </summary>
+            <value>The group caption text of the grid.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridPdfExport.IsHideColumnIncude">
+            <summary>
+            Gets or sets the IsHideColumnInclude for grid.	
+            </summary>
+            <value>IsHideColumnInclude in file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridPdfExport.IsAutoFit">
+            <summary>
+            Gets or sets the IsAutoFit for grid.	
+            </summary>
+            <value>IsAutoFit in file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridPdfExport.IsCustomCommandColumnIncude">
+            <summary>
+            Gets or sets the IsCustomCommandColumnIncude for grid.	
+            </summary>
+            <value>IsCustomCommandColumnIncude in file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridPdfExport.IsSummaryRow">
+            <summary>
+            Gets or sets the IsSummaryRow included in the file.	
+            </summary>
+            <value>IsSummaryRow in file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridPdfExport.IsTemplateColumnIncluded">
+            <summary>
+            Gets or sets the IsTemplateColumnIncluded included in the file.	
+            </summary>
+            <value>IsTemplateColumnIncluded included in file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridPdfExport.IncludeChildGrid">
+            <summary>
+            Gets or sets the IncludeChildGrid to either included/exclude the child Grid.	
+            </summary>
+            <value>true/false</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridPdfExport.DocumentOption">
+            <summary>
+            Gets or sets the documentoption of the file.	
+            </summary>
+            <value>The documentoption of the file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridPdfExport.ExportType">
+            <summary>
+            Gets or sets the name of the file.	
+            </summary>
+            <value>The name of the file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridPdfExport.Document">
+            <summary>
+            Gets or sets the name of the file.	
+            </summary>
+            <value>The name of the file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridPdfExport.PdfVersion">
+            <summary>
+            Gets or sets the Pdf version.	
+            </summary>
+            <value>The Pdf version.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridPdfExport.HeaderText">
+            <summary>
+            Gets or sets the Header Text for multiple export.	
+            </summary>
+            <value>HeaderText for multiple export.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridPdfExport.CheckRTLText">
+            <summary>
+            Gets or sets the RTL check for RTL languages.	
+            </summary>
+            <value>CheckRTL boolean value</value>
+            <remarks></remarks>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.GridPdfExport.InitializePdf(Syncfusion.Pdf.PdfDocument,System.String)">
+            <summary>
+            Initializes the excel.	
+            </summary>
+            <param name="pdfDocument">The Pdf document</param>
+            <param name="headerText">The headerText</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.GridPdfExport.RenderGroupedData">
+             <summary>
+            Perform Sorting.	
+             </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.GridPdfExport.SetTableOptions(Syncfusion.EJ.Export.TableOptions,System.Int32,System.Int32,Syncfusion.Pdf.Grid.PdfGridRow)">
+            <summary>
+            Sets the table options.	
+            </summary>
+            <param name="tableOptions">The table options.</param>
+            <param name="Idx">The idx.</param>
+            <param name="value">The value.</param>
+            <param name="row"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.GridPdfExport.ExportRecordRow(System.String,Syncfusion.Pdf.Grid.PdfGridRow)">
+            <summary>
+            Exports the record row.	
+            </summary>
+            <param name="value">The value.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.GridPdfExport.CopyBorders(Syncfusion.EJ.Export.GridTableCellType,Syncfusion.Pdf.Grid.PdfGridCell)">
+            <summary>
+            Copies the borders.	
+            </summary>
+            <param name="style">The style.</param>
+            <param name="cell">The cell</param>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridWordExport.Format">
+            <summary>
+            Gets or sets the format.	
+            </summary>
+            <value>The format.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridWordExport.HeaderText">
+            <summary>
+            Gets or sets the HeaderText.	
+            </summary>
+            <value>The format.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridWordExport.FileName">
+            <summary>
+            Gets or sets the name of the file.	
+            </summary>
+            <value>The name of the file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridWordExport.Theme">
+            <summary>
+            Gets or sets the name of the Theme.	
+            </summary>
+            <value>The name of the Theme.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridWordExport.FilePath">
+            <summary>
+            Gets or sets the File Path.	
+            </summary>
+            <value>The path of the file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridWordExport.LocalSave">
+            <summary>
+            Gets or sets the Local Save.	
+            </summary>
+            <value>Local Save.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridWordExport.FontWeight">
+            <summary>
+            Gets or sets the FontWeight.	
+            </summary>
+            <value>FontWeight.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridWordExport.AutoFormat">
+            <summary>
+            Gets or sets the AutoFormat.	
+            </summary>
+            <value>AutoFormat.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridWordExport.EmptyText">
+            <summary>
+            Gets or sets Grid Empty Text.	
+            </summary>
+            <value>Empty Text.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridWordExport.DataSource">
+            <summary>
+            Gets or sets the DataSource.	
+            </summary>
+            <value>DataSource.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridWordExport.GroupCaptionText">
+            <summary>
+            Gets or sets the GroupCaptionText.	
+            </summary>
+            <value>GroupCaptionText.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridWordExport.IsHideColumnIncude">
+            <summary>
+            Gets or sets IsHideColumnIncude.	
+            </summary>
+            <value>IsHideColumnIncude.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridWordExport.IsAutoFit">
+            <summary>
+            Gets or sets IsAutoFit.	
+            </summary>
+            <value>IsAutoFit.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridWordExport.IsCustomCommandColumnIncude">
+            <summary>
+            Gets or sets IsHideColumnIncude.	
+            </summary>
+            <value>IsHideColumnIncude.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridWordExport.IsSummaryRow">
+            <summary>
+            Gets or sets the name of the file.	
+            </summary>
+            <value>The name of the file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridWordExport.IncludeChildGrid">
+            <summary>
+            Gets or sets the IncludeChildGrid to either included/exclude the child Grid.	
+            </summary>
+            <value>true/false</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridWordExport.Document">
+            <summary>
+            Gets or sets the name of the file.	
+            </summary>
+            <value>The name of the file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridWordExport.DocumentOption">
+            <summary>
+            Gets or sets the name of the file.	
+            </summary>
+            <value>The name of the file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridWordExport.DocumentVersion">
+            <summary>
+            Gets or sets the excel version.	
+            </summary>
+            <value>The excel version.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.GridWordExport.WordDocument">
+            <summary>
+            Gets or sets the word document.	
+            </summary>
+            <value>The word document</value>
+            <remarks></remarks>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.GridWordExport.InitializeWord(Syncfusion.JavaScript.Models.GridProperties,Syncfusion.DocIO.DLS.IWordDocument,System.String)">
+            <summary>
+            Initializes the excel.	
+            </summary>
+            <param name="model">The model.</param>
+            <param name="book">The book.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.GridWordExport.RenderGroupedData">
+             <summary>
+            Perform Sorting.	
+             </summary>
+             <param name="value">The value.</param>
+             <remarks></remarks>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.GridWordExport.SetTableOptions(Syncfusion.EJ.Export.TableOptions,System.Int32,System.Int32)">
+            <summary>
+            Sets the table options.	
+            </summary>
+            <param name="tableOptions">The table options.</param>
+            <param name="Idx">The idx.</param>
+            <param name="value">The value.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.GridWordExport.ExportRecordRow(System.String,Syncfusion.EJ.Export.GridTableCellType)">
+            <summary>
+            Exports the record row.	
+            </summary>
+            <param name="value">The value.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.GridWordExport.CopyBorders(Syncfusion.EJ.Export.GridTableCellType,System.Int32,System.Int32)">
+            <summary>
+            Copies the borders.	
+            </summary>
+            <param name="style">The style.</param>
+            <param name="range">The range.</param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.XhtmlConversion">
+            <summary>
+            Converts XML formatted string to XHTML formatted string.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.XhtmlConversion.XmlContent">
+            <summary>
+            XML String that is to be formatted to XHTML
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.XhtmlConversion.#ctor(Syncfusion.EJ.Export.XmlConversion)">
+            <summary>
+            Initializes a new instance of the XHTMLConversion class that contains all the  formatting Methods.
+            </summary>
+            <param name="Xml">XML String to be converted.</param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.XhtmlConversion.ToString">
+            <summary>
+            Returns XHTML formatted String.
+            </summary>
+            <returns>XHTML formatted string</returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.XhtmlConversion.ImageTags(System.Xml.XmlNode,System.Xml.XmlDocument)">
+            <summary>
+            Adding alt Attribute to the Image Tags
+            </summary>
+            <param name="root">contains Xml Nodes</param>
+            <param name="doc">contains Xml Document</param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.XhtmlConversion.ListTags(System.Xml.XmlNode)">
+            <summary>
+            Finds and removes br tags from list tags
+            </summary>
+            <param name="root">contains Xml Nodes</param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.XhtmlConversion.SpanTags(System.Xml.XmlNode)">
+            <summary>
+            Removes block elements inside span tags
+            </summary>
+            <param name="root">contains xml nodes</param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.XhtmlConversion.RemoveElementNode(System.Xml.XmlNode,System.String,System.String)">
+            <summary>
+            Removes the specified element Nodes 
+            </summary>
+            <param name="root">Xml root Node</param>
+            <param name="tagRemove">Tag to be removed is given as Xpath</param>
+            <param name="tagParent">Parant Tag name</param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.XhtmlConversion.RemoveUnsupported(System.Xml.XmlNode,System.Xml.XmlDocument)">
+            <summary>
+            Removes all unsupported Attributes and Tags
+            </summary>
+            <param name="root">contains xml nodes</param>
+            <param name="doc">contains xml document</param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.XhtmlConversion.RemoveAttributeByName(System.Xml.XmlNode,System.String)">
+            <summary>
+            Removes the given attribute from Root element
+            </summary>
+            <param name="root">contains xml nodes</param>
+            <param name="name">string containing attribute name</param>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.XmlConversion">
+            <summary>
+            Converts HTML string into XML formatted string.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.XmlConversion._htmlContent">
+            <summary>
+            HTML String that is to be formatted to XML
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.XmlConversion.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the XHTMLConversion class.
+            </summary>
+            <param name="html">HTML String to be converted.</param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.XmlConversion.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.XmlConversion.LoadXml(System.String)">
+            <summary>
+            Contains all the  formatting Methods.
+            </summary>
+            <param name="html">Html String</param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.XmlConversion.ToString">
+            <summary>
+            Returns XML formatted String.
+            </summary>
+            <returns>XML formatted string</returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.XmlConversion.AddRootElement">
+            <summary>
+            Adds root element for the xml string (Rule No.1 - XML documents must have a root element)
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.XmlConversion.TagCase">
+            <summary>
+            Converts all tags into lower case (Rule No.3 - XML tags are case sensitive)
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.XmlConversion.CloseTags">
+            <summary>
+            Closes all the self closing Tags (Rule No.2 - XML elements must have a closing tag)
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.XmlConversion.AttrClose">
+            <summary>
+            Closes self closing tags that can have attributes except img tag and removes its closing tag if its present.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.XmlConversion.CloseImg(System.String)">
+            <summary>
+            Adds self closing for image tags 
+            </summary>
+            <param name="htmlText">String to be modified</param>
+            <returns>Modified String</returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.XmlConversion.RemoveComment">
+            <summary>
+            Removes comments from the html string
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.XmlConversion.attrQuotes">
+            <summary>
+            Check proper quotes for attribute values and replace if it is not present (Rule No.5 - XML attribute values must be quoted)
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.XmlConversion.RemoveEncoding">
+            <summary>
+            Removes the encoded text in the string  
+            </summary>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.RegexCollection">
+            <summary>
+            Class containing Regex based processing.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.RegexCollection.GetCollection(System.String,System.String)">
+            <summary>
+            Return collection based on pattern from a String.
+            </summary>
+            <param name="pattern"></param>
+            <param name="htmlContent"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.RegexCollection.GetCollectionAsList(System.Text.RegularExpressions.MatchCollection)">
+            <summary>
+            Gets collection as List.
+            </summary>
+            <param name="matches">Regex MatchCollection</param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.RegexCollection.#ctor(System.String,System.String)">
+            <summary>
+            Gets collection of strings from a string based on the pattern.
+            </summary>
+            <param name="pattern">Pattern as a string.</param>
+            <param name="htmlContent">Html string to be modified.</param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.RegexCollection.ReplaceSelfClosing(System.String,System.String,System.String)">
+            <summary>
+            Adds self closing for tags 
+            </summary>
+            <param name="pattern">Pattern for regex evaluation</param>
+            <param name="htmlText">String to be Modified</param>
+            <returns>Modified string</returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.RegexCollection.ReplaceByPattern(System.String,System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Selects content based on a pattern and replaces it with replacement string.
+            </summary>
+            <param name="content">Content to be modified</param>
+            <param name="pattern">Pattern for replacing.</param>
+            <param name="replace">Replacement String</param>
+            <returns></returns>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.RegexType">
+            <summary>
+            Class contain static regex patterns.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.TuplePair">
+            <summary>
+            Class for storing three strings.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.InternetCalendaring">
+            <summary>
+            Specifies Internet Calendaring
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.c_sGroupName">
+            <summary>
+            Store for the c_sGroupName property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.c_sVCALENDARContentRegEx">
+            <summary>
+            Store for the c_sVCALENDARContentRegEx property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.c_sVEVENTContentRegEx">
+            <summary>
+            Store for the c_sVEVENTContentRegEx property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.c_sUIDContentRegEx">
+            <summary>
+            Store for the c_sUIDContentRegEx property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.c_sCategoriesContentRegEx">
+            <summary>
+            Store for the c_sCategoriesContentRegEx property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.c_sSummaryContentRegEx">
+            <summary>
+            Store for the c_sSummaryContentRegEx property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.c_sDescriptionContentRegEx">
+            <summary>
+            Store for the c_sDescriptionContentRegEx property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.c_sLocationContentRegEx">
+            <summary>
+            Store for the c_sLocationContentRegEx property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.c_sDTStartContentRegEx">
+            <summary>
+            Store for the c_sDTStartContentRegEx property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.c_sDTEndContentRegEx">
+            <summary>
+            Store for the c_sDTEndContentRegEx property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.c_sDTStampContentRegEx">
+            <summary>
+            Store for the c_sDTStampContentRegEx property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.c_sRRuleContentRegEx">
+            <summary>
+            Store for the c_sRRuleContentRegEx property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.c_sPriority">
+            <summary>
+            Store for the c_sPriority property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.c_sReminder">
+            <summary>
+            Store for the c_sReminder property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.c_sRecurrence">
+            <summary>
+            Store for the c_sRecurrence property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.c_sDateTimeContentRegEx">
+            <summary>
+            Store for the c_sDateTimeContentRegEx property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.m_bIsICalendarContentValid">
+            <summary>
+            Store for the m_bIsICalendarContentValid property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.vcVEventCollection">
+            <summary>
+            Store for the vcVEventCollection property.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.#ctor(System.String)">
+            <summary>
+            Check whether the it is ICalenderContent or not
+            </summary>
+            <param name="sICalendarContent">The sICalendarContent</param>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.IsICalendarContentValid">
+            <summary>
+            Gets or sets a value indicating whether this instance is I calendar content valid.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is I calendar content valid; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.VEventCollectionProperty">
+            <summary>
+            Gets or sets the V event collection property.
+            </summary>
+            <value>The V event collection property.</value>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ParseICalendarContent(System.String)">
+            <summary>
+            Parses the content of the calendar.
+            </summary>
+            <param name="sICalendarContent">Content of the calendar.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.GetRecurrenceRule(System.String,System.String)">
+            <summary>
+            Gets the recurrence rule.
+            </summary>
+            <param name="sVEventContent">Content of the s v event</param>
+            <param name="sRRuleContentRegEx">The sr rule content regex </param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.GetMatches(System.String,System.String)">
+            <summary>
+            Gets the matches.
+            </summary>
+            <param name="sContent">Content of the s</param>
+            <param name="sRegularExpression">The sregularexpression</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.GetString(System.String,System.String)">
+            <summary>
+            Gets the string.
+            </summary>
+            <param name="sContent">Content of the s</param>
+            <param name="sRegularExpression">The sregularexpression</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.GetDateTime(System.String,System.String)">
+            <summary>
+            Gets the date time.
+            </summary>
+            <param name="sContent">Content of the s</param>
+            <param name="sRegularExpression">The sregularexpression</param>
+            <returns></returns>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.InternetCalendaring.Event">
+            <summary>
+            Class for Event.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.DTStart">
+            <summary>
+            Gets or Sets the DTStart value.
+            </summary>
+            <value>The date time start</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.DTEnd">
+            <summary>
+            Gets or Sets the DTEnd value.
+            </summary>
+            <value>The date time end</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.DTStamp">
+            <summary>
+            Gets or Sets the DTStamp Value.
+            </summary>
+            <value>The date time stamp</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.UID">
+            <summary>
+            Gets or sets the UID
+            </summary>
+            <value>The uid</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.Categories">
+            <summary>
+            Gets or sets the categories.
+            </summary>
+            <value>The categories</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.Summary">
+            <summary>
+            Gets or sets the summary.
+            </summary>
+            <value>The summary</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.Location">
+            <summary>
+            Gets or sets the Location
+            </summary>
+            <value>The location</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.RRule">
+            <summary>
+            Gets or sets the Recurrence Rule.
+            </summary>
+            <value>The recurrence rule</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.Description">
+            <summary>
+            Gets or sets the Description.
+            </summary>
+            <value>The description</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.Owner">
+            <summary>
+            Gets or sets the Owner.
+            </summary>
+            <value>The owner</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.Priority">
+            <summary>
+            Gets or set the Priority.
+            </summary>
+            <value>The priority</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.Reminder">
+            <summary>
+            Gets or sets the Reminder.
+            </summary>
+            <value>The reminder</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.Recurrence">
+            <summary>
+            Gets or sets the Recurrence.
+            </summary>
+            <value>The recurrence</value>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules">
+             <summary>
+            Class for RecurencesRules 
+             </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.#ctor">
+            <summary>
+            constructor for RecurenceRules
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.#ctor(System.String)">
+            <summary>
+            ReccurenceRules content values
+            </summary>
+            <param name="sRuleContent">The schedule recurrence rule content</param>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.Frequency">
+            <summary>
+            Gets or sets the Frequency.
+            </summary>
+            <value>The frequency</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.Until">
+            <summary>
+            Gets or sets the Untill.
+            </summary>
+            <value>The until</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.Count">
+            <summary>
+            Gets or sets the Count.
+            </summary>
+            <value>The count</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.Interval">
+            <summary>
+            Gets or sets the interval.
+            </summary>
+            <value>The interval</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.BySecond">
+            <summary>
+            Gets or sets the Bysecond.
+            </summary>
+            <value>The by second</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.ByMinute">
+            <summary>
+            Gets or sets the ByMinute value
+            </summary>
+            <value>The by minute</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.ByHour">
+            <summary>
+            Gets or Sets the ByHour value.
+            </summary>
+            <value>The by hour</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.ByDay">
+            <summary>
+            Gets or sets the ByDay value
+            </summary>
+            <value>The by day</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.ByMonthDay">
+            <summary>
+            Gets or Sets the ByMonthDay value
+            </summary>
+            <value>The by month day</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.ByYearDay">
+            <summary>
+            Gets or sets the ByYearDay
+            </summary>
+            <value>The by year day</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.ByWeekNo">
+            <summary>
+            Gets or sets the ByWeekNo
+            </summary>
+            <value>The by week number</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.ByMonth">
+            <summary>
+            Gets or sets the ByMonth.
+            </summary>
+            <value>The by month</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.BySetPos">
+            <summary>
+            Gets or sets the BySetPos.
+            </summary>
+            <value>The by set position</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.Wkst">
+            <summary>
+            Gets or sets the week set  value
+            </summary>
+            <value>The wkst</value>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.ParseRRuleContent(System.String)">
+            <summary>
+            Parses the RecurenceRule content
+            </summary>
+            <param name="sRRuleContent">RecurenceRule content value</param>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.EFrequency">
+            <summary>
+            Efrequency values
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.EFrequency.SECONDLY">
+            <summary>
+            Efrequency value secondly
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.EFrequency.MINUTELY">
+            <summary>
+            Efrequency value minutely
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.EFrequency.HOURLY">
+            <summary>
+            Efrequency value Hourly
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.EFrequency.DAILY">
+            <summary>
+            Efrequency value Daily
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.EFrequency.WEEKLY">
+            <summary>
+            Efrequency value Weekly
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.EFrequency.MONTHLY">
+            <summary>
+            Efrequency value monthly
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.EFrequency.YEARLY">
+            <summary>
+            Efrequency value yearly
+            </summary>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.EWeekDay">
+            <summary>
+            EweekDay values
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.EWeekDay.SU">
+            <summary>
+            EWeekDay value Sunday
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.EWeekDay.MO">
+            <summary>
+            EWeekDay value Monday
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.EWeekDay.TU">
+            <summary>
+            EWeekDay value Tuesday
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.EWeekDay.WE">
+            <summary>
+            EWeekDay value Wednesday
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.EWeekDay.TH">
+            <summary>
+            EWeekDay value Thursday
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.EWeekDay.FR">
+            <summary>
+            EWeekDay value Friday
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.EWeekDay.SA">
+            <summary>
+            EWeekDay value Saturday
+            </summary>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.InternetCalendaring.EventCollection">
+            <summary>
+            Eventcollection class inherits the collectin base.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.EventCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets the VEvent index value.
+            </summary>
+            <param name="nIndex">The n index</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.EventCollection.Add(Syncfusion.EJ.Export.InternetCalendaring.Event)">
+            <summary>
+            Add the VEvent values to the list
+            </summary>
+            <param name="vVEvent">The vVEvent</param>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder">
+            <summary>
+            Class for ics builder.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.#ctor(Syncfusion.EJ.Export.InternetCalendaring.EventCollection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder"/> class to indicate the event collection.
+            </summary>
+            <param name="vecVEventCollection">The vec vevent collection</param>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.Version">
+            <summary>
+            gets or sets the Version
+            </summary>
+            <value>The version</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.ProdID">
+            <summary>
+            get or sets the Prodid
+            </summary>
+            <value>The prodid</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.Method">
+            <summary>
+            gets or sets the Method
+            </summary>
+            <value>The method</value>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.ICSBuildProcess">
+            <summary>
+            ICS file build process
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetBeginFormatedElement(System.String)">
+            <summary>
+            Gets the begin formated element.
+            </summary>
+            <param name="sElement">The begin schedule element</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetEndFormatedElement(System.String)">
+            <summary>
+            Gets the end formated element.
+            </summary>
+            <param name="sElement">The end schedule element</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetVersion">
+            <summary>
+            Gets the version.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetProdID">
+            <summary>
+            Gets the product id.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetMethod">
+            <summary>
+            Gets the method.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetDateTimeString(System.DateTime)">
+            <summary>
+            Gets the date time string.
+            </summary>
+            <param name="dtDateTime">The datetime string date time</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetDateString(System.DateTime)">
+            <summary>
+            Gets the date string.
+            </summary>
+            <param name="dtDateTime">The date string date time</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetDTStart(System.DateTime)">
+            <summary>
+            Gets the date time start value.
+            </summary>
+            <param name="dtDateTime">The dt start date time</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetDTEnd(System.DateTime)">
+            <summary>
+            Gets the date time end value.
+            </summary>
+            <param name="dtDateTime">The dt end date time</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetDT(System.DateTime,System.String)">
+            <summary>
+            Gets the date and time.
+            </summary>
+            <param name="dtDateTime">The dt date time</param>
+            <param name="sFormat">The schedule format</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetUID(System.String)">
+            <summary>
+            Gets the uid.
+            </summary>
+            <param name="sID">The schedule id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetPriority(System.String)">
+            <summary>
+            Gets the priority.
+            </summary>
+            <param name="sPriority">The schedule priority</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetReminder(System.String)">
+            <summary>
+            Gets the reminder value.
+            </summary>
+            <param name="sReminder">The schedule reminder.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetRecurrence(System.String)">
+            <summary>
+            Gets the reccurrence value.
+            </summary>
+            <param name="sRecurrence">The schedule recurrence.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetSummary(System.String)">
+            <summary>
+            Gets the summary.
+            </summary>
+            <param name="sSummary">The schedule summary</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetOwner(System.String)">
+            <summary>
+            Gets the owner value.
+            </summary>
+            <param name="sOwner">The schedule owner value</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetDescription(System.String)">
+            <summary>
+            Gets the description.
+            </summary>
+            <param name="sDescription">The schedule description</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetLocation(System.String)">
+            <summary>
+            Gets the location value.
+            </summary>
+            <param name="sLocation">The schedule location</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetDTStamp(System.DateTime)">
+            <summary>
+            Gets the date time stamp.
+            </summary>
+            <param name="dtDateTime">The dt stamp date time</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.ICSBuildVEvent(Syncfusion.EJ.Export.InternetCalendaring.Event)">
+            <summary>
+            Ics build event.
+            </summary>
+            <param name="veEvent">The veevent</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.ICSBuildRRule(Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules)">
+            <summary>
+            Ics build recurence rule.
+            </summary>
+            <param name="rrRules">The recurrence rules</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetByMonth(System.Int32)">
+            <summary>
+            Gets the by month value.
+            </summary>
+            <param name="nByMonth">The n by month</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetByMonthDay(System.Int32)">
+            <summary>
+            Gets the by month day.
+            </summary>
+            <param name="nByMonthDay">The by month day</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetByDay(Syncfusion.EJ.Export.InternetCalendaring.Event.ReccurenceRules.EWeekDay[])">
+            <summary>
+            Gets the by day.
+            </summary>
+            <param name="arrWeekDays">The array week days</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetRRule(System.String)">
+            <summary>
+            Gets the recurrence rule value.
+            </summary>
+            <param name="sRRule">The schedule recurrence rule</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetFreq(System.String)">
+            <summary>
+            Gets the frequent value.
+            </summary>
+            <param name="sFreq">The schedule freq</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetUntil(System.String)">
+            <summary>
+            Gets the until value.
+            </summary>
+            <param name="dtUntil">The date time until</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetCount(System.Int32)">
+            <summary>
+            Gets the count value.
+            </summary>
+            <param name="nCount">The n count</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetCategories(System.String)">
+            <summary>
+            Getts the categories value.
+            </summary>
+            <param name="sCatogories">The schedule catogories</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetInterval(System.Int32)">
+            <summary>
+            Gets the interval value.
+            </summary>
+            <param name="nInterval">The n interval</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.GetBySetPos(System.Int32)">
+            <summary>
+            Gets the by set position value.
+            </summary>
+            <param name="nBySetPos">The n by set position</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.InternetCalendaring.ICSBuilder.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.ScheduleExport">
+            <summary>
+            Class for schedule export.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.ScheduleExport.#ctor(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.IEnumerable)">
+            <summary>
+            Schedule export the appointments.
+            </summary>
+            <param name="schedule">The schedule</param>
+            <param name="dataSource">The data source</param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.ScheduleExport.ICSFile(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.IEnumerable)">
+            <summary>
+            Internet calender schedule file.
+            </summary>
+            <param name="schedule">The schedule</param>
+            <param name="dataSource">The datasource</param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.ScheduleFormat.SetTheme(Syncfusion.JavaScript.AutoFormat,System.String)">
+            <summary>
+            Set theme to the Scheduler
+            </summary>
+            <param name="autoFormat">The autoFormat</param>
+            <param name="theme">The theme</param>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.ScheduleImport">
+            <summary>
+            Class for schedule import.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.ScheduleImport.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.EJ.Export.ScheduleImport"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.ScheduleImport.renderingImportAppointments(System.String)">
+            <summary>
+            Renderings the import appointments.
+            </summary>
+            <param name="destinationPath">The destination path.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment">
+            <summary>
+            Class for schedule appointment.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment._Id">
+            <summary>
+            Store for the _Id property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment._Subject">
+            <summary>
+            Store for the _Subject property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment._StartTime">
+            <summary>
+            Store for the _StartTime property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment._EndTime">
+            <summary>
+            Store for the _EndTime property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment._Location">
+            <summary>
+            Store for the _Location property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment._Reminder">
+            <summary>
+            Store for the _Reminder property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment._Description">
+            <summary>
+            Store for the _Description property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment._Owner">
+            <summary>
+            Store for the _Owner property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment._Recurrence">
+            <summary>
+            Store for the _Recurrence property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment._RecurrenceRules">
+            <summary>
+            Store for the _RecurrenceRules property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment._AllDay">
+            <summary>
+            Store for the _AllDay property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment._categorize">
+            <summary>
+            Store for the _categorize property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment._priority">
+            <summary>
+            Store for the _priority property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment.Id">
+            <summary>
+            Gets or sets id value.
+            </summary>
+            <value>The id</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment.Subject">
+            <summary>
+            gets or sets the Subject value.
+            </summary>
+            <value>The subject</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment.StartTime">
+            <summary>
+            gets or sets the StartTime value.
+            </summary>
+            <value>Ths start time</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment.EndTime">
+            <summary>
+            gets or sets the EndTime value.
+            </summary>
+            <value>The end time</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment.Description">
+            <summary>
+            gets or sets the Decription value.
+            </summary>
+            <value>The description</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment.Owner">
+            <summary>
+            Gets or sets the owner value.
+            </summary>
+            <value>The owner</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment.Reminder">
+            <summary>
+            Gets or sets the reminder value.
+            </summary>
+            <value>The reminder</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment.Recurrence">
+            <summary>
+            gets or sets the Recurrence value
+            </summary>
+            <value>The recurrence</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment.RecurrenceRules">
+            <summary>
+            Gets or Sets the RecurrenceRules value
+            </summary>
+            <value>The recurrence rule</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment.AllDay">
+            <summary>
+            Gets or Sets the AllDay value
+            </summary>
+            <value>The all day</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment.AppointmentCategorize">
+             <summary>
+            Gets or sets the Custom Appointment Categorize.
+             </summary>
+             <value>The appointment categorize</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment.Priority">
+             <summary>
+            Gets or sets the Appointment priority value.
+             </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleImport.ScheduleAppointment.Location">
+            <summary>
+            Gets or sets the location value.
+            </summary>
+            <value>The location</value>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._endResources">
+            <summary>
+            Store for the _endResources property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._appList">
+            <summary>
+            Store for the _appList property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._blockAppList">
+            <summary>
+            Store for the _blockAppList property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._allDayApp">
+            <summary>
+            Store for the _allDayApp property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._endResourcesId">
+            <summary>
+            Store for the _endResourcesId property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._app">
+            <summary>
+            Store for the _app property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._resDetail">
+            <summary>
+            Store for the _resDetail property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._monthViewRows">
+            <summary>
+            Store for the _monthViewRows property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport.Locale">
+            <summary>
+            Store for the Locale property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport.ci">
+            <summary>
+            Store for the ci property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._isAllDayRow">
+            <summary>
+            Store for the _isAllDayRow property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._showHeaderBar">
+            <summary>
+            Store for the _showHeaderBar property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._isCustomView">
+            <summary>
+            Store for the _isCustomView property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._isRenderDates">
+            <summary>
+            Store for the _isRenderDates property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._isRenderCustomDates">
+            <summary>
+            Store for the _isRenderCustomDates property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._ignoreTimeScale">
+            <summary>
+            Store for the _ignoreTimeScale property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._isAppointmentBlock">
+            <summary>
+            Store for the _isBlockAppointment property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._majorSlot">
+            <summary>
+            Store for the _majorSlot property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport.am">
+            <summary>
+            Store for the am property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport.pm">
+            <summary>
+            Store for the pm property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._minorSeparation">
+            <summary>
+            Store for the _minorSeparation property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._currentView">
+            <summary>
+            Store for the _currentView property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._groupHeight">
+            <summary>
+            Store for the _groupHeight property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._allDayHeight">
+            <summary>
+            Store for the _allDayHeight property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport.HEADER_HEIGHT">
+            <summary>
+            Store for the HEADER_HEIGHT property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport.VIEW_HEADER_HEIGHT">
+            <summary>
+            Store for the VIEW_HEADER_HEIGHT property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._cellHeight">
+            <summary>
+            Store for the _cellHeight property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._cellColWidth">
+            <summary>
+            Store for the _cellColWidth property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._monthCellHeight">
+            <summary>
+            Store for the _monthCellHeight property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._monthCellWidth">
+            <summary>
+            Store for the _monthCellWidth property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._workWeekCount">
+            <summary>
+            Store for the _workWeekCount property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._startHour">
+            <summary>
+            Store for the _startHour property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._endHour">
+            <summary>
+            Store for the _endHour property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._viewStartTime">
+            <summary>
+            Store for the _viewStartTime property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._viewEndTime">
+            <summary>
+            Store for the _viewEndTime property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._autoFormat">
+            <summary>
+            Store for the _autoFormat property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport.SchProp">
+            <summary>
+            Store for the SchProp property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport.CustomRenderDates">
+            <summary>
+            Store for the CustomRenderDates property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport.RenderCustomDates">
+            <summary>
+            Store for the CustomRenderDates property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport._document">
+            <summary>
+            Store for the _document property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport.sortedListItem">
+            <summary>
+            Store for the sortedListItem property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport.unSortedListItem">
+            <summary>
+            Store for the unSortedListItem property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport.temp">
+            <summary>
+            Store for the temp property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport.AlldayImage">
+            <summary>
+            Store for the AlldayImage property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport.RecurrenceImage">
+            <summary>
+            Store for the RecurrenceImage property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.SchedulePDFExport.RecurrenceEditiImage">
+            <summary>
+            Store for the RecurrenceEditImage property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.MonthRowHeight">
+            <summary>
+            Gets or sets the MonthRowHeight value
+            </summary>
+            <value>The month row height</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.Temp">
+            <summary>
+            Gets or sets the Temp value
+            </summary>
+            <value>The temp</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.SortedListItem">
+            <summary>
+            Gets or sets the SortedListItem value
+            </summary>
+            <value>The sorted list item</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.UnSortedListItem">
+            <summary>
+            Gets or sets the UnSortedListItem value
+            </summary>
+            <value>The unsorted list item</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.ResDetail">
+            <summary>
+            Gets or sets the ResDetail value
+            </summary>
+            <value>The res detail</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.AM">
+            <summary>
+            Gets or sets the AM value
+            </summary>
+            <value>The am</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.PM">
+            <summary>
+            Gets or sets the PM value
+            </summary>
+            <value>The pm</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.AppointmentList">
+            <summary>
+            Gets or sets the AppointmentList value
+            </summary>
+            <value>The appointment list</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.BlockAppointmentList">
+            <summary>
+            Gets or sets the Block AppointmentList value
+            </summary>
+            <value>The block appointment list</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.AllDayApp">
+            <summary>
+            Gets or sets the AllDayApp value
+            </summary>
+            <value>The allday app</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.Appointments">
+            <summary>
+            Gets or sets the Appointments value
+            </summary>
+            <value>The appointments</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.EndResources">
+            <summary>
+            Gets or sets the EndResources value
+            </summary>
+            <value>The end resources</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.EndResourcesID">
+            <summary>
+            Gets or sets the EndResourcesID value
+            </summary>
+            <value>The end resources id</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.MajorInterval">
+            <summary>
+            Gets or sets the MajorInterval value
+            </summary>
+            <value>The major interval</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.GroupHeight">
+            <summary>
+            Gets or sets the GroupHeight value
+            </summary>
+            <value>The group height</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.IsAllDayRow">
+            <summary>
+            Gets or sets the isAllDayRow value
+            </summary>
+            <value>The show / hide AllDayRow </value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.ShowHeaderBar">
+            <summary>
+            Gets or sets the ShowHeaderBar value
+            </summary>
+            <value>The show / hide ShowHeaderBar </value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.IsCustomView">
+            <summary>
+            Gets or sets the IsCustomView value
+            </summary>
+            <value>The CustomView Rendering </value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.IsArrayOfDates">
+            <summary>
+            Gets or sets the IsArrayOfDates value
+            </summary>
+            <value>The CustomView Rendering </value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.RenderDates">
+            <summary>
+            Gets or sets the RenderDates value
+            </summary>
+            <value>The RenderDates Count </value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.IgnoreTimeScale">
+            <summary>
+            Gets or sets the IgnoreTimeScale value
+            </summary>
+            <value>The timeScale enable / disable </value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.IsAppointmentBlock">
+            <summary>
+            Gets or sets the BlockAppointment value
+            </summary>
+            <value>The BlockAppointment is enable / disable </value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.MinorSeperation">
+            <summary>
+            Gets or sets the MinorSeperation value
+            </summary>
+            <value>The minor seperation</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.MonthViewRows">
+            <summary>
+            Gets or sets the MonthViewRows value
+            </summary>
+            <value>The month view rows</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.MonthCellWidth">
+            <summary>
+            Gets or sets the MonthCellWidth value
+            </summary>
+            <value>The month cell width</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.Document">
+            <summary>
+            Gets or sets the Document value
+            </summary>
+            <value>The document</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.CurrentView">
+            <summary>
+            Gets or sets the CurrentView value
+            </summary>
+            <value>The currrent view</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.ViewStartTime">
+            <summary>
+            Gets or sets the ViewStartTime value
+            </summary>
+            <value>The view start time</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.ViewEndTime">
+            <summary>
+            Gets or sets the ViewEndTime value
+            </summary>
+            <value>The view end time</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.MonthCellHeight">
+            <summary>
+            Gets or sets the MonthCellHeight value
+            </summary>
+            <value>The month cell height</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.CellHeight">
+            <summary>
+            Gets or sets the CellHeight value
+            </summary>
+            <value>The cell height</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.CellColWidth">
+            <summary>
+            Gets or sets the CellColWidth value
+            </summary>
+            <value>The cell col width</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.WorkWeekCount">
+            <summary>
+            Gets or sets the WorkWeekCount value
+            </summary>
+            <value>The work week count height</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.AllDayHeight">
+            <summary>
+            Gets or sets the AllDayHeight value
+            </summary>
+            <value>The all day height</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.StartHour">
+            <summary>
+            Gets or sets the StartHour value
+            </summary>
+            <value>The start hourt</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.EndHour">
+            <summary>
+            Gets or sets the EndHour value
+            </summary>
+            <value>The end hour</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SchedulePDFExport.AutoFormat">
+            <summary>
+            Gets or sets the AutoFormat value
+            </summary>
+            <value>The auto format</value>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.Export(Syncfusion.JavaScript.Models.ScheduleProperties,System.Object,Syncfusion.Pdf.PdfPageSettings,System.String,System.String,Syncfusion.Pdf.PdfDocumentTemplate)">
+            <summary>
+            Process the data and return the PDF Document
+            </summary>
+            <param name="model"></param>
+            <param name="processedApp"></param>
+            <param name="pdfPageSettings"></param>
+            <param name="pdfDocumentTemplate"></param>
+            <param name="theme"></param>
+            <param name="locale"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.GetWeekFirstDate">
+            <summary>
+            Initialize the View start and end time.
+            </summary>
+            <param name="DateTime"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.SetIcons(System.String)">
+            <summary>
+            Load the icons in stream memory.
+            </summary>
+            <param name="theme"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.RenderSchedule(Syncfusion.Pdf.PdfPageSettings,Syncfusion.Pdf.PdfDocumentTemplate)">
+            <summary>
+            Schedule Rendering initiation
+            </summary>
+            <param name="pdfPageSettings"></param>
+            <param name="pdfDocumentTemplate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.ProcessAllDayAppointment">
+            <summary>
+            To Change the StartTime and EndTime for all day appointments
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.RenderAppHorizontalDayView">
+            <summary>
+            Rendering appointment in Horizontal Day View.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.RenderHorizontalBlockIntervals">
+            <summary>
+            Rendering  block intervals in Horizontal Day View.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.RenderHorizondalDayView(Syncfusion.Pdf.Graphics.PdfGraphics,Syncfusion.Pdf.PdfDocument)">
+            <summary>
+            Rendering Horizontal Day View
+            </summary>
+            <param name="g"></param>
+            <param name="document"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.RenderAppHorizontalMonth">
+            <summary>
+            Rendering appointment in Horizontal Month View
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.RenderHorizontalBlockMonthIntervals">
+            <summary>
+            Rendering block intervals in Horizontal Month View
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.RenderHorizondalMonthView(Syncfusion.Pdf.Graphics.PdfGraphics,Syncfusion.Pdf.PdfDocument)">
+            <summary>
+            Rendering Horizontal Month View.
+            </summary>
+            <param name="g"></param>
+            <param name="document"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.GetEndResourceHeight(System.String)">
+            <summary>
+            Get the Array of End Resources Heights
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.GetResourceHoriList">
+            <summary>
+            Get the sorted horizontal Resource order
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.Sort(System.Collections.Generic.List{Syncfusion.EJ.Export.ResApp})">
+            <summary>
+            Sort the resources in the treeview manner.
+            </summary>
+            <param name="unsorted"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.SortItem(Syncfusion.EJ.Export.ResApp,System.Collections.Generic.List{Syncfusion.EJ.Export.ResApp})">
+            <summary>
+            Intermediate calculation for sorting the resources.
+            </summary>
+            <param name="first"></param>
+            <param name="Items"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.GetIntFromString(System.String)">
+            <summary>
+            For String to Integer conversion
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.SetViewDates">
+            <summary>
+            Set View start time and view end time
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.GetAllDayHeight">
+            <summary>
+            Calculate the All day appointment maximum height.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.ScheduleSerializeModel(System.String)">
+            <summary>
+            serialize the Schedule model.
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.SerializeApp(System.Object)">
+            <summary>
+            Serialize the Schedule Appointment
+            </summary>
+            <param name="scheduleApps"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.SerializeBlockApp(System.Object)">
+            <summary>
+            Serialize the Schedule Block Appointment
+            </summary>
+            <param name="blockApps"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.GetFieldName(System.String)">
+            <summary>
+            Get the Mapping Field Name
+            </summary>
+            <param name="mappingName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.GetBlockFieldName(System.String)">
+            <summary>
+            Get the Mapping Field Name
+            </summary>
+            <param name="mappingName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.DrawHorizondalLines(Syncfusion.Pdf.Graphics.PdfGraphics,Syncfusion.Pdf.PdfDocument)">
+            <summary>
+            Draw the horizontal lines in the vertical orientation in Day, Week, and Workweek.
+            </summary>
+            <param name="g"></param>
+            <param name="document"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.RemoveUnWantedBGColor(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            To Remove the black theme color from schedule.
+            </summary>
+            <param name="array"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.DrawVerticalLines(Syncfusion.Pdf.PdfDocument,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            To draw the vertical lines in the Schedule Vertical orientation.
+            </summary>
+            <param name="document"></param>
+            <param name="items"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.RenderAgendaView(Syncfusion.Pdf.Graphics.PdfGraphics,Syncfusion.Pdf.PdfDocument)">
+            <summary>
+            To render the schedule in agenda view.
+            </summary>
+            <param name="g"></param>
+            <param name="document"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.RenderMonthView(Syncfusion.Pdf.Graphics.PdfGraphics,Syncfusion.Pdf.PdfDocument)">
+            <summary>
+            To render the schedule in vertical month view
+            </summary>
+            <param name="g"></param>
+            <param name="document"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.GetMonthVerticalRowHeight(System.Int32)">
+            <summary>
+            Calulate the row height for vertical month view.
+            </summary>
+            <param name="i"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.AppendDateandTimeVDWWW(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Append Date and Time in the vertical Day, Week, and Workweek.
+            </summary>
+            <param name="rows"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.RenderVDWWWApp(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Render Vertical appointment in Day, Week and Workweek.
+            </summary>
+            <param name="rows"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.RenderAllDayApp">
+            <summary>
+            Render Allday appointment in vertical view.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.GetSmallestInteger(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            to calculate appointment index in the Allday appointment
+            </summary>
+            <param name="appIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.RenderApp(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Render appointment in Day , Week and Workweek.
+            </summary>
+            <param name="rows"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.RenderBlockIntervals(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Render Block intervals in Day, Week and Workweek.
+            </summary>
+            <param name="rows"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.RenderViewHeader(Syncfusion.Pdf.PdfPageSettings,Syncfusion.Pdf.Graphics.PdfGraphics,Syncfusion.Pdf.PdfPage)">
+            <summary>
+            To render the view header
+            </summary>
+            <param name="pdfPageSettings"></param>
+            <param name="g"></param>
+            <param name="page1"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.AppendDateOnViewHeader(Syncfusion.Pdf.Graphics.PdfGraphics)">
+            <summary>
+            To append the Date on the view header.
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.AppendDateandTimeMonth(Syncfusion.Pdf.Graphics.PdfGraphics)">
+            <summary>
+            To append the date time in month view
+            </summary>
+            <param name="graphics"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.RenderGrouping(Syncfusion.Pdf.Graphics.PdfGraphics)">
+            <summary>
+            Render the grouping in the vertical Day, Week and Workweek.
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.GetEndResourceCount">
+            <summary>
+            To get the end resource count
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.GetResourceGroupDetails">
+            <summary>
+            To get the structure of the grouping in the list 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.RenderResourceHeader(System.Int32)">
+            <summary>
+            To render the resource header.
+            </summary>
+            <param name="column"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.RenderVerticalMonthAppointment(System.Collections.Generic.List{System.Single})">
+            <summary>
+            Render vertical month appointments.
+            </summary>
+            <param name="rows"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.RenderVerticalBlockMonthIntervals(System.Collections.Generic.List{System.Single})">
+            <summary>
+            Render vertical block month intervals.
+            </summary>
+            <param name="rows"></param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.CalcMonthAppPosition(System.Collections.Generic.List{Syncfusion.EJ.Export.ScheduleAppFields},Syncfusion.EJ.Export.ScheduleAppFields,System.Collections.Generic.List{System.Single})">
+            <summary>
+            Calculation made for month appointment position in vertical orienatation
+            </summary>
+            <param name="visApp"></param>
+            <param name="appoint"></param>
+            <param name="rows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.CalcMonthBlockAppPosition(System.Collections.Generic.List{Syncfusion.EJ.Export.ScheduleBlockAppFields},Syncfusion.EJ.Export.ScheduleBlockAppFields,System.Collections.Generic.List{System.Single})">
+            <summary>
+            Calculation made for month appointment position in vertical orienatation
+            </summary>
+            <param name="visApp"></param>
+            <param name="appoint"></param>
+            <param name="rows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.RenderAgendaApp">
+            <summary>
+            To render the appointment in agenda view.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.GetResColor(System.String)">
+            <summary>
+            To get the resouce color for rendering appointment.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.GetCatagorizeColor(System.String)">
+            <summary>
+            To get catagory color for rendering the appointment.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SchedulePDFExport.GetBooleanValue(System.String)">
+            <summary>
+            Get the boolean value from string and integer
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.ScheduleAppFields">
+            <summary>
+            Class for the Schedule Appointments.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleAppFields.Id">
+            <summary>
+            Gets or sets the Id value
+            </summary>
+            <value>The id</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleAppFields.Subject">
+            <summary>
+            Gets or sets the Subject value
+            </summary>
+            <value>The subject</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleAppFields.Description">
+            <summary>
+            Gets or sets the Description value
+            </summary>
+            <value>The description</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleAppFields.StartTime">
+            <summary>
+            Gets or sets the StartTime value
+            </summary>
+            <value>The start time</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleAppFields.EndTime">
+            <summary>
+            Gets or sets the EndTime value
+            </summary>
+            <value>The end time</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleAppFields.Recurrence">
+            <summary>
+            Gets or sets the Recurrence value
+            </summary>
+            <value>The recurrence</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleAppFields.RecurrenceRule">
+            <summary>
+            Gets or sets the RecurrenceRule value
+            </summary>
+            <value>The recurrence rule</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleAppFields.AllDay">
+            <summary>
+            Gets or sets the AllDay value
+            </summary>
+            <value>The all day</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleAppFields.ResourceFields">
+            <summary>
+            Gets or sets the ResourceFields value
+            </summary>
+            <value>The resource fields</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleAppFields.Categorize">
+            <summary>
+            Gets or sets the Categorize value
+            </summary>
+            <value>The categorize</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleAppFields.Location">
+            <summary>
+            Gets or sets the Location value
+            </summary>
+            <value>The location</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleAppFields.Priority">
+            <summary>
+            Gets or sets the Priority value
+            </summary>
+            <value>The priority</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleAppFields.StartTimeZone">
+            <summary>
+            Gets or sets the StartTimeZone value
+            </summary>
+            <value>The start time zone</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleAppFields.EndTimeZone">
+            <summary>
+            Gets or sets the EndTimeZone value
+            </summary>
+            <value>The end time zone</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleAppFields.RecurrenceId">
+            <summary>
+            Gets or sets the RecurrenceId value
+            </summary>
+            <value>The recurrence id </value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleAppFields.RecurrenceExDate">
+            <summary>
+            Gets or sets the RecurrenceExDate value
+            </summary>
+            <value>The recurrence exdate </value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleAppFields.ResourceId">
+            <summary>
+            Gets or sets the ResourceId value
+            </summary>
+            <value>The resource id </value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleAppFields.Guid">
+            <summary>
+            Gets or sets the Guid value
+            </summary>
+            <value>The guid </value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleAppFields.Index">
+            <summary>
+            Gets or sets the Index value
+            </summary>
+            <value>The index </value>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.ResApp">
+            <summary>
+            Class for finding index in horizontal view.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ResApp.Id">
+            <summary>
+            Gets or sets the Id value
+            </summary>
+            <value>The id </value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ResApp.ParentId">
+            <summary>
+            Gets or sets the ParentId value
+            </summary>
+            <value>The parent id </value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ResApp.Name">
+            <summary>
+            Gets or sets the Name value
+            </summary>
+            <value>The name </value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ResApp.Level">
+            <summary>
+            Gets or sets the Level value
+            </summary>
+            <value>The level </value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ResApp.Resource">
+            <summary>
+            Gets or sets the Resource value
+            </summary>
+            <value>The resource </value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ResApp.VerticalIndent">
+            <summary>
+            Gets or sets the VerticalIndent value
+            </summary>
+            <value>The vertical indent </value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ResApp.Color">
+            <summary>
+            Gets or sets the Color value
+            </summary>
+            <value>The color </value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ResApp.PageValue">
+            <summary>
+            Gets or sets the page value
+            </summary>
+            <value>The page value </value>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.ScheduleBlockAppFields">
+            <summary>
+            Class for the Schedule Block Appointments.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleBlockAppFields.Id">
+            <summary>
+            Gets or sets the Id value
+            </summary>
+            <value>The id</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleBlockAppFields.Subject">
+            <summary>
+            Gets or sets the Subject value
+            </summary>
+            <value>The subject</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleBlockAppFields.StartTime">
+            <summary>
+            Gets or sets the StartTime value
+            </summary>
+            <value>The start time</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleBlockAppFields.EndTime">
+            <summary>
+            Gets or sets the EndTime value
+            </summary>
+            <value>The end time</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleBlockAppFields.IsBlockAppointment">
+            <summary>
+            Gets or sets the IsBlockAppointment value
+            </summary>
+            <value>The isBlockAppointment</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleBlockAppFields.IsAllDay">
+            <summary>
+            Gets or sets the IsAllDay value
+            </summary>
+            <value>The isAllDay</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleBlockAppFields.ResourceId">
+            <summary>
+            Gets or sets the ResourceId value
+            </summary>
+            <value>The resourceId</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleBlockAppFields.GroupId">
+            <summary>
+            Gets or sets the GroupId value
+            </summary>
+            <value>The GroupId</value>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ScheduleExcelExport.workBook">
+            <summary>
+            Store for the workBook property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ScheduleExcelExport.workSheet">
+            <summary>
+            Store for the workSheet property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ScheduleExcelExport.excelVersion">
+            <summary>
+            Store for the excelVersion property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ScheduleExcelExport.excelFormat">
+            <summary>
+            Store for the excelFormat property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ScheduleExcelExport.contentType">
+            <summary>
+            Store for the contentType property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ScheduleExcelExport.downloadType">
+            <summary>
+            Store for the downloadType property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ScheduleExcelExport.appointmentCollection">
+            <summary>
+            Store for the appointmentCollection property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ScheduleExcelExport.fileName">
+            <summary>
+            Store for the fileName property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.ScheduleExcelExport.streamMemory">
+            <summary>
+            Store for the MemoryStream property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleExcelExport.WorkBook">
+            <summary>
+            Creats new WorkBook.	
+            </summary>
+            <value>WorkBook Creation.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleExcelExport.WorkSheet">
+            <summary>
+            Create new WorkSheet.	
+            </summary>
+            <value>WorkSheet Creation.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleExcelExport.FileName">
+            <summary>
+            Gets or sets the name of the file.	
+            </summary>
+            <value>The name of the file.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleExcelExport.Excelversion">
+            <summary>
+            Gets or sets the excel version.	
+            </summary>
+            <value>The excel version.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleExcelExport.ExcelFormat">
+            <summary>
+            Gets or sets the excel format.	
+            </summary>
+            <value>The excel format.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleExcelExport.ContentType">
+            <summary>
+            Gets or sets the excel content type.	
+            </summary>
+            <value>The content type.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleExcelExport.DownloadType">
+            <summary>
+            Gets or sets the excel content type.	
+            </summary>
+            <value>The content type.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleExcelExport.AppointmentCollection">
+            <summary>
+            Gets or sets the appointmentCollection type.	
+            </summary>
+            <value>The appointmentCollection type.</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.ScheduleExcelExport.StreamMemory">
+            <summary>
+            Gets or sets the memory stream type.	
+            </summary>
+            <value>The memory stream type.</value>
+            <remarks></remarks>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.SheetExport">
+            <summary>
+            Represents a class for sheet export.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SheetExport.DownloadType">
+            <summary>
+            Gets or sets the download type.	
+            </summary>
+            <value>The type of the download.</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SheetExport.ExcelVersion">
+            <summary>
+            Gets or sets the excel version.	
+            </summary>
+            <value>The excel version.</value>
+        </member>
+        <member name="P:Syncfusion.EJ.Export.SheetExport.Sheet">
+            <summary>
+            Gets or sets the excel sheet.	
+            </summary>
+            <value>The excel sheet.</value>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Syncfusion.EJ.Export.SheetExport.Export(Syncfusion.JavaScript.Models.WorkbookProperties,Syncfusion.JavaScript.Models.DataContainer,System.String,Syncfusion.EJ.Export.ExportFormat,Syncfusion.XlsIO.ExcelVersion)" -->
+        <member name="M:Syncfusion.EJ.Export.SheetExport.Export(Syncfusion.JavaScript.Models.WorkbookProperties,Syncfusion.JavaScript.Models.DataContainer,System.String,Syncfusion.EJ.Export.ExportFormat,Syncfusion.XlsIO.ExcelVersion,System.String)">
+            <summary>
+            Save the Spreadsheet in excel file.
+            </summary>
+            <param name="sheetModel">The Spreadsheet model.</param>
+            <param name="sheetData">The Spreadsheet data.</param>
+            <param name="fileName">The file name to export.</param>
+            <param name="type">The type of excel file.</param>
+            <param name="excelVersion">The version of excel file.</param>
+            <param name="password">The password for excel file.</param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SheetExport.ExportAsBinary(Syncfusion.JavaScript.Models.WorkbookProperties,Syncfusion.JavaScript.Models.DataContainer,Syncfusion.EJ.Export.ExportFormat,Syncfusion.XlsIO.ExcelVersion)">
+            <summary>
+            Save the Spreadsheet as binary file.
+            </summary>
+            <param name="sheetModel">The Spreadsheet model.</param>
+            <param name="sheetData">The Spreadsheet data.</param>
+            <param name="type">The type of excel file.</param>
+            <param name="excelVersion">The version of excel file.</param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SheetExport.ProcessSheet(Syncfusion.JavaScript.Models.WorkbookProperties,Syncfusion.JavaScript.Models.DataContainer)">
+            <summary>
+            Process the exporting sheet.
+            </summary>
+            <param name="sheetModel">The Spreadsheet model.</param>
+            <param name="sheetData">The Spreadsheet data.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.SheetExport.InitializeSheet">
+            <summary>
+            Initializes the sheet.	
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.ExportFormat">
+            <summary>
+            Specifies the export format.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.SheetImport">
+            <summary>
+            Represents a class for sheet import.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.Spreadsheet.Syncfusion#JavaScript#ISpreadsheet#Open(Syncfusion.JavaScript.Models.ImportRequest)">
+            <summary>
+            Open the sheet using import request.
+            </summary>
+            <param name="importRequest">The import request.</param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.Spreadsheet.Open(Syncfusion.JavaScript.Models.ImportRequest)">
+            <summary>
+            Open the sheet using import request.
+            </summary>
+            <param name="importRequest">The import request.</param>
+            <returns>The sheet settings.</returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.Spreadsheet.processRequest(Syncfusion.JavaScript.Models.ImportRequest)">
+            <summary>
+            Process the import request.
+            </summary>
+            <param name="importRequest">The importRequset.</param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.Spreadsheet.Save(System.String,System.String,Syncfusion.EJ.Export.ExportFormat,Syncfusion.XlsIO.ExcelVersion)">
+            <summary>
+            Save the Spreadsheet as a excel file.
+            </summary>
+            <param name="sheetModel">The Spreadsheet model.</param>
+            <param name="sheetData">The Spreadsheet data.</param>
+            <param name="type">The type of export format.</param>
+            <param name="excelVersion">The version for excel.</param>
+            <returns>The stream of data.</returns>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.Spreadsheet.Save(System.String,System.String,System.String,Syncfusion.EJ.Export.ExportFormat,Syncfusion.XlsIO.ExcelVersion)">
+            <summary>
+            Save the Spreadsheet as a excel file.
+            </summary>
+            <param name="sheetModel">The Spreadsheet model.</param>
+            <param name="sheetData">The Spreadsheet data.</param>
+            <param name="fileName">The file name to export.</param>
+            <param name="type">The type of excel file.</param>
+            <param name="excelVersion">The version of excel file.</param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.Spreadsheet.Save(System.String,System.String,System.String,Syncfusion.EJ.Export.ExportFormat,Syncfusion.XlsIO.ExcelVersion,System.String)">
+            <summary>
+            Save the Spreadsheet as a excel file.
+            </summary>
+            <param name="sheetModel">The Spreadsheet model.</param>
+            <param name="sheetData">The Spreadsheet data.</param>
+            <param name="fileName">The file name to export.</param>
+            <param name="type">The type of excel file.</param>
+            <param name="excelVersion">The version of excel file.</param>
+            <param name="password">The password for excel file.</param>
+        </member>
+        <member name="M:Syncfusion.EJ.Export.Spreadsheet.Save(System.String,System.String,System.String,Syncfusion.EJ.Export.ExportFormat)">
+            <summary>
+            Save the Spreadsheet as a excel file.
+            </summary>
+            <param name="sheetModel">The Spreadsheet model.</param>
+            <param name="sheetData">The Spreadsheet data.</param>
+            <param name="fileName">The file name to export.</param>
+            <param name="type">The type of excel file.</param>
+        </member>
+        <member name="T:Syncfusion.EJ.Export.TreeGridTableCellType">
+            <summary>
+            Defines cell types
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.TreeGridTableCellType.SummaryFieldCell">
+            <summary>
+            Field cell in summary row.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.TreeGridTableCellType.IndentCell">
+            <summary>
+            Indent cell in group.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.TreeGridTableCellType.TopLeftHeaderCell">
+            <summary>
+            The top-left header cell.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.TreeGridTableCellType.RowHeaderCell">
+            <summary>
+            Any row header cell.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.TreeGridTableCellType.ColumnHeaderCell">
+            <summary>
+            Column header cell.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.TreeGridTableCellType.RecordPlusMinusCell">
+            <summary>
+            PlusMinus cell in a record row.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.TreeGridTableCellType.RecordFieldCell">
+            <summary>
+            Field cell in a non-alternate record row.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.TreeGridTableCellType.AlternateRecordFieldCell">
+            <summary>
+            Field cell in an alternate record row.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.TreeGridTableCellType.AlternateRecordRowHeaderCell">
+            <summary>
+            Any header cell in an alternate record row.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.TreeGridTableCellType.EmptyCell">
+            <summary>
+            Empty cell 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.Export.TreeGridTableCellType.CaptionCell">
+            <summary>
+            Caption Cell
+            </summary>
+        </member>
+        <member name="P:TreeGridRowDetail.IsParnetRow">
+            <summary>
+            Gets or sets the isParentRow for particular record.	
+            </summary>
+            <value>isParentRow of particular record</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:TreeGridRowDetail.RowLevel">
+            <summary>
+            Gets or sets the level of particular record.	
+            </summary>
+            <value>level of particular record</value>
+            <remarks></remarks>
+        </member>
+        <member name="P:TreeGridRowDetail.ParentId">
+            <summary>
+            Gets or sets the parent ID of the record.	
+            </summary>
+            <value>Parent ID of the record</value>
+            <remarks></remarks>
+        </member>
+    </members>
+</doc>

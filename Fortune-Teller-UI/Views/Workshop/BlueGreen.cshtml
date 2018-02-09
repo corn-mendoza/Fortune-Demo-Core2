@@ -1,0 +1,104 @@
+﻿@using Syncfusion.JavaScript;
+@using Syncfusion.JavaScript.DataVisualization;
+@model CloudFoundryViewModel
+@{
+    ViewData["Title"] = "Zero Downtime";
+}
+<div class="panel-heading">
+    <div class="media">
+        <a class="pull-left" href="http://pivotal.io">
+            <img class="" src="~/images/icon_pivotal_generic@2x.png" title="Cloud Foundry" alt="PCF" width="40" height="40" />
+        </a>
+        <div class="media-body">
+            <h2 class="media-heading">Zero Downtime</h2>
+        </div>
+    </div>
+    <p class="lead">Blue/Green Application Deployments</p>
+    <p class="body-content">Deploy your application with no downtime and without impacting your customers.  Zero downtime Blue/Green application deployments are easy on PCF.  See how you can get your weekends back.</p>
+</div>
+<div class="row">
+    <div class="col-md-5">
+        <h4><font color="@ViewData["AppColor"]"><b>@Model.CloudFoundryApplication.ApplicationName</b></font></h4>
+        <h5>Instance Index: @Model.CloudFoundryApplication.Instance_Index</h5>
+        <h5>Instance IP: @Model.CloudFoundryApplication.InstanceIP</h5>
+        <h5>Instance ID: @Model.CloudFoundryApplication.InstanceId</h5>
+        <h5>Instance Port: @Model.CloudFoundryApplication.Port</h5>
+        <h5>URL</h5>
+        @foreach (var uri in Model.CloudFoundryApplication.Application_Uris)
+        {
+            <h6>@uri</h6>
+        }
+        <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="BlueGreen">Refresh &raquo;</a>
+        <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="Index">Reset Stats &raquo;</a>
+    </div>
+    @foreach (var _key in Model.AppInstanceCounts.Keys)
+    {
+        <div class="col-md-3">
+            <center>
+                <ej-circular-gauge id="CircularGauge@_key" is-responsive="true" load="loadGaugeTheme" background-color="transparent" radius="90" width="180" height="170">
+                    <e-circular-scale-collections>
+                        <e-circular-scales radius="70" minimum="0" maximum="1000" major-interval-value="200" minor-interval-value="100" show-scale-bar="true" size="1" show-ranges="true">
+                            <e-pointer-cap radius="10"></e-pointer-cap>
+                            <e-circular-range-collections>
+                                <e-circular-ranges size="5" distance-from-scale="-30" start-value="0" end-value="1000" background-color="@ViewData["AppColor"]"></e-circular-ranges>
+                            </e-circular-range-collections>
+                            <e-pointer-collections>
+                                <e-pointers value="@Convert.ToDouble(Model.AppInstanceCounts.GetValueOrDefault(_key, 0));" length="60" width="8" show-back-needle="true" back-needle-length="15"></e-pointers>
+                            </e-pointer-collections>
+                        </e-circular-scales>
+                    </e-circular-scale-collections>
+                </ej-circular-gauge>
+                <h4>@Model.AppInstanceCounts.GetValueOrDefault(_key, 0)</h4>
+                <h5><b>Instance @_key</b></h5>
+            </center>
+        </div>
+    }
+</div>
+<div class="clearfix"></div>
+<div class="row">
+    <div class="col-lg-12">
+        <h4>Instructions</h4>
+        <p class="panel-body">
+            To see Blue Green deployments demonstrated, push a second copy of this application using a different application name (i.e. <i>cf push workshopui-green</i>) and then map the route for this application to the newly pushed application. 
+            If you use the word "green", "purple", "pink", "yellow", or "red", this application will change the color for the newly mapped application.  By default, the interface will display a "blue" color for highlights.
+        </p>
+    </div>
+</div>
+<style class="cssStyles">
+    .tooltipDivcontainer {
+        background-color: #E94649;
+        color: white;
+        width: 130px;
+    }
+
+    #Tooltip > div:first-child {
+        float: left;
+    }
+
+    #Tooltip #value {
+        float: right;
+        height: 50px;
+        width: 63px;
+    }
+
+        #Tooltip #value > div {
+            margin: 5px 5px 5px 5px;
+        }
+
+    #Tooltip #efpercentage {
+        font-size: 20px;
+        font-family: segoe ui;
+    }
+
+    #Tooltip #ef {
+        font-size: 12px;
+        font-family: segoe ui;
+    }
+
+    #eficon {
+        background-image: url("../images/chart/eficon.png");
+        height: 60px;
+        width: 60px;
+        background-repeat: no-repeat;
+    }
+</style>

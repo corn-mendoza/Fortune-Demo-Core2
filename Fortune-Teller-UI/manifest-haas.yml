@@ -1,0 +1,15 @@
+﻿---
+applications:
+- name: workshopui
+  buildpack: https://github.com/cloudfoundry/dotnet-core-buildpack
+  instance: 2
+  env:
+    ASPNETCORE_ENVIRONMENT: HaaS
+  services:
+   - myConfigServer
+   - myDiscoveryService
+   - myRedisService
+   - myHystrixService
+   - myOAuthService
+   - myRabbitMQService
+   - AttendeeContext

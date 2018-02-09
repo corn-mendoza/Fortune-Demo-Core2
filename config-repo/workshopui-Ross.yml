@@ -1,0 +1,14 @@
+ConnectionStrings:
+    AttendeeContext: Server=pa-workshop.database.windows.net;Initial Catalog=AttendeeDB-S1;User ID=dbadmin;Password=PCF!Password;
+workshopConfig:
+    AppsManagerUrl: https://apps.sys.cloud.rick-ross.com
+    AppBaseUrl: https://apps.sys.cloud.rick-ross.com/organizations/70992892-89ce-4331-ae1f-f03e80fadbfc/spaces/23000c9f-27c0-4e32-abc4-e2f32d7bb291/applications/
+    EurekaDashboardUrl: https://eureka-67aa46d1-5a92-4d46-b54c-81ad2dc1446d.app.cloud.rick-ross.com/
+    HystrixDashboardUrl: https://hystrix-6e7fbf4d-d726-4991-8238-e8cdfd05a339.app.cloud.rick-ross.com/hystrix/monitor?stream=https%3A%2F%2Fturbine-6e7fbf4d-d726-4991-8238-e8cdfd05a339.app.cloud.rick-ross.com%2Fturbine.stream
+    OpsManagerUrl: https://opsmgr.cloud.rick-ross.com
+    ConfigServerUrl: https://spring-cloud-broker.app.cloud.rick-ross.com/dashboard/p-config-server/4856418d-f0ec-4218-bfda-2997923b4315
+    ConfigRepoUrl: https://github.com/corn-pivotal/configserver-repo
+    PCFMetricsUrl: https://metrics.sys.cloud.rick-ross.com/apps/11e54744-5681-42fe-812d-0dc2ddc51a93/dashboard
+    ExchangeUrl: https://exchangeui-antinodal-dehorter.app.cloud.rick-ross.com/
+    GithubRepoUrl: https://github.com/corn-pivotal/Workshop-v3
+    ManifestUrl: https://github.com/corn-pivotal/Workshop-v3/blob/master/Workshop-UI/manifest-ross.yml

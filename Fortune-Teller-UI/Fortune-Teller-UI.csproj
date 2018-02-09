@@ -1,0 +1,86 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>Workshop_UI</RootNamespace>
+    <Company>Pivotal Software, Inc.</Company>
+    <Product>Workshop Demo</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" />
+    <PackageReference Include="Pivotal.Extensions.Configuration.ConfigServerCore" Version="2.0.0-dev-00118" />
+    <PackageReference Include="Pivotal.Discovery.ClientCore" Version="2.0.0-dev-00114" />
+    <PackageReference Include="Steeltoe.CloudFoundry.ConnectorCore" version="2.0.0-dev-00197" />
+    <PackageReference Include="Steeltoe.Security.DataProtection.RedisCore" version="2.0.0-dev-00081" />
+    <PackageReference Include="Steeltoe.Security.Authentication.CloudFoundryCore" Version="2.0.0-dev-00081" />
+    <PackageReference Include="Steeltoe.Management.CloudFoundryCore" Version="2.0.0-dev-00055" />
+    <PackageReference Include="GitInfo" Version="2.0.8" />
+    <PackageReference Include="Syncfusion.Compression.NETStandard20" Version="15.4200.0.17" />
+    <PackageReference Include="Syncfusion.EJ.Pivot" Version="15.4600.0.17" />
+    <PackageReference Include="Syncfusion.XlsIO.NETStandard20" Version="15.4200.0.17" />
+    <PackageReference Include="Syncfusion.DocIO.NETStandard20" Version="15.4200.0.17" />
+    <PackageReference Include="Syncfusion.EJ.AspNet.Core" Version="15.4600.0.17" />
+    <PackageReference Include="Syncfusion.Presentation.NETStandard20" Version="15.4200.0.17" />
+    <PackageReference Include="Syncfusion.Pdf.NETStandard20" Version="15.4200.0.17" />
+    <PackageReference Include="Syncfusion.PMML.NETStandard20" Version="15.4200.0.17" />
+    <PackageReference Include="Syncfusion.EJ.Export" Version="15.4600.0.17" />
+    <PackageReference Include="RabbitMQ.Client" Version="5.1.0-pre2" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(BUILD)' == ''">
+    <PackageReference Include="Steeltoe.CircuitBreaker.HystrixCore" Version="2.0.0-dev-00084" />
+    <PackageReference Include="Steeltoe.CircuitBreaker.Hystrix.MetricsStreamCore" Version="2.0.0-dev-00084" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(BUILD)' == 'LOCAL'">
+    <PackageReference Include="Steeltoe.CircuitBreaker.HystrixCore" Version="2.0.0-dev-00081" />
+    <PackageReference Include="Steeltoe.CircuitBreaker.Hystrix.MetricsEventsCore" Version="2.0.0-dev-00081" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".bowerrc" />
+    <None Include="git.properties">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="manifest-windows.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="manifest.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="manifest-ross.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="manifest-haas.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Target Name="_GitProperties" AfterTargets="CoreCompile">
+    <WriteLinesToFile File="git.properties" Lines="git.remote.origin.url=$(GitRoot)" Overwrite="true" />
+    <WriteLinesToFile File="git.properties" Lines="git.build.version=$(GitBaseVersion)" Overwrite="false" />
+    <WriteLinesToFile File="git.properties" Lines="git.commit.id.abbrev=$(GitCommit)" Overwrite="false" />
+    <WriteLinesToFile File="git.properties" Lines="git.commit.id=$(GitSha)" Overwrite="false" />
+    <WriteLinesToFile File="git.properties" Lines="git.tags=$(GitTag)" Overwrite="false" />
+    <WriteLinesToFile File="git.properties" Lines="git.branch=$(GitBranch)" Overwrite="false" />
+    <WriteLinesToFile File="git.properties" Lines="git.build.time=$([System.DateTime]::Now.ToString('O'))" Overwrite="false" />
+    <WriteLinesToFile File="git.properties" Lines="git.build.user.name=$([System.Environment]::GetEnvironmentVariable('USERNAME'))" Overwrite="false" />
+    <WriteLinesToFile File="git.properties" Lines="git.build.host=$([System.Environment]::GetEnvironmentVariable('COMPUTERNAME'))" Overwrite="false" />
+  </Target>
+  
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Fortune-Service-Client\Fortune-Service-Client.csproj" />
+    <ProjectReference Include="..\Order-Manager-Client\Order-Manager-Client.csproj" />
+    <ProjectReference Include="..\Pivotal-Utilities\Pivotal-Utilities.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+  
+</Project>

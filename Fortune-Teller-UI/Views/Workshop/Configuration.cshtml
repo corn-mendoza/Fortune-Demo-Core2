@@ -1,0 +1,83 @@
+﻿@model CloudFoundryViewModel
+@{
+    ViewData["Title"] = "Configuration";
+}
+<div class="panel-heading">
+    <div class="media">
+        <a class="pull-left" href="http://pivotal.io">
+            <img class="" src="~/images/icon_pivotal_generic@2x.png" title="Cloud Foundry" alt="PCF" width="40" height="40" />
+        </a>
+        <div class="media-body">
+            <h2 class="media-heading">Configuration for .NET</h2>
+        </div>
+    </div>
+    <p class="lead">Managing configuration information for applications</p>
+    <p class="body-content">Strict separation of config from code” has become a cloud mandate, but that begs the question, where do you put it? And once you’ve externalized your config from your app, how do you track who changed what, when? Steeltoe leverages Spring Cloud Config Server so you can store your app’s config in a centralized, version-controlled git repo and then load it at runtime.</p>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <a class="btn btn-default" href="@(Model.ConfigData.AppBaseUrl)+ @ViewData["appId"])/settings" target="_blank"><b>Environment Variables</b></a>
+        <a class="btn btn-default" href="@(Model.ConfigData.ManifestUrl)" target="_blank"><b>Manifest File</b></a>
+        <a class="btn btn-default" href="@(Model.ConfigData.GithubRepoUrl)/tree/master/Workshop-UI/appsettings.json" target="_blank"><b>appsettings.json</b></a>
+        <a class="btn btn-default" href="@Model.ConfigData.ConfigServerUrl" target="_blank"><b>Config Server</b></a>
+        <a class="btn btn-default" href="@Model.ConfigData.ConfigRepoUrl" target="_blank"><b>Config Repo</b></a>
+        <a class="btn btn-default" href="@(Model.ConfigData.AppBaseUrl)+ @ViewData["appId"])/settings" target="_blank"><b>Build Info</b></a>
+        <a class="btn btn-default" href="@(Model.ConfigData.GithubRepoUrl)/blob/master/Workshop-UI/git.properties" target="_blank"><b>Git Properties</b></a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <h4><b>Application Details</b></h4>
+        <h5>App ID: @ViewData["appId"]</h5>
+        <h5>App Name: @ViewData["appName"]     <b>&laquo;--<i>This name is used for loading configurations if the config name is not set below</i></b></h5>
+        <h5>App URI: @ViewData["uri0"]</h5>
+        <h5>Disk Quota: @ViewData["disk"]</h5>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <h4><b>Config Server Settings</b></h4>            
+        @*<h4><a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="Reload">Reload</a></h4>*@
+        <h5>spring:cloud:config:uri = @ViewData["Uri"]</h5>
+        <h5>spring:cloud:config:enabled = @ViewData["Enabled"]</h5>
+        <h5>spring:cloud:config:env = @ViewData["Environment"]     <b>&laquo;--<i>Environment name that has been loaded</i></b></h5>
+        <h5>spring:cloud:config:failFast = @ViewData["FailFast"]</h5>
+        <h5>spring:cloud:config:name = @ViewData["Name"]     <b>&laquo;--<i>Change this value to the same application name</i></b></h5>
+        <h5>spring:cloud:config:label = @ViewData["Label"]</h5>
+        <h5>spring:cloud:config:username = @ViewData["Username"]</h5>
+        <h5>spring:cloud:config:password = @ViewData["Password"]</h5>
+        <h5>spring:cloud:config:access_token_uri = @ViewData["AccessTokenUri"]</h5>
+        <h5>spring:cloud:config:client_id = @ViewData["ClientId"]</h5>
+        <h5>spring:cloud:config:client_secret = @ViewData["ClientSecret"]</h5>
+        <h5>spring:cloud:config:validate_certificates = @ViewData["ValidateCertificates"]</h5>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <h4><b>Config Server Data</b></h4>
+        <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="ReloadConfig">Reload</a>
+        <h5>AppBaseUrl = @Model.ConfigData.AppBaseUrl</h5>
+        <h5>AppsManagerUrl = @Model.ConfigData.AppsManagerUrl</h5>
+        <h5>ConfigRepoUrl = @Model.ConfigData.ConfigRepoUrl</h5>
+        <h5>ConfigServerUrl = @Model.ConfigData.ConfigServerUrl</h5>
+        <h5>EurekaDashboardUrl = @Model.ConfigData.EurekaDashboardUrl</h5>
+        <h5>ExchangeUrl = @Model.ConfigData.ExchangeUrl</h5>
+        <h5>GithubRepoUrl = @Model.ConfigData.GithubRepoUrl</h5>
+        <h5>HystrixDashboardUrl = @Model.ConfigData.HystrixDashboardUrl</h5>
+        <h5>ManifestUrl = @Model.ConfigData.ManifestUrl</h5>
+        <h5>OpsManagerUrl = @Model.ConfigData.OpsManagerUrl</h5>
+        <h5>PCFMetricsUrl = @Model.ConfigData.PCFMetricsUrl</h5>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <h4><b>Connection Strings</b></h4>
+        <h5>@ViewData["sourceString"]     <b>&laquo;--<i>Connection string was loaded from this source</i></b></h5>
+        <h6>@ViewData["jsonDBString"]</h6>
+    </div>
+</div>

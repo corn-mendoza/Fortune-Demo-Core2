@@ -1,0 +1,85 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #037366;
+  border-color: #2e6da4;
+}
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.navbar-inverse {
+  background-color: #037366;
+  border-color: #080808;
+}
+.navbar-inverse .navbar-brand {
+  color: #f9f9f9;
+}
+.navbar-inverse .navbar-text {
+  color: #f9f9f9;
+}
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+  color: #f9f9f9;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #f9f9f9;
+}
+.navbar-inverse .navbar-link {
+  color: #f9f9f9;
+}
+.navbar-inverse .btn-link {
+  color: #f9f9f9;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+#reject {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+    #reject.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }

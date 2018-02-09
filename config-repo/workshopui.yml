@@ -1,0 +1,25 @@
+eureka:
+  client:
+    shouldRegisterWithEureka: false
+hystrix:
+  stream:
+    validate_certificates: false
+fortuneService:
+  scheme: http
+  address: fortuneservice
+  randomFortunePath: api/fortunes/random
+  allFortunesPath: api/fortunes/all
+ConnectionStrings:
+    AttendeeContext: Server=pa-workshop.database.windows.net;Initial Catalog=AttendeeDB-S1;User ID=dbadmin;Password=PCF!Password;
+workshopConfig:
+    AppsManagerUrl: https://apps.sys.islands.cloud
+    AppBaseUrl: https://apps.sys.islands.cloud/organizations/21c9ef98-0008-4f6c-a9a8-e7183869992d/spaces/c6781755-3f7f-411f-9f80-8bcd5dc6c04e/applications/
+    EurekaDashboardUrl: https://eureka-c177404f-f62e-4747-9a2b-e617b7301a86.apps.islands.cloud/
+    HystrixDashboardUrl: https://hystrix-9e3d8c20-ccea-4484-90c3-b1fb316b5682.apps.islands.cloud/hystrix/monitor?stream=https%3A%2F%2Fturbine-9e3d8c20-ccea-4484-90c3-b1fb316b5682.apps.islands.cloud%2Fturbine.stream
+    OpsManagerUrl: https://opsmgr.islands.cloud
+    ConfigServerUrl: https://spring-cloud-broker.apps.islands.cloud/dashboard/p-config-server/94210da6-7cee-4879-a97b-cd2750e1c1d4
+    ConfigRepoUrl: https://github.com/corn-pivotal/configserver-repo
+    PCFMetricsUrl: https://metrics.sys.islands.cloud/apps/
+    ExchangeUrl: https://exchangeui-alcidine-trichinization.apps.islands.cloud/
+    GithubRepoUrl: https://github.com/corn-pivotal/Workshop-v3
+    ManifestUrl: https://github.com/corn-pivotal/Workshop-v3/blob/master/Workshop-UI/manifest.yml

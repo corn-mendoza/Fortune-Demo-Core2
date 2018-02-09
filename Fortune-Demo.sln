@@ -1,0 +1,95 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fortune-Teller-Service", "Fortune-Teller-Service\Fortune-Teller-Service.csproj", "{1F534DE2-0A76-40FC-A350-A18F669EBA77}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{A6F8950D-532F-4677-8A34-3C364DF65B17}"
+	ProjectSection(SolutionItems) = preProject
+		scripts\config-server.json = scripts\config-server.json
+		scripts\createCloudFoundryServices.cmd = scripts\createCloudFoundryServices.cmd
+		scripts\createCloudFoundryServices.sh = scripts\createCloudFoundryServices.sh
+		scripts\deleteCloudFoundryServices.cmd = scripts\deleteCloudFoundryServices.cmd
+		scripts\deleteCloudFoundryServices.sh = scripts\deleteCloudFoundryServices.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config-repo", "config-repo", "{CBC04407-7B9D-43E3-B417-84A82EDA7A78}"
+	ProjectSection(SolutionItems) = preProject
+		config-repo\application-Development.yml = config-repo\application-Development.yml
+		config-repo\application.yml = config-repo\application.yml
+		config-repo\fortuneService.yml = config-repo\fortuneService.yml
+		config-repo\workshopui.yml = config-repo\workshopui.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{64A63130-7B13-4DE9-AB54-65610DF7C472}"
+	ProjectSection(SolutionItems) = preProject
+		config-server.json = config-server.json
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pivotal-Utilities", "Pivotal-Utilities\Pivotal-Utilities.csproj", "{DC264055-A3F3-4214-A24E-F7900B5F41A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{54328253-C500-40DF-89DD-A20635F0EB1C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D35C783F-A337-4FB4-939D-22B3E8F3D763}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilities", "Utilities", "{3B9A2239-E7B3-499D-9831-2F228B02BB1B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{769FB96C-C49F-48FA-9E90-E8FA353E4BEE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fortunes", "Fortunes", "{1E46AAD8-BAB6-43D7-9378-4DCADE68BC90}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fortune-Teller-Models", "Fortune-Teller-Models\Fortune-Teller-Models.csproj", "{6512C1EA-2991-4B1B-AB91-9F196610FE61}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fortune-Service-Client", "Fortune-Service-Client\Fortune-Service-Client.csproj", "{5BBF21B6-94FB-44E4-A80A-CBA3A97174AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Orders", "Orders", "{5B5C67CE-86DF-4C81-BB1C-B13B73EFD5CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{4341127A-379A-4E1F-AE0A-C5FE9DC9321F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fortune-Teller-UI", "Fortune-Teller-UI\Fortune-Teller-UI.csproj", "{F42694F5-CB65-423D-80FB-2109DDC4FAC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F534DE2-0A76-40FC-A350-A18F669EBA77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F534DE2-0A76-40FC-A350-A18F669EBA77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F534DE2-0A76-40FC-A350-A18F669EBA77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F534DE2-0A76-40FC-A350-A18F669EBA77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC264055-A3F3-4214-A24E-F7900B5F41A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC264055-A3F3-4214-A24E-F7900B5F41A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC264055-A3F3-4214-A24E-F7900B5F41A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC264055-A3F3-4214-A24E-F7900B5F41A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6512C1EA-2991-4B1B-AB91-9F196610FE61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6512C1EA-2991-4B1B-AB91-9F196610FE61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6512C1EA-2991-4B1B-AB91-9F196610FE61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6512C1EA-2991-4B1B-AB91-9F196610FE61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BBF21B6-94FB-44E4-A80A-CBA3A97174AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BBF21B6-94FB-44E4-A80A-CBA3A97174AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BBF21B6-94FB-44E4-A80A-CBA3A97174AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BBF21B6-94FB-44E4-A80A-CBA3A97174AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F42694F5-CB65-423D-80FB-2109DDC4FAC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F42694F5-CB65-423D-80FB-2109DDC4FAC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F42694F5-CB65-423D-80FB-2109DDC4FAC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F42694F5-CB65-423D-80FB-2109DDC4FAC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1F534DE2-0A76-40FC-A350-A18F669EBA77} = {D35C783F-A337-4FB4-939D-22B3E8F3D763}
+		{DC264055-A3F3-4214-A24E-F7900B5F41A5} = {3B9A2239-E7B3-499D-9831-2F228B02BB1B}
+		{1E46AAD8-BAB6-43D7-9378-4DCADE68BC90} = {769FB96C-C49F-48FA-9E90-E8FA353E4BEE}
+		{6512C1EA-2991-4B1B-AB91-9F196610FE61} = {1E46AAD8-BAB6-43D7-9378-4DCADE68BC90}
+		{5BBF21B6-94FB-44E4-A80A-CBA3A97174AF} = {54328253-C500-40DF-89DD-A20635F0EB1C}
+		{5B5C67CE-86DF-4C81-BB1C-B13B73EFD5CC} = {769FB96C-C49F-48FA-9E90-E8FA353E4BEE}
+		{F42694F5-CB65-423D-80FB-2109DDC4FAC3} = {4341127A-379A-4E1F-AE0A-C5FE9DC9321F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA8851C4-8497-4082-8285-61E762CCB310}
+	EndGlobalSection
+EndGlobal

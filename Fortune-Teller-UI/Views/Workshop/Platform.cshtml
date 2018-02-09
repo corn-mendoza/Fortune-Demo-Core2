@@ -1,0 +1,112 @@
+﻿@using Syncfusion.JavaScript;
+@using Syncfusion.JavaScript.DataVisualization;
+@model CloudFoundryViewModel
+@{
+    ViewData["Title"] = "Platform";
+}
+<div class="panel-heading">
+    <div class="media">
+        <a class="pull-left" href="http://pivotal.io">
+            <img class="" src="~/images/icon_pivotal_generic@2x.png" title="Cloud Foundry" alt="PCF" width="40" height="40" />
+        </a>
+        <div class="media-body">
+            <h2 class="media-heading">The Platform for .NET</h2>
+        </div>
+    </div>
+    <p class="lead">Secure, Resilient, and Scalable</p>
+    <p class="body-content">Managing IIS can be a pain. PCF provides a enterprise ready platform for your .NET applications.</p>
+</div>
+<div class="row">
+    <div class="col-md-5">
+        <h4><b>Web Application</b></h4>
+        <h5>Application: @Model.CloudFoundryApplication.ApplicationName</h5>
+        <h5>Application ID: @Model.CloudFoundryApplication.ApplicationId</h5>
+        <h5>Instance Index: @Model.CloudFoundryApplication.Instance_Index</h5>
+        <h5>Instance IP: @Model.CloudFoundryApplication.InstanceIP</h5>
+        <h5>Instance ID: @Model.CloudFoundryApplication.InstanceId</h5>
+        <h5>Instance Port: @Model.CloudFoundryApplication.Port</h5>
+        <h5>URL</h5>
+        @foreach (var uri in Model.CloudFoundryApplication.Application_Uris)
+    {
+        <h6>@uri</h6>
+}
+        <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="Platform">Refresh &raquo;</a>
+        <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="ResetApplicationStats">Reset Stats &raquo;</a>
+        <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="Kill">Kill Instance &raquo;</a>
+    </div>
+    @foreach (var _key in Model.AppInstanceCounts.Keys)
+    {
+        <div class="col-md-3">
+            <center>
+                <ej-circular-gauge id="CircularGauge@_key" is-responsive="true" load="loadGaugeTheme" background-color="transparent" radius="90" width="180" height="170">
+                    <e-circular-scale-collections>
+                        <e-circular-scales radius="70" minimum="0" maximum="1000" major-interval-value="200" minor-interval-value="100" show-scale-bar="true" size="1" show-ranges="true">
+                            <e-pointer-cap radius="10"></e-pointer-cap>
+                            <e-circular-range-collections>
+                                <e-circular-ranges size="5" distance-from-scale="-30" start-value="0" end-value="900" ></e-circular-ranges>
+                                <e-circular-ranges size="5" distance-from-scale="-30" start-value="900" end-value="1000" background-color="red">
+                                </e-circular-ranges>
+                                <e-circular-ranges size="5" distance-from-scale="-30" start-value="800" end-value="900" background-color="yellow">
+                                </e-circular-ranges>
+                            </e-circular-range-collections>
+                            <e-pointer-collections>
+                                <e-pointers value="@Convert.ToDouble(Model.AppInstanceCounts.GetValueOrDefault(_key, 0));" length="60" width="8" show-back-needle="true" back-needle-length="15"></e-pointers>
+                            </e-pointer-collections>
+                        </e-circular-scales>
+                    </e-circular-scale-collections>
+                </ej-circular-gauge>
+                <h4>@Model.AppInstanceCounts.GetValueOrDefault(_key, 0)</h4>
+                <h5><b>Instance @_key</b></h5>
+            </center>
+        </div>
+    }
+</div>
+<div class="clearfix"><hr/></div>
+<div class="row">
+    <div class="col-md-12">
+        <a class="btn btn-default" href="@(Model.ConfigData.AppBaseUrl+Model.CloudFoundryApplication.ApplicationId)/logs" target="_blank"><b>Logging</b></a>
+        <a class="btn btn-default" href="@(Model.ConfigData.AppBaseUrl+Model.CloudFoundryApplication.ApplicationId)/trace" target="_blank"><b>Request Tracing</b></a>
+        <a class="btn btn-default" href="@(Model.ConfigData.PCFMetricsUrl+Model.CloudFoundryApplication.ApplicationId)" target="_blank"><b>PCF Metrics</b></a>
+        <a class="btn btn-default" href="@(Model.ConfigData.AppBaseUrl+Model.CloudFoundryApplication.ApplicationId)" target="_blank"><b>Health Contributers</b></a>
+        <a class="btn btn-default" href="@(Model.ConfigData.GithubRepoUrl)/blob/master/Workshop-UI/SqlServerHealthContributor.cs" target="_blank"><b>Source Code</b></a>
+        <a class="btn btn-default" href="@(Model.ConfigData.AppBaseUrl+Model.CloudFoundryApplication.ApplicationId)/tasks" target="_blank"><b>Tasks and Jobs</b></a>
+    </div>
+</div>
+<style class="cssStyles">
+    .tooltipDivcontainer {
+        background-color: #E94649;
+        color: white;
+        width: 130px;
+    }
+
+    #Tooltip > div:first-child {
+        float: left;
+    }
+
+    #Tooltip #value {
+        float: right;
+        height: 50px;
+        width: 63px;
+    }
+
+        #Tooltip #value > div {
+            margin: 5px 5px 5px 5px;
+        }
+
+    #Tooltip #efpercentage {
+        font-size: 20px;
+        font-family: segoe ui;
+    }
+
+    #Tooltip #ef {
+        font-size: 12px;
+        font-family: segoe ui;
+    }
+
+    #eficon {
+        background-image: url("../images/chart/eficon.png");
+        height: 60px;
+        width: 60px;
+        background-repeat: no-repeat;
+    }
+</style>

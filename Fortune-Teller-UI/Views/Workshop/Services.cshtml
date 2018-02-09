@@ -1,0 +1,141 @@
+﻿@using Syncfusion.JavaScript;
+@using Syncfusion.JavaScript.DataVisualization;
+@model CloudFoundryViewModel
+@{
+    ViewData["Title"] = "Services";
+}
+<div class="panel-heading">
+    <div class="media">
+        <a class="pull-left" href="http://pivotal.io">
+            <img class="" src="~/images/icon_pivotal_generic@2x.png" title="Cloud Foundry" alt="PCF" width="40" height="40" />
+        </a>
+        <div class="media-body">
+            <h2 class="media-heading">Cloud Patterns for .NET</h2>
+        </div>
+    </div>
+    <p class="lead">Cloud Native Design Patterns using Spring Cloud Services and Steeltoe</p>
+    <p class="body-content">Designing applications to run natively in the cloud can be hard. Steeltoe can help developers quickly implement these design patterns by leveraging configuration services, service discovery, circuit breakers, and management services available in Spring Cloud Services.</p>
+</div>
+<div class="panel-primary" align="center">
+    <h3>Your New Fortune sent from the Fortune Service</h3>
+    <h4><i>@ViewData["MyFortune"]</i></h4>
+</div>
+<div class="media-object"><hr /></div>
+<div class="row">
+    <div class="col-md-6">
+        <h4><b>Service Information</b></h4>
+        <h5>Fortune Service Instance: @ViewData["FortuneIndex"]</h5>
+        <b><h5>Request URL</h5></b>
+        <h5>@ViewData["FortuneUrl"]</h5>
+        <b><h5>Service Discovery URL</h5></b>
+        <h5>@ViewData["FortuneDiscoveryUrl"]</h5>
+        <div class="panel-group">
+            <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="Refresh">Refresh</a>
+            <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="ResetServiceStats">Reset Stats</a>
+            <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="CreateLoad">Create Load</a>
+        </div>
+        <div class="panel-group">
+            <a class="btn btn-default" href="@Model.ConfigData.HystrixDashboardUrl" target="_blank">Hystrix Dashboard &raquo;</a>
+            <a class="btn btn-default" href="@Model.ConfigData.EurekaDashboardUrl" target="_blank">Eureka Dashboard &raquo;</a>
+        </div>
+        </div>
+        <div class="col-md-3">
+            <ej-chart id="container" can-resize="true" load="loadTheme">
+                <e-primary-x-axis start-from-zero="false" range-padding="@ChartRangePadding.Auto">
+                    <e-title text="Instance"></e-title>
+                    <e-range max="@(Model.GetServiceInstanceCounts().Max(w => w.Key) + 1);" min="-1" interval="1"></e-range>
+                </e-primary-x-axis>
+                <e-primary-y-axis range-padding="@ChartRangePadding.Auto" start-from-zero="false" label-format="{value}" edge-label-placement="None">
+                    <e-title text="Count"></e-title>
+                    <e-range min="0" max="@(Model.GetServiceInstanceCounts().Max(w=> w.Value) + 10);" interval="25"></e-range>
+                </e-primary-y-axis>
+                <e-title text="Fortune Service Instance Counts"></e-title>
+                <e-size height="300"></e-size>
+                <e-legend visible="true"></e-legend>
+                <e-common-series-options type="@SeriesType.Column" enable-animation="true">
+                    <e-marker shape="@ChartShape.None" visible="false">
+                        <e-border width="2"></e-border>
+                        <e-Size height="10" width="10"></e-Size>
+                    </e-marker>
+                </e-common-series-options>
+                <e-chart-series>
+                    <e-series name="Fortune Service" datasource="@Model.GetServiceInstanceCounts();" x-name="Key" y-name="Value" visible-on-legend="Visible">
+                        <e-marker>
+                            <e-data-label text-position="Middle" visible="true">
+                                <e-font color="white"></e-font>
+                            </e-data-label>
+                        </e-marker>
+                        <e-chart-tooltip visible="true" template="Tooltip"></e-chart-tooltip>
+                    </e-series>
+                </e-chart-series>
+            </ej-chart>
+        </div>
+    </div>
+<div class="clearfix"></div>
+<div class="row">
+    <div class="col-md-4">
+        <h4>Last 10 Fortunes in Cache</h4>
+        <ul>
+            @foreach (var fortune in Model.FortuneHistory)
+            {
+                <li>@fortune</li>
+            }
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <h4>Current Bound Services</h4>
+        <ul>
+            @foreach (var service in Model.CloudFoundryServices.ServicesList)
+            {
+                <li>@service.Label: @service.Name</li>
+            }
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <h4>Available Services from Service Discovery</h4>
+        <ul>
+            @foreach (var service in Model.discoveryClient.Services)
+            {
+                <li>@service</li>
+            }
+        </ul>
+    </div>
+</div>
+<style class="cssStyles">
+    .tooltipDivcontainer {
+        background-color: #E94649;
+        color: white;
+        width: 130px;
+    }
+
+    #Tooltip > div:first-child {
+        float: left;
+    }
+
+    #Tooltip #value {
+        float: right;
+        height: 50px;
+        width: 63px;
+    }
+
+        #Tooltip #value > div {
+            margin: 5px 5px 5px 5px;
+        }
+
+    #Tooltip #efpercentage {
+        font-size: 20px;
+        font-family: segoe ui;
+    }
+
+    #Tooltip #ef {
+        font-size: 12px;
+        font-family: segoe ui;
+    }
+
+    #eficon {
+        background-image: url("../images/chart/eficon.png");
+        height: 60px;
+        width: 60px;
+        background-repeat: no-repeat;
+    }
+</style>
