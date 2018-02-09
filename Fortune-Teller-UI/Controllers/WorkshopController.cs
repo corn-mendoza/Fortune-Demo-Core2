@@ -79,6 +79,18 @@ namespace Workshop_UI.Controllers
                 fortunes));
         }
 
+        public IActionResult Workshop()
+        {
+            _logger?.LogDebug("Workshop");
+            return View(new CloudFoundryViewModel(
+                CloudFoundryApplication == null ? new CloudFoundryApplicationOptions() : CloudFoundryApplication,
+                CloudFoundryServices == null ? new CloudFoundryServicesOptions() : CloudFoundryServices,
+                IConfigServerData.Value,
+                discoveryClient,
+                appInstCount,
+                srvInstCount,
+                fortunes));
+        }
         public IActionResult Steeltoe()
         {
             _logger?.LogDebug("Steeltoe");
