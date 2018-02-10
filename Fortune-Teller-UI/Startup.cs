@@ -181,6 +181,30 @@ namespace Workshop_UI
                 app.UseExceptionHandler("/Workshop/Error");
             }
 
+            // Perform some database initialisation.
+            using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
+            {
+                var dbContext = serviceScope.ServiceProvider.GetService<AttendeeContext>();
+
+                // Database.Migrate() will perform a migration of the database. This will ensure that the target database
+                // is in sync with current context model snapshot found in the Migrations folder.
+                // The alternative is to use EnsureCreated(). This will create a database and tables, if not existent on server.
+                // However, consequently this skips migration altogether. Future migrations will not be possible
+                // and one must issue EnsureDeleted() each time at the end to pull down the database.  
+                // Therefore use EnsureCreated()/EnsureDeleted() for testing/development purposes only.
+                // Note: On CF, it appears that EnsureDeleted may not work. For MySql dbs, it tries to 
+                // access the 'mysql' database and fails because our random bound user (via cf bind-service) cannot 
+                // this internal database.
+
+                // For clarity and compatibility, we'll stick to Database.Migrate()
+                // We do migrate here because potentially, one would need to initialise
+                // a database on CF that may only be internal to CF or do further migrations in future. 
+                // This will require a snapshot to be created first via dotnet ef migrations add <somename>.  
+                // If access to CF database is not possible, point to a local database first.
+
+                dbContext.Database.Migrate();
+            }
+
             app.UseStaticFiles();
 
             // Lab11 Start
