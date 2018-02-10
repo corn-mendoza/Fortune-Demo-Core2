@@ -1,6 +1,6 @@
 ﻿---
 applications:
-- name: workshopui
+- name: fortuneui
   buildpack: https://github.com/cloudfoundry/dotnet-core-buildpack
   instance: 2
   env:

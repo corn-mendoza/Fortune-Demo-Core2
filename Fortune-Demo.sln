@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config-repo", "config-repo"
 		config-repo\application-Development.yml = config-repo\application-Development.yml
 		config-repo\application.yml = config-repo\application.yml
 		config-repo\fortuneService.yml = config-repo\fortuneService.yml
-		config-repo\workshopui.yml = config-repo\workshopui.yml
+		config-repo\fortuneui.yml = config-repo\fortuneui.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{64A63130-7B13-4DE9-AB54-65610DF7C472}"
