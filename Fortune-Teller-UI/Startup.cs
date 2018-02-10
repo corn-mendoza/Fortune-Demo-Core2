@@ -1,4 +1,4 @@
-﻿
+﻿using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -6,6 +6,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+using Pivotal.Helper;
+using Workshop_UI.Models;
+
+using Pivotal.Extensions.Configuration.ConfigServer;
 
 // Lab07 Start
 using Pivotal.Discovery.Client;
@@ -27,17 +32,11 @@ using Steeltoe.CircuitBreaker.Hystrix;
 // Lab11 Start
 using Steeltoe.Management.CloudFoundry;
 using Steeltoe.Extensions.Configuration.CloudFoundry;
-using System;
-using Workshop_UI.Models;
-using Microsoft.EntityFrameworkCore;
-using Pivotal.Extensions.Configuration.ConfigServer;
-using System.Linq;
-using Pivotal.Helper;
 using Steeltoe.Management.Endpoint.Health;
-using FortuneService.Client;
 // Lab11 End
 
-
+// Add Fortune Service Models
+using FortuneService.Client;
 
 namespace Workshop_UI
 {
@@ -81,8 +80,6 @@ namespace Workshop_UI
             services.AddConfiguration(Configuration);
 
             // Add for Service Options
-            //services.Configure<CloudFoundryServicesOptions>(Configuration);
-            //services.Configure<CloudFoundryApplicationOptions>(Configuration);
             services.ConfigureCloudFoundryOptions(Configuration);
             //
 
@@ -186,23 +183,7 @@ namespace Workshop_UI
             {
                 var dbContext = serviceScope.ServiceProvider.GetService<AttendeeContext>();
 
-                // Database.Migrate() will perform a migration of the database. This will ensure that the target database
-                // is in sync with current context model snapshot found in the Migrations folder.
-                // The alternative is to use EnsureCreated(). This will create a database and tables, if not existent on server.
-                // However, consequently this skips migration altogether. Future migrations will not be possible
-                // and one must issue EnsureDeleted() each time at the end to pull down the database.  
-                // Therefore use EnsureCreated()/EnsureDeleted() for testing/development purposes only.
-                // Note: On CF, it appears that EnsureDeleted may not work. For MySql dbs, it tries to 
-                // access the 'mysql' database and fails because our random bound user (via cf bind-service) cannot 
-                // this internal database.
-
-                // For clarity and compatibility, we'll stick to Database.Migrate()
-                // We do migrate here because potentially, one would need to initialise
-                // a database on CF that may only be internal to CF or do further migrations in future. 
-                // This will require a snapshot to be created first via dotnet ef migrations add <somename>.  
-                // If access to CF database is not possible, point to a local database first.
-
-                dbContext.Database.Migrate();
+                dbContext.Database.EnsureCreated();
             }
 
             app.UseStaticFiles();
