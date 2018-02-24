@@ -11,10 +11,13 @@ using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using Pivotal.Helper;
 using Pivotal.Utilities;
+using RabbitMQ.Client;
 using Steeltoe.Common.Discovery;
 using Steeltoe.Extensions.Configuration.CloudFoundry;
 using System;
 using System.Collections.Generic;
+using System.Net.Security;
+using System.Security.Authentication;
 using System.Threading.Tasks;
 using Workshop_UI.Models;
 using Workshop_UI.ViewModels.Workshop;
@@ -33,6 +36,7 @@ namespace Workshop_UI.Controllers
         IDistributedCache RedisCacheStore { get; set; }
         IConfiguration Config { get; set; }
         IConfigurationRoot ConfigRoot { get; set; }
+        ConnectionFactory ConnectionFactory { get; set; }
 
         SortedList<int, int> appInstCount = new SortedList<int, int>();
         SortedList<int, int> srvInstCount = new SortedList<int, int>();
@@ -49,6 +53,7 @@ namespace Workshop_UI.Controllers
             IConfiguration configApp,
             IConfigurationRoot configRoot,
             IDistributedCache cache,
+            [FromServices] ConnectionFactory connectionFactory,
             [FromServices] IDiscoveryClient client
             )
         {
@@ -64,6 +69,19 @@ namespace Workshop_UI.Controllers
             RedisCacheStore = cache;
             Config = configApp;
             ConfigRoot = configRoot;
+
+            // Set up RabbitMQ Connection
+            ConnectionFactory = connectionFactory;
+
+            SslOption opt = ConnectionFactory.Ssl;
+            if (opt != null && opt.Enabled)
+            {
+                opt.Version = SslProtocols.Tls | SslProtocols.Tls11 | SslProtocols.Tls12;
+
+                // Only needed if want to disable certificate validations
+                opt.AcceptablePolicyErrors = SslPolicyErrors.RemoteCertificateChainErrors |
+                    SslPolicyErrors.RemoteCertificateNameMismatch | SslPolicyErrors.RemoteCertificateNotAvailable;
+            }
         }
         
         public IActionResult Index()

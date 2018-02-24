@@ -38,6 +38,8 @@ using Steeltoe.Management.Endpoint.Health;
 // Add Fortune Service Models
 using FortuneService.Client;
 
+using Steeltoe.CloudFoundry.Connector.Rabbit;
+
 namespace Workshop_UI
 {
     public class Startup
@@ -163,6 +165,9 @@ namespace Workshop_UI
 
             services.AddDbContext<AttendeeContext>(options =>
                     options.UseSqlServer(dbString));
+
+            services.AddRabbitConnection(Configuration);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
