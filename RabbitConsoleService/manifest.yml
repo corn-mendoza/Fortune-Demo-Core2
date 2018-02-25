@@ -1,0 +1,12 @@
+﻿---
+applications:
+- name: rabbitservice
+  buildpack: https://github.com/cloudfoundry/dotnet-core-buildpack
+  instance: 1
+  health-check-type: process
+  no-route: true
+  env:
+    ASPNETCORE_ENVIRONMENT: Production
+  services:
+   - myConfigServer
+   - myRabbitMQService

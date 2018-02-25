@@ -17,8 +17,6 @@ namespace Fortune_Teller_UI.Controllers
 
         public MessagingController([FromServices] ConnectionFactory connectionFactory)
         {
-            ConnectionFactory = connectionFactory;
-
             // Set up RabbitMQ Connection
             ConnectionFactory = connectionFactory;
 
