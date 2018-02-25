@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using FortuneTeller.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Workshop_UI.Models;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Pivotal.Helper;
 using Pivotal.Utilities;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Workshop_UI.Controllers
+namespace FortuneTeller.Controllers
 {
     public class AttendeeController : Controller
     {

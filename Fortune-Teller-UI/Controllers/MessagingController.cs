@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RabbitMQ.Client;
 
-namespace Fortune_Teller_UI.Controllers
+namespace FortuneTeller.Controllers
 {
     public class MessagingController : Controller
     {

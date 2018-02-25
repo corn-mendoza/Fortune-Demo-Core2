@@ -2,7 +2,6 @@
 
 ## Overview
 This demo and accompanying source code is designed to help facilitate a deeper understanding of Pivotal Application Services, Spring Cloud Services, and Steeltoe.  The source code is based on two existing projects:
-1. [Steeltoe Workshop](https://github.com/SteeltoeOSS/Workshop) developed by Dave Tillman
 
 A live demonstration can be found [here](https://fortuneui.apps.islands.cloud/).  This project is still in development and will be updated regularly.
 
@@ -42,6 +41,7 @@ The following are some of the patterns used in development:
 - User and Service Security using OAuth and JWT methods
 - Application support for Blue Green Deployments
 - Continuous integration and deployment using Visual Studio Team Services
+- Messaging using RabbitMQ and Steeltoe connector
 
 ## Features
 The workshop application can be navigated through the home page links through the various topics. The workshop can also be used as a demo for the capabilities of PAS. The following areas are designed to support the navigation of many of the features of PAS, SCS, and Steeltoe.
@@ -77,6 +77,9 @@ Main demo application web application
 ### Fortune Teller Service
 Provides fortunes as a service used to demonstrate the circuit breaker and service discovery design patterns. 
 
+### RabbitConsoleService
+Example of a console application processing RabbitMQ message queues. 
+
 ### Fortune Service Client
 Provides a reusable client for accessing the fortune teller service.
 
@@ -96,8 +99,5 @@ This project is developed using Visual Studio 2017. To build this solution, clon
 
 ### Configuration
 Additional configuration instructions can be found in the content directory of this project.
-
-
-
 
 

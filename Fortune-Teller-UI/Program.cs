@@ -1,19 +1,12 @@
-﻿
-using System.IO;
+﻿using System.IO;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-
-// Lab06 Start
 using Pivotal.Extensions.Configuration.ConfigServer;
-// Lab06 End
-
-// Lab11 Start
 using Steeltoe.Extensions.Logging;
-// Lab11 End
 
-namespace Workshop_UI
+namespace FortuneTeller
 {
     public class Program
     {
@@ -34,11 +27,9 @@ namespace Workshop_UI
                     config.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                         .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
 
-                    // Lab06 Start
-                    config.AddConfigServer(env);
-                    // Lab06 End
-
                     config.AddEnvironmentVariables();
+
+                    config.AddConfigServer(env);
 
                     if (args != null)
                     {
@@ -49,11 +40,7 @@ namespace Workshop_UI
                 {
                     logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
                     logging.AddDebug();
-
-                    // Lab11 Start
                     logging.AddDynamicConsole(hostingContext.Configuration);
-                    // Lab11 End
-
                 })
                 .UseIISIntegration()
                 .UseDefaultServiceProvider((context, options) =>

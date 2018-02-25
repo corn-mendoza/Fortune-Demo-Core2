@@ -1,12 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FortuneTeller.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Steeltoe.Management.Endpoint.Health;
 using System;
 using System.Data.Common;
 using System.Data.SqlClient;
-using Workshop_UI.Models;
 
-namespace Workshop_UI
+namespace FortuneTeller
 {
     public class SqlServerHealthContributor : IHealthContributor
     {

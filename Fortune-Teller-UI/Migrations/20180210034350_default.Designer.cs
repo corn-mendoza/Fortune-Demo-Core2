@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
 using System;
-using Workshop_UI.Models;
+using FortuneTeller.Models;
 
-namespace Workshop_UI.Migrations
+namespace FortuneTeller.Migrations
 {
     [DbContext(typeof(AttendeeContext))]
     [Migration("20180210034350_default")]

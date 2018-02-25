@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Workshop_UI.Migrations
+namespace FortuneTeller.Migrations
 {
     public partial class @default : Migration
     {

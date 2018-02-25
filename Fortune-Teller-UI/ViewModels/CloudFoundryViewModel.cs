@@ -1,9 +1,9 @@
-﻿using Steeltoe.Common.Discovery;
+﻿using FortuneTeller.Models;
+using Steeltoe.Common.Discovery;
 using Steeltoe.Extensions.Configuration.CloudFoundry;
 using System.Collections.Generic;
-using Workshop_UI.Models;
 
-namespace Workshop_UI.ViewModels.Workshop
+namespace FortuneTeller.ViewModels.Workshop
 {
     public class CloudFoundryViewModel
     {

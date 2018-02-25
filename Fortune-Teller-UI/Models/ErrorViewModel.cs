@@ -1,6 +1,4 @@
-using System;
-
-namespace Workshop_UI.Models
+namespace FortuneTeller.Models
 {
     public class ErrorViewModel
     {

@@ -1,8 +1,6 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Pivotal.Helper
 {
@@ -228,6 +226,26 @@ namespace Pivotal.Helper
                 }
             }
             return null;
+        }
+
+        public static string GetConfigurationConnectionString(IConfiguration configuration, string dbName)
+        {
+            // Use the Bound Service for connection string if it is found in a User Provided Service
+            string sourceString = "appsettings.json/Config Server";
+            string dbString = configuration.GetConnectionString(dbName);
+
+            var cfe = new CFEnvironmentVariables();
+            var _connect = cfe.getConnectionStringForDbService("user-provided", dbName);
+            if (!string.IsNullOrEmpty(_connect))
+            {
+                sourceString = "User Provided Service";
+                configuration.GetConnectionString(dbName).Replace(dbString, _connect);
+                dbString = _connect;
+            }
+
+            Console.WriteLine($"{dbName} using connection string from {sourceString}");
+
+            return dbString;
         }
     }
 

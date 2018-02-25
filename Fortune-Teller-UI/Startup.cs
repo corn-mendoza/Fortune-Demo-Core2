@@ -1,46 +1,27 @@
-﻿using System;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.DataProtection;
+﻿using FortuneService.Client;
+using FortuneTeller.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.DataProtection;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using Pivotal.Helper;
-using Workshop_UI.Models;
-
-using Pivotal.Extensions.Configuration.ConfigServer;
-
-// Lab07 Start
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Pivotal.Discovery.Client;
-// Lab07 End
-
-// Lab08 Start
-using Steeltoe.CloudFoundry.Connector.Redis;
-using Steeltoe.Security.DataProtection;
-// Lab08 End
-
-// Lab10 Start
-using Steeltoe.Security.Authentication.CloudFoundry;
-// Lab10 End
-
-// Lab09 Start
+using Pivotal.Extensions.Configuration.ConfigServer;
+using Pivotal.Helper;
 using Steeltoe.CircuitBreaker.Hystrix;
-// Lab09 End
-
-// Lab11 Start
-using Steeltoe.Management.CloudFoundry;
-using Steeltoe.Extensions.Configuration.CloudFoundry;
-using Steeltoe.Management.Endpoint.Health;
-// Lab11 End
-
-// Add Fortune Service Models
-using FortuneService.Client;
-
 using Steeltoe.CloudFoundry.Connector.Rabbit;
+using Steeltoe.CloudFoundry.Connector.Redis;
+using Steeltoe.Extensions.Configuration.CloudFoundry;
+using Steeltoe.Management.CloudFoundry;
+using Steeltoe.Management.Endpoint.Health;
+using Steeltoe.Security.Authentication.CloudFoundry;
+using Steeltoe.Security.DataProtection;
+using System;
 
-namespace Workshop_UI
+namespace FortuneTeller
 {
     public class Startup
     {
@@ -58,7 +39,7 @@ namespace Workshop_UI
         {
             services.AddOptions();
 
-            // Lab08 Start
+            // Enable Redis function if not offline
             if (!Environment.IsDevelopment())
             {
                 // Use Redis cache on CloudFoundry to DataProtection Keys
@@ -67,15 +48,15 @@ namespace Workshop_UI
                     .PersistKeysToRedis()
                     .SetApplicationName("workshopui");
             }
-            // Lab08 End
+            // End Redis
 
-            // Lab05 Start
+            // Add service client library for calling the Fortune Service
             services.AddScoped<IFortuneService, FortuneServiceClient>();
-            // Lab05 End
+            // End add service client
 
-            // Lab05 Start
+            // Load Fortune Service Options 
             services.Configure<FortuneServiceOptions>(Configuration.GetSection("fortuneService"));
-            // Lab05 End
+            // End load Fortune Service
 
             // Workshop Configuration
             services.Configure<ConfigServerData>(Configuration.GetSection("workshopConfig"));
@@ -85,12 +66,11 @@ namespace Workshop_UI
             services.ConfigureCloudFoundryOptions(Configuration);
             //
 
-            // Lab07 Start
+            // Add Service Discovery
             services.AddDiscoveryClient(Configuration);
+            // End Service Discovery
 
-            // Lab07 End
-
-            // Lab08 Start
+            // Add Session Caching function
             if (Environment.IsDevelopment())
             {
                 services.AddDistributedMemoryCache();
@@ -100,9 +80,10 @@ namespace Workshop_UI
                 // Use Redis cache on CloudFoundry to store session data
                 services.AddDistributedRedisCache(Configuration);
             }
-            // Lab08 End
+            services.AddSession();
+            // End Session Cache
 
-            // Lab10 Start
+            // Add Single Sign-on functionality
             services.AddAuthentication((options) =>
             {
                 options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
@@ -122,52 +103,31 @@ namespace Workshop_UI
 
             });
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            // Lab10 End
+            // End Add SSO
 
-            // Lab09 Start
+            // Add Circuit Breaker function
             services.AddHystrixCommand<FortuneServiceCommand>("FortuneService", Configuration);
             services.AddHystrixMetricsStream(Configuration);
-            // Lab09 End
-
-            services.AddSession();
+            // End Add CB
 
             services.AddSingleton<IHealthContributor, SqlServerHealthContributor>();
 
-            // Lab11 Start
+            // Add Cloud Foundry Management actuator endpoint functions
             services.AddCloudFoundryActuators(Configuration);
-            // Lab11 End
+            // End CF Management
 
             services.AddMvc();
 
-            // Use the Bound Service for connection string if it is found in a User Provided Service
-            string sourceString = "appsettings.json";
-            string dbString = Configuration.GetConnectionString("AttendeeContext");
-            IConfigurationSection configurationSection = Configuration.GetSection("ConnectionStrings");
-            if (configurationSection != null)
-            {
-                if (configurationSection.GetValue<string>("AttendeeContext") != null)
-                {
-                    dbString = configurationSection.GetValue<string>("AttendeeContext");
-                    sourceString = "Config Server";
-                }
-            }
-            else
-            {
-                var cfe = new CFEnvironmentVariables();
-                var _connect = cfe.getConnectionStringForDbService("user-provided", "AttendeeContext");
-                if (!string.IsNullOrEmpty(_connect))
-                {
-                    sourceString = "User Provided Service";
-                }
-            }
+            // Get the connection string from appSettings.json or Config Server or a User Provided Service
+            // User Provided Service will take presidence over other sources
+            string dbString = CFEnvironmentVariables.GetConfigurationConnectionString(Configuration, "AttendeeContext");
 
-            Console.WriteLine($"Using connection string from the {sourceString}");
+            services.AddDbContext<AttendeeContext>(options => options.UseSqlServer(dbString));
+            // End connection strings
 
-            services.AddDbContext<AttendeeContext>(options =>
-                    options.UseSqlServer(dbString));
-
+            // Add RabbitMQ function
             services.AddRabbitConnection(Configuration);
-
+            // End RabbitMQ
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,5 +1,7 @@
 ﻿
 using FortuneService.Client;
+using FortuneTeller.Models;
+using FortuneTeller.ViewModels.Workshop;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -19,10 +21,8 @@ using System.Collections.Generic;
 using System.Net.Security;
 using System.Security.Authentication;
 using System.Threading.Tasks;
-using Workshop_UI.Models;
-using Workshop_UI.ViewModels.Workshop;
 
-namespace Workshop_UI.Controllers
+namespace FortuneTeller.Controllers
 {
     public class WorkshopController : Controller
     {
@@ -83,7 +83,7 @@ namespace Workshop_UI.Controllers
                     SslPolicyErrors.RemoteCertificateNameMismatch | SslPolicyErrors.RemoteCertificateNotAvailable;
             }
         }
-        
+
         public IActionResult Index()
         {
             _logger?.LogDebug("Index");
@@ -137,7 +137,7 @@ namespace Workshop_UI.Controllers
 
         public IActionResult ResetBlueGreenStats()
         {
-            return RedirectToAction(nameof(WorkshopController.BlueGreen), "Workshop"); 
+            return RedirectToAction(nameof(WorkshopController.BlueGreen), "Workshop");
         }
 
         public IActionResult Refresh()
@@ -145,18 +145,15 @@ namespace Workshop_UI.Controllers
             return RedirectToAction(nameof(WorkshopController.Services), "Workshop"); ;
         }
 
-        // Lab10 Start
+        // Enable this for security
         //[Authorize(Policy = "read.fortunes")] 
-        // Lab10 End
         public async Task<IActionResult> Services()
         {
             _logger?.LogDebug("RandomFortune");
 
             ViewData["FortuneUrl"] = _fortunesConfig.Value.RandomFortuneURL;
 
-            // Lab05 Start
             var fortune = await _fortunes.RandomFortuneAsync();
-            // Lab05 End
 
             var _fortuneHistory = RedisCacheStore?.GetString("FortuneHistory");
             if (!string.IsNullOrEmpty(_fortuneHistory))
@@ -171,9 +168,9 @@ namespace Workshop_UI.Controllers
 
             string fortuneoutput = JsonConvert.SerializeObject(fortunes);
             RedisCacheStore?.SetString("FortuneHistory", fortuneoutput);
-            
+
             HttpContext.Session.SetString("MyFortune", fortune.Text);
-            
+
             var _appInstCount = RedisCacheStore?.GetString("AppInstance");
             if (!string.IsNullOrEmpty(_appInstCount))
             {
@@ -190,7 +187,7 @@ namespace Workshop_UI.Controllers
 
             var _count2 = srvInstCount.GetValueOrDefault(fortune.InstanceIndex, 0);
             srvInstCount[fortune.InstanceIndex] = ++_count2;
-            
+
             string output2 = JsonConvert.SerializeObject(srvInstCount);
             RedisCacheStore?.SetString("SrvInstance", output2);
 
@@ -311,24 +308,19 @@ namespace Workshop_UI.Controllers
             ViewData["appName"] = CloudFoundryApplication.ApplicationName;
             ViewData["uri0"] = CloudFoundryApplication.ApplicationUris[0];
             ViewData["disk"] = Config["vcap:application:limits:disk"];
-            ViewData["sourceString"] = "appsettings.json";
-
-            IConfigurationSection configurationSection = Config.GetSection("ConnectionStrings");
-            if (configurationSection != null)
-            {
-                if (configurationSection.GetValue<string>("AttendeeContext") != null)
-                {
-                    ViewData["sourceString"] = "Config Server";
-                }
-            }
+            ViewData["sourceString"] = "appsettings.json/Config Server";
 
             var _connectJson = Config.GetConnectionString("AttendeeContext");
             if (!string.IsNullOrEmpty(_connectJson))
                 ViewData["jsonDBString"] = StringCleaner.GetDisplayString("Password=", ";", _connectJson ,"*****");
+
             var cfe = new CFEnvironmentVariables();
             var _connect = cfe.getConnectionStringForDbService("user-provided", "AttendeeContext");
             if (!string.IsNullOrEmpty(_connect))
-                ViewData["boundDBString"] = StringCleaner.GetDisplayString("Password=", ";", _connect, "*****");
+            {
+                ViewData["jsonDBString"] = StringCleaner.GetDisplayString("Password=", ";", _connect, "*****");
+                ViewData["sourceString"] = "User Provided Service";
+            }
 
             //if (Services.Value != null)
             //{
@@ -338,7 +330,6 @@ namespace Workshop_UI.Controllers
             //        ViewData[service.Plan] = service.Plan;
             //    }
             //}
-
 
             if (Config.GetSection("spring") != null)
             {
