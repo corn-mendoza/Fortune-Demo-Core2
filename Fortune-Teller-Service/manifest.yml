@@ -8,5 +8,5 @@ applications:
   services:
    - myConfigServer
    - myDiscoveryService
-   - myMySqlService
+   - myFortuneDB
    - myOAuthService

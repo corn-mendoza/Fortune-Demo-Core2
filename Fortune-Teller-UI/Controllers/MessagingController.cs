@@ -71,6 +71,8 @@ namespace Fortune_Teller_UI.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Send(string message)
         {
+            const string EXCHANGE_NAME = "EXCHANGE3";
+
             try
             {
                 // TODO: Add insert logic here
@@ -79,10 +81,10 @@ namespace Fortune_Teller_UI.Controllers
                     using (var connection = ConnectionFactory.CreateConnection())
                     using (var channel = connection.CreateModel())
                     {
-                        CreateQueue(channel);
+                        channel.ExchangeDeclare(EXCHANGE_NAME, ExchangeType.Topic, false, true, null);
 
                         var body = Encoding.UTF8.GetBytes(message);
-                        channel.BasicPublish(exchange: "",
+                        channel.BasicPublish(exchange: EXCHANGE_NAME,
                                              routingKey: "rabbit-test",
                                              basicProperties: null,
                                              body: body);

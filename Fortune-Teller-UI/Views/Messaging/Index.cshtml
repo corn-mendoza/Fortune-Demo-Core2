@@ -2,6 +2,26 @@
 @{
     ViewData["Title"] = "View";
 }
+<div class="panel-heading">
+    <div class="media">
+        <a class="pull-left" href="http://pivotal.io">
+            <img class="" src="~/images/icon_pivotal_generic@2x.png" title="Cloud Foundry" alt="PCF" width="40" height="40" />
+        </a>
+        <div class="media-body">
+            <h2 class="media-heading">Messaging for .NET</h2>
+        </div>
+    </div>
+    <p class="lead">RabbitMQ using the Steeltoe Connector</p>
+    <p class="body-content">Designing applications to run natively in the cloud can be hard. Steeltoe can help developers quickly implement these design patterns by leveraging configuration services, service discovery, circuit breakers, and management services available in Spring Cloud Services.</p>
+</div>
+<form asp-controller="Messaging"
+      asp-action="Send"
+      method="post">
 
-<h2>View</h2>
+    Message:
+    <input type="text" name="Message" value="" />
+    <br />
 
+    <input type="submit" value="Send" />
+
+</form>
