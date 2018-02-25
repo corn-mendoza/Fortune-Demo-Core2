@@ -2,7 +2,7 @@
 @{
     ViewData["Title"] = "Home";
 }
-<div class="jumbotron">
+<div class="panel-heading">
     <div class="media">
         <a class="pull-left" href="http://pivotal.io">
             <img class="" src="~/images/icon_pivotal_generic@2x.png" title="Dotnet" alt="Dotnet" height="40" width="40" />
@@ -12,8 +12,14 @@
         </div>
     </div>
     <p class="lead">Cloud Ready to Cloud Native </p>
-    <p class="lead">Whether you are supporting legacy applications or developing new microservices on .NET Framework or .NET Core, Pivotal Application Services can help you focus on your code and not the infrastructure.</p>
-    <p>
+    <p class="body-content">Whether you are supporting legacy applications or developing new microservices on .NET Framework or .NET Core, Pivotal Application Services can help you focus on your code and not the infrastructure.</p>
+</div>
+<div class="row" align="center">
+    <h3><b>Application Architecture</b></h3>
+    <div class="col-md-8" align="center">
+        <img class="" src="~/images/application.png" title="Fortune" alt="Fortune" width="600" />
+    </div>
+    <div class="col-md-2" align="center">
         <a href="@Model.ConfigData.AppsManagerUrl" class="btn btn-primary btn-lg" target="_blank">Apps Manager &raquo;</a>
-    </p>
+    </div>
 </div>
