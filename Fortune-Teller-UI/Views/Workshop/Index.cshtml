@@ -11,15 +11,21 @@
             <h2 class="media-heading">Pivotal Application Services for .NET</h2>
         </div>
     </div>
-    <p class="lead">Cloud Ready to Cloud Native </p>
-    <p class="body-content">Whether you are supporting legacy applications or developing new microservices on .NET Framework or .NET Core, Pivotal Application Services can help you focus on your code and not the infrastructure.</p>
+    @*<p class="lead">Cloud Ready to Cloud Native </p>
+    <p class="body-content">Whether you are supporting legacy applications or developing new microservices on .NET Framework or .NET Core, Pivotal Application Services can help you focus on your code and not the infrastructure.</p>*@
+</div>
+<div class="row" align="center">
+    <a href="@Model.ConfigData.OpsManagerUrl" class="btn btn-primary btn-lg" target="_blank">Ops Manager &raquo;</a>
+    <a href="@Model.ConfigData.AppsManagerUrl" class="btn btn-primary btn-lg" target="_blank">Apps Manager &raquo;</a>
+    <a href="https://steeltoe.io" class="btn btn-primary btn-lg" target="_blank">Steeltoe &raquo;</a>
+    <a href="https://github.com/steeltoeoss/Samples" class="btn btn-primary btn-lg" target="_blank">Steeltoe Samples &raquo;</a>
+    <a href="https://github.com/corn-pivotal/Fortune-Teller-Core2" class="btn btn-primary btn-lg" target="_blank">Source Code &raquo;</a>
 </div>
 <div class="row" align="center">
     <h3><b>Application Architecture</b></h3>
-    <div class="col-md-8" align="center">
-        <img class="" src="~/images/application.png" title="Fortune" alt="Fortune" width="600" />
-    </div>
-    <div class="col-md-2" align="center">
-        <a href="@Model.ConfigData.AppsManagerUrl" class="btn btn-primary btn-lg" target="_blank">Apps Manager &raquo;</a>
-    </div>
 </div>
+<div class="row" align="center">
+    <img class="" src="~/images/application.png" title="Fortune" alt="Fortune" width="600" />
+    <br/>
+</div>
+
