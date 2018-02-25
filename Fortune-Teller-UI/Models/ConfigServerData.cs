@@ -18,5 +18,6 @@ namespace Workshop_UI.Models
         public string ExchangeUrl { get; set; }
         public string GithubRepoUrl { get; set; }
         public string ManifestUrl { get; set; }
+        public string PipelineUrl { get; set; }
     }
 }
