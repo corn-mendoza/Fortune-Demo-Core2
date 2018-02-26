@@ -1,7 +1,7 @@
 # Fortune Teller Demo and Source Code
 
 ## Overview
-This demo and accompanying source code is designed to help facilitate a deeper understanding of Pivotal Application Services, Spring Cloud Services, and Steeltoe.  The source code is based on two existing projects:
+This demo and accompanying source code is designed to help facilitate a deeper understanding of Pivotal Application Services, Spring Cloud Services, and Steeltoe.  
 
 A live demonstration can be found [here](https://fortuneui.apps.islands.cloud/).  This project is still in development and will be updated regularly.
 
