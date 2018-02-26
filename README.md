@@ -42,7 +42,7 @@ The following are some of the patterns used in development:
 - Application support for Blue Green Deployments
 - Continuous integration and deployment using Visual Studio Team Services
 - Messaging using RabbitMQ and Steeltoe connector
-
+ 
 ## Features
 The workshop application can be navigated through the home page links through the various topics. The workshop can also be used as a demo for the capabilities of PAS. The following areas are designed to support the navigation of many of the features of PAS, SCS, and Steeltoe.
 
@@ -77,7 +77,7 @@ Main demo application web application
 ### Fortune Teller Service
 Provides fortunes as a service used to demonstrate the circuit breaker and service discovery design patterns. 
 
-### RabbitConsoleService
+### Rabbit Console Service
 Example of a console application processing RabbitMQ message queues. 
 
 ### Fortune Service Client
