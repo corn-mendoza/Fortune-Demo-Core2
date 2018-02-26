@@ -153,19 +153,13 @@ namespace FortuneTeller
 
             app.UseStaticFiles();
 
-            // Lab11 Start
             app.UseCloudFoundryActuators();
-            // Lab11 End
 
-            // Lab09 Start
             app.UseHystrixRequestContext();
-            // Lab09 End
 
             app.UseSession();
 
-            // Lab10 Start
             app.UseAuthentication();
-            // Lab10 End
 
             app.UseMvc(routes =>
             {
@@ -174,17 +168,12 @@ namespace FortuneTeller
                     template: "{controller=Workshop}/{action=Index}/{id?}");
             });
 
-
-            // Lab07 Start
             app.UseDiscoveryClient();
-            // Lab07 End
 
-            // Lab09 Start
             if (!Environment.IsDevelopment())
             {
                 app.UseHystrixMetricsStream();
             }
-            // Lab09 End
         }
     }
 }

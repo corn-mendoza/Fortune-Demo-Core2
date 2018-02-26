@@ -29,10 +29,8 @@ namespace RabbitConsoleService
 
                     config.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                         .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
-
-                    config.AddConfigServer(env);
-
                     config.AddEnvironmentVariables();
+                    config.AddConfigServer(env);
 
                     if (args != null)
                     {

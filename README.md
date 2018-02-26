@@ -92,7 +92,12 @@ This demo source code repository has been integrated into a CI/CD pipeline using
 The portal for the VSTS CI/CD pipeline can be found [here](https://pivotal-workshops.visualstudio.com/Fortune%20Teller/). Access is required to the portal to view the job definitions.
 
 ### Installation Packages without Visual Studio
-Installation packages that are ready to push are available in the Release section of this repository.  You can find them [here](https://github.com/corn-pivotal/Fortune-Demo-Core2/releases).
+Installation packages that are ready to push are available in the Release section of this repository.  You can find them [here](https://pivotal-workshops.visualstudio.com/Fortune%20Teller/).
+
+### Installation using .Net CLI
+Projects can be built using .NET Core 2.0 SDK from a console window. Use the publish commmand to create a deployment package or push the source code directly onto cloud foundry.
+
+	`dotnet publish {nameofproject}.csproj -o {outputpath}`
 
 ### Cloning and Building the Solution
 This project is developed using Visual Studio 2017. To build this solution, clone this repo and open the solution file. The projects can then be published and pushed from the publish folder. 
