@@ -1,7 +1,7 @@
 # Fortune Teller Demo and Source Code
 
 ## Overview
-This demo and accompanying source code is designed to help facilitate a deeper understanding of Pivotal Application Services, Spring Cloud Services, and Steeltoe.  The source code is based on two existing projects:
+This demo and accompanying source code is designed to help facilitate a deeper understanding of Pivotal Application Services, Spring Cloud Services, and Steeltoe.  
 
 A live demonstration can be found [here](https://fortuneui.apps.islands.cloud/).  This project is still in development and will be updated regularly.
 
@@ -42,7 +42,7 @@ The following are some of the patterns used in development:
 - Application support for Blue Green Deployments
 - Continuous integration and deployment using Visual Studio Team Services
 - Messaging using RabbitMQ and Steeltoe connector
-
+ 
 ## Features
 The workshop application can be navigated through the home page links through the various topics. The workshop can also be used as a demo for the capabilities of PAS. The following areas are designed to support the navigation of many of the features of PAS, SCS, and Steeltoe.
 
@@ -77,7 +77,7 @@ Main demo application web application
 ### Fortune Teller Service
 Provides fortunes as a service used to demonstrate the circuit breaker and service discovery design patterns. 
 
-### RabbitConsoleService
+### Rabbit Console Service
 Example of a console application processing RabbitMQ message queues. 
 
 ### Fortune Service Client
