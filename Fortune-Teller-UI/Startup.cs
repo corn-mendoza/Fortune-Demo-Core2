@@ -12,7 +12,7 @@ using Pivotal.Discovery.Client;
 using Pivotal.Extensions.Configuration.ConfigServer;
 using Pivotal.Helper;
 using Steeltoe.CircuitBreaker.Hystrix;
-using Steeltoe.CloudFoundry.Connector.Rabbit;
+using Steeltoe.CloudFoundry.Connector.RabbitMQ;
 using Steeltoe.CloudFoundry.Connector.Redis;
 using Steeltoe.Extensions.Configuration.CloudFoundry;
 using Steeltoe.Management.CloudFoundry;
@@ -126,7 +126,7 @@ namespace FortuneTeller
             // End connection strings
 
             // Add RabbitMQ function
-            services.AddRabbitConnection(Configuration);
+            services.AddRabbitMQConnection(Configuration);
             // End RabbitMQ
         }
 

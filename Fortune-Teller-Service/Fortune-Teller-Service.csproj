@@ -10,31 +10,31 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
     <!-- Lab06 Start-->
-    <PackageReference Include="Pivotal.Extensions.Configuration.ConfigServerCore" Version="2.0.0-dev-00118" />
+    <PackageReference Include="Pivotal.Extensions.Configuration.ConfigServerCore" Version="2.0.0" />
     <!-- Lab06 End-->
 
     <!-- Lab07 Start-->
-    <PackageReference Include="Pivotal.Discovery.ClientCore" Version="2.0.0-dev-00114" />
+    <PackageReference Include="Pivotal.Discovery.ClientCore" Version="2.0.0" />
     <!-- Lab07 End-->
 
     <!-- Lab08 Start-->
-    <PackageReference Include="Steeltoe.CloudFoundry.Connector.EFCore" Version="2.0.0-dev-00193" />
-    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.0.0" />
+    <PackageReference Include="Steeltoe.CloudFoundry.Connector.EFCore" Version="2.0.0" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.0.1" />
     <!-- Lab08 End-->
     
     <!-- Lab10 Start-->
-    <PackageReference Include="Steeltoe.Security.Authentication.CloudFoundryCore" Version="2.0.0-dev-00081" />
+    <PackageReference Include="Steeltoe.Security.Authentication.CloudFoundryCore" Version="2.0.0" />
     <!-- Lab10 End-->
     
   </ItemGroup>
 
   <!-- Lab11 Start-->
   <ItemGroup>
-    <PackageReference Include="Steeltoe.Management.CloudFoundryCore" Version="2.0.0-dev-00055" />
+    <PackageReference Include="Steeltoe.Management.CloudFoundryCore" Version="2.0.0" />
     
-    <PackageReference Include="GitInfo" Version="2.0.1" />
+    <PackageReference Include="GitInfo" Version="2.0.10" />
     <None Include="git.properties">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
