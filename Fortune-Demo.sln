@@ -50,6 +50,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fortune-Teller-UI", "Fortun
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rabbit-Console-Service", "RabbitConsoleService\Rabbit-Console-Service.csproj", "{68C166C2-AE3A-406A-AF32-08BD82AF93FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fortune-Teller-Service4", "Fortune-Teller-Service4\Fortune-Teller-Service4.csproj", "{AF79873A-08ED-490A-B689-FC9375D30911}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -80,6 +82,10 @@ Global
 		{68C166C2-AE3A-406A-AF32-08BD82AF93FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68C166C2-AE3A-406A-AF32-08BD82AF93FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68C166C2-AE3A-406A-AF32-08BD82AF93FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF79873A-08ED-490A-B689-FC9375D30911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF79873A-08ED-490A-B689-FC9375D30911}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF79873A-08ED-490A-B689-FC9375D30911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF79873A-08ED-490A-B689-FC9375D30911}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +98,7 @@ Global
 		{5BBF21B6-94FB-44E4-A80A-CBA3A97174AF} = {54328253-C500-40DF-89DD-A20635F0EB1C}
 		{F42694F5-CB65-423D-80FB-2109DDC4FAC3} = {4341127A-379A-4E1F-AE0A-C5FE9DC9321F}
 		{68C166C2-AE3A-406A-AF32-08BD82AF93FB} = {D35C783F-A337-4FB4-939D-22B3E8F3D763}
+		{AF79873A-08ED-490A-B689-FC9375D30911} = {D35C783F-A337-4FB4-939D-22B3E8F3D763}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FA8851C4-8497-4082-8285-61E762CCB310}
