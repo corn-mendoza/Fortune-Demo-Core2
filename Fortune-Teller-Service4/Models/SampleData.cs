@@ -1,4 +1,4 @@
-﻿
+﻿using FortuneTeller.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace FortuneTellerService4.Models
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class SampleData
     {
         internal static FortuneContext InitializeFortunes()

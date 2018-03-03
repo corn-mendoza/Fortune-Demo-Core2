@@ -99,5 +99,42 @@ namespace FortuneTeller.Controllers
                 return View();
             }
         }
+
+        // POST: Messaging/Send
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Blast(int? count)
+        {
+            const string EXCHANGE_NAME = "EXCHANGE3";
+
+            try
+            {
+                if (count != null && count > 0)
+                {
+                    for (var idx = 0; idx <= count; idx++)
+                    {
+                        using (var connection = ConnectionFactory.CreateConnection())
+                        using (var channel = connection.CreateModel())
+                        {
+                            channel.ExchangeDeclare(EXCHANGE_NAME, ExchangeType.Topic, false, true, null);
+
+                            var message = $"Message number {idx}";
+                            var body = Encoding.UTF8.GetBytes(message);
+                            channel.BasicPublish(exchange: EXCHANGE_NAME,
+                                                 routingKey: "rabbit-test",
+                                                 basicProperties: null,
+                                                 body: body);
+                        }
+                    }
+                }
+
+                //return View();
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
     }
 }

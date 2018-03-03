@@ -25,78 +25,88 @@
     <div class="col-md-6">
         <h4><b>Service Information</b></h4>
         <h5>Fortune Service Instance: @ViewData["FortuneIndex"]</h5>
-        <b><h5>Request URL</h5></b>
+        <h5><b>Request URL</b></h5>
         <h5>@ViewData["FortuneUrl"]</h5>
-        <b><h5>Service Discovery URL</h5></b>
+        <h5><b>Service Discovery URL</b></h5>
         <h5>@ViewData["FortuneDiscoveryUrl"]</h5>
         <div class="panel-group">
             <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="Refresh">Refresh</a>
             <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="ResetServiceStats">Reset Stats</a>
             <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="CreateLoad">Create Load</a>
         </div>
-        <div class="panel-group">
-            <a class="btn btn-default" href="@Model.ConfigData.HystrixDashboardUrl" target="_blank">Hystrix Dashboard &raquo;</a>
-            <a class="btn btn-default" href="@Model.ConfigData.EurekaDashboardUrl" target="_blank">Eureka Dashboard &raquo;</a>
-        </div>
-        </div>
-        <div class="col-md-3">
-            <ej-chart id="container" can-resize="true" load="loadTheme">
-                <e-primary-x-axis start-from-zero="false" range-padding="@ChartRangePadding.Auto">
-                    <e-title text="Instance"></e-title>
-                    <e-range max="@(Model.GetServiceInstanceCounts().Max(w => w.Key) + 1);" min="-1" interval="1"></e-range>
-                </e-primary-x-axis>
-                <e-primary-y-axis range-padding="@ChartRangePadding.Auto" start-from-zero="false" label-format="{value}" edge-label-placement="None">
-                    <e-title text="Count"></e-title>
-                    <e-range min="0" max="@(Model.GetServiceInstanceCounts().Max(w=> w.Value) + 10);" interval="25"></e-range>
-                </e-primary-y-axis>
-                <e-title text="Fortune Service Instance Counts"></e-title>
-                <e-size height="300"></e-size>
-                <e-legend visible="true"></e-legend>
-                <e-common-series-options type="@SeriesType.Column" enable-animation="true">
-                    <e-marker shape="@ChartShape.None" visible="false">
-                        <e-border width="2"></e-border>
-                        <e-Size height="10" width="10"></e-Size>
-                    </e-marker>
-                </e-common-series-options>
-                <e-chart-series>
-                    <e-series name="Fortune Service" datasource="@Model.GetServiceInstanceCounts();" x-name="Key" y-name="Value" visible-on-legend="Visible">
-                        <e-marker>
-                            <e-data-label text-position="Middle" visible="true">
-                                <e-font color="white"></e-font>
-                            </e-data-label>
-                        </e-marker>
-                        <e-chart-tooltip visible="true" template="Tooltip"></e-chart-tooltip>
-                    </e-series>
-                </e-chart-series>
-            </ej-chart>
-        </div>
     </div>
-<div class="clearfix"></div>
+    <div class="col-md-3">
+        <ej-chart id="container" can-resize="true" load="loadTheme">
+            <e-primary-x-axis start-from-zero="false" range-padding="@ChartRangePadding.Auto">
+                <e-title text="Instance"></e-title>
+                <e-range max="@(Model.GetServiceInstanceCounts().Max(w => w.Key) + 1);" min="-1" interval="1"></e-range>
+            </e-primary-x-axis>
+            <e-primary-y-axis range-padding="@ChartRangePadding.Auto" start-from-zero="false" label-format="{value}" edge-label-placement="None">
+                <e-title text="Count"></e-title>
+                <e-range min="0" max="@(Model.GetServiceInstanceCounts().Max(w=> w.Value) + 10);" interval="25"></e-range>
+            </e-primary-y-axis>
+            <e-title text="Fortune Service Instance Counts"></e-title>
+            <e-size height="300"></e-size>
+            <e-legend visible="true"></e-legend>
+            <e-common-series-options type="@SeriesType.Column" enable-animation="true">
+                <e-marker shape="@ChartShape.None" visible="false">
+                    <e-border width="2"></e-border>
+                    <e-Size height="10" width="10"></e-Size>
+                </e-marker>
+            </e-common-series-options>
+            <e-chart-series>
+                <e-series name="Fortune Service" datasource="@Model.GetServiceInstanceCounts();" x-name="Key" y-name="Value" visible-on-legend="Visible">
+                    <e-marker>
+                        <e-data-label text-position="Middle" visible="true">
+                            <e-font color="white"></e-font>
+                        </e-data-label>
+                    </e-marker>
+                    <e-chart-tooltip visible="true" template="Tooltip"></e-chart-tooltip>
+                </e-series>
+            </e-chart-series>
+        </ej-chart>
+    </div>
+</div>
+<div class="clearfix"><hr /></div>
 <div class="row">
     <div class="col-md-4">
-        <h4>Last 10 Fortunes in Cache</h4>
-        <ul>
-            @foreach (var fortune in Model.FortuneHistory)
-            {
-                <li>@fortune</li>
-            }
-        </ul>
+        <h4>Handle issues with Circuit Breakers</h4>
+        <p>Circuit breakers let applications handle unexpected errors with services. View the dashboard to help identify problems and resolve issues that affect the user's experience.</p>
+        <a class="btn-link" href="@Model.ConfigData.HystrixDashboardUrl" target="_blank">Hystrix Dashboard &raquo;</a>
+        <p />
+        <hr />
+        <h4>Implementing Service Discovery</h4>
+        <p>Implementing service discovery patterns will help improve the resilience of your applications. Steeltoe helps you easily implement service discovery in new and legacy .NET Framework and .NET Core applications.</p>
+        <a class="btn-link" href="@Model.ConfigData.EurekaDashboardUrl" target="_blank">Eureka Dashboard &raquo;</a>
+        <p />
+        <hr />
+        <h4>Steeltoe support for .NET Framework</h4>
+        <p>Pivotal Application Services can support services written using .NET Framework. .NET Framework applications can also implement Cloud Native Patterns using Steeltoe.</p>
+        <a class="btn-link" href="@Model.ConfigData.SwaggerUrl" target="_blank">Fortune Service .NET4.6 using Swagger</a>
     </div>
     <div class="col-md-4">
-        <h4>Current Bound Services</h4>
+        <h4>Services bound to this application</h4>
         <ul>
             @foreach (var service in Model.CloudFoundryServices.ServicesList)
             {
                 <li>@service.Label: @service.Name</li>
             }
         </ul>
-    </div>
-    <div class="col-md-4">
-        <h4>Available Services from Service Discovery</h4>
+        <div class="clearfix"><hr /></div>
+        <h4>REST Services available through discovery</h4>
         <ul>
             @foreach (var service in Model.discoveryClient.Services)
             {
                 <li>@service</li>
+            }
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <h4>Last 10 Fortunes stored in cache</h4>
+        <ul>
+            @foreach (var fortune in Model.FortuneHistory)
+            {
+                <li>@fortune</li>
             }
         </ul>
     </div>

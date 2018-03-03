@@ -70,16 +70,18 @@ namespace RabbitConsoleService
                     {
                         channel.ExchangeDeclare(EXCHANGE_NAME, ExchangeType.Topic, false, true, null);
 
-                        string queueName = channel.QueueDeclare();
+                        var queueName = "rabbit-queue";
+                        var queueDeclareOk = channel.QueueDeclare(queueName, true, false, true, null);
 
                         EventingBasicConsumer consumer = new EventingBasicConsumer(channel);
                         consumer.Received += (o, e) =>
                         {
                             string data = Encoding.ASCII.GetString(e.Body);
                             _logger?.LogInformation($"Received message: {data}");
+                            channel.BasicAck(e.DeliveryTag, true);
                         };
 
-                        string consumerTag = channel.BasicConsume(queueName, true, consumer);
+                        string consumerTag = channel.BasicConsume(consumer, queueName, false, "Queue", true, false);
 
                         channel.QueueBind(queueName, EXCHANGE_NAME, "rabbit-test");
 

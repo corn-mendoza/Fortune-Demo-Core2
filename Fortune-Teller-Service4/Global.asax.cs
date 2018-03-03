@@ -11,9 +11,16 @@ using Steeltoe.Common.Logging.Autofac;
 namespace FortuneTellerService4
 {
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <seealso cref="System.Web.HttpApplication" />
     public class WebApiApplication : System.Web.HttpApplication
     {
 
+        /// <summary>
+        /// Applications the start.
+        /// </summary>
         protected void Application_Start()
         {
 
@@ -22,7 +29,7 @@ namespace FortuneTellerService4
             var config = GlobalConfiguration.Configuration;
 
             // Build application configuration
-            ApplicationConfig.RegisterConfig("development");
+            ApplicationConfig.RegisterConfig("Production");
 
             var builder = new ContainerBuilder();
 
@@ -61,6 +68,9 @@ namespace FortuneTellerService4
             logger.LogInformation("Finished starting background services");
         }
 
+        /// <summary>
+        /// Applications the end.
+        /// </summary>
         protected void Application_End()
         {
             // Unregister current app with Service Discovery server

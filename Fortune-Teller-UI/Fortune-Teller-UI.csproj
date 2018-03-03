@@ -80,4 +80,10 @@
     <ProjectReference Include="..\Pivotal-Utilities\Pivotal-Utilities.csproj" />
   </ItemGroup>
   
+  <ItemGroup>
+    <Content Update="wwwroot\favicon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  
 </Project>

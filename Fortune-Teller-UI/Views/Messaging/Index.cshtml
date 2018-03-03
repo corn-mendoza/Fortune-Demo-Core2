@@ -8,13 +8,13 @@
             <img class="" src="~/images/icon_pivotal_generic@2x.png" title="Cloud Foundry" alt="PCF" width="40" height="40" />
         </a>
         <div class="media-body">
-            <h2 class="media-heading">Messaging for .NET</h2>
+            <h2 class="media-heading">Messaging for .NET and Console Applications</h2>
         </div>
     </div>
     <p class="lead">RabbitMQ using the Steeltoe Connector</p>
-    <p class="body-content">Designing applications to run natively in the cloud can be hard. Steeltoe can help developers quickly implement these design patterns by leveraging configuration services, service discovery, circuit breakers, and management services available in Spring Cloud Services.</p>
+    <p class="body-content">Pivotal Application Services is not just for Web and Web API applications. Steeltoe can enable console applications to unlock the power of the platform. This page demonstrates the ability to implement a console based messaging application that can scale.</p>
 </div>
-<div class="clearfix"></div>
+<div class="clearfix"><hr /></div>
 <div class="row">
     <div class="col-lg-12">
         <h4>Instructions</h4>
@@ -23,14 +23,31 @@
         </p>
     </div>
 </div>
-<div class="form-row">
-    <form asp-controller="Messaging"
-          asp-action="Send"
-          method="post">
+<div class="clearfix"><hr /></div>
+<div class="row">
+    <div class="col-lg-12">
+        <h4>Send a single RabbitMQ Message</h4>
+        <form asp-controller="Messaging"
+              asp-action="Send"
+              method="post">
+            Message:
+            <input type="text" name="Message" value="" />
 
-        Message:
-        <input type="text" name="Message" value="" />
-
-        <input type="submit" value="Send" />
-    </form>
+            <input type="submit" value="Send" />
+        </form>
+    </div>
 </div>
+<div class="clearfix"><hr /></div>
+<div class="row">
+    <div class="col-lg-12">
+        <h4>Send a blast of RabbitMQ Messages</h4>
+        <form asp-controller="Messaging"
+              asp-action="Blast"
+              method="post">
+            Number of messages to send:
+            <input type="number" name="Count" value="" />
+            <input type="submit" value="Blast" />
+        </form>
+    </div>
+</div>
+<div class="clearfix"><hr /></div>

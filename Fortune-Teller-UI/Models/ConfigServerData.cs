@@ -14,5 +14,6 @@
         public string GithubRepoUrl { get; set; }
         public string ManifestUrl { get; set; }
         public string PipelineUrl { get; set; }
+        public string SwaggerUrl { get; set; }
     }
 }
