@@ -24,3 +24,4 @@ workshopConfig:
     GithubRepoUrl: https://github.com/corn-pivotal/Fortune-Demo-Core2
     ManifestUrl: https://github.com/corn-pivotal/Fortune-Demo-Core2/blob/master/Fortune-Teller-UI/manifest.yml
     PipelineUrl: https://pivotal-workshops.visualstudio.com/Fortune%20Teller/_build
+    SwaggerUrl: https://fortuneServiceLegacy.apps.islands.cloud

@@ -19,6 +19,7 @@ This application is intended to be deployed using Pivotal Application Services o
 9. MySQL Connector
 10. Microsoft SQL Server
 11. User Provided Services
+12. Swagger UI for .NET and.NET Core
 
 ### Requirements
 The following are required for building and deploying the applications in this workshop.
@@ -76,6 +77,9 @@ Main demo application web application
 
 ### Fortune Teller Service
 Provides fortunes as a service used to demonstrate the circuit breaker and service discovery design patterns. 
+
+### Fortune Teller Service 4
+A .NET 4.6x version of the fortune service to demonstrate full framework support integrated with the Swagger API interface. This project requires Visual Studio to compile and build a deployment package. 
 
 ### Rabbit Console Service
 Example of a console application processing RabbitMQ message queues. 

@@ -83,6 +83,7 @@ Add a configuration file for the environment that is being setup. For example: i
 - ConfigRepoUrl: Config Server Repo Location URI
 - PCFMetricsUrl: PCF Metrics URI
 - GithubRepoUrl: Workshop Source Repo URI
+- SwaggerUrl: URI for the .NET46 version of the Fortune Service
 
 #### Connection Strings
 The workshop application demonstrates the ability to load connection string information from both a user provided service and from the config server. In order for the application to function correctly for this demonstration, a SQL Server database 
