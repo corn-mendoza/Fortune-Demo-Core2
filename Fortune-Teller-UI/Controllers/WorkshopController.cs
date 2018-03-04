@@ -17,6 +17,7 @@ using RabbitMQ.Client;
 using Steeltoe.Common.Discovery;
 using Steeltoe.Extensions.Configuration.CloudFoundry;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Net.Security;
 using System.Security.Authentication;
@@ -24,25 +25,44 @@ using System.Threading.Tasks;
 
 namespace FortuneTeller.Controllers
 {
+    /// <summary>
+    /// Workshop Controller Class
+    /// </summary>
+    /// <seealso cref="Microsoft.AspNetCore.Mvc.Controller" />
     public class WorkshopController : Controller
     {
         private IOptionsSnapshot<ConfigServerData> IConfigServerData { get; set; }
 
-        ILogger<WorkshopController> _logger;
+        private ILogger<WorkshopController> _logger;
         public CloudFoundryServicesOptions CloudFoundryServices { get; set; }
         public CloudFoundryApplicationOptions CloudFoundryApplication { get; set; }
-        IOptionsSnapshot<FortuneServiceOptions> _fortunesConfig;
-        IDiscoveryClient discoveryClient;
-        IDistributedCache RedisCacheStore { get; set; }
-        IConfiguration Config { get; set; }
-        IConfigurationRoot ConfigRoot { get; set; }
-        ConnectionFactory ConnectionFactory { get; set; }
+        private IOptionsSnapshot<FortuneServiceOptions> _fortunesConfig;
+        private IDiscoveryClient discoveryClient;
+        private IDistributedCache RedisCacheStore { get; set; }
+        private IConfiguration Config { get; set; }
+        private IConfigurationRoot ConfigRoot { get; set; }
+        private ConnectionFactory ConnectionFactory { get; set; }
 
-        SortedList<int, int> appInstCount = new SortedList<int, int>();
-        SortedList<int, int> srvInstCount = new SortedList<int, int>();
-        List<string> fortunes = new List<string>();
+        private SortedList<int, int> appInstCount = new SortedList<int, int>();
+        private SortedList<int, int> srvInstCount = new SortedList<int, int>();
+        private List<string> fortunes = new List<string>();
 
         private FortuneServiceCommand _fortunes;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WorkshopController"/> class.
+        /// </summary>
+        /// <param name="logger">The logger.</param>
+        /// <param name="config">The configuration.</param>
+        /// <param name="configServerData">The configuration server data.</param>
+        /// <param name="fortunes">The fortunes.</param>
+        /// <param name="appOptions">The application options.</param>
+        /// <param name="servOptions">The serv options.</param>
+        /// <param name="configApp">The configuration application.</param>
+        /// <param name="configRoot">The configuration root.</param>
+        /// <param name="cache">The cache.</param>
+        /// <param name="connectionFactory">The connection factory.</param>
+        /// <param name="client">The client.</param>
         public WorkshopController(
             ILogger<WorkshopController> logger,
             IOptionsSnapshot<FortuneServiceOptions> config,
@@ -84,6 +104,10 @@ namespace FortuneTeller.Controllers
             }
         }
 
+        /// <summary>
+        /// Index Page.
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Index()
         {
             _logger?.LogDebug("Index");
@@ -97,6 +121,10 @@ namespace FortuneTeller.Controllers
                 fortunes));
         }
 
+        /// <summary>
+        /// Workshop Page.
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Workshop()
         {
             _logger?.LogDebug("Workshop");
@@ -109,12 +137,21 @@ namespace FortuneTeller.Controllers
                 srvInstCount,
                 fortunes));
         }
+
+        /// <summary>
+        /// Steeltoe Page.
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Steeltoe()
         {
             _logger?.LogDebug("Steeltoe");
             return View();
         }
 
+        /// <summary>
+        /// Resets the service stats.
+        /// </summary>
+        /// <returns></returns>
         public IActionResult ResetServiceStats()
         {
             srvInstCount = new SortedList<int, int>();
@@ -125,6 +162,10 @@ namespace FortuneTeller.Controllers
             return RedirectToAction(nameof(WorkshopController.Services), "Workshop");
         }
 
+        /// <summary>
+        /// Resets the application stats.
+        /// </summary>
+        /// <returns></returns>
         public IActionResult ResetApplicationStats()
         {
             appInstCount = new SortedList<int, int>();
@@ -135,11 +176,19 @@ namespace FortuneTeller.Controllers
             return RedirectToAction(nameof(WorkshopController.Platform), "Workshop");
         }
 
+        /// <summary>
+        /// Resets the blue green stats.
+        /// </summary>
+        /// <returns></returns>
         public IActionResult ResetBlueGreenStats()
         {
             return RedirectToAction(nameof(WorkshopController.BlueGreen), "Workshop");
         }
 
+        /// <summary>
+        /// Refreshes this instance.
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Refresh()
         {
             return RedirectToAction(nameof(WorkshopController.Services), "Workshop"); ;
@@ -147,6 +196,10 @@ namespace FortuneTeller.Controllers
 
         // Enable this for security
         //[Authorize(Policy = "read.fortunes")] 
+        /// <summary>
+        /// Services Page.
+        /// </summary>
+        /// <returns></returns>
         public async Task<IActionResult> Services()
         {
             _logger?.LogDebug("RandomFortune");
@@ -204,6 +257,10 @@ namespace FortuneTeller.Controllers
                 fortunes));
         }
 
+        /// <summary>
+        /// Platform Page
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Platform()
         {
             _logger?.LogDebug("Platform");
@@ -235,6 +292,10 @@ namespace FortuneTeller.Controllers
                 fortunes));
         }
 
+        /// <summary>
+        /// Blue Green Page.
+        /// </summary>
+        /// <returns></returns>
         public IActionResult BlueGreen()
         {
             _logger?.LogDebug("BlueGreen");
@@ -268,15 +329,11 @@ namespace FortuneTeller.Controllers
                 fortunes));
         }
 
-        [HttpPost]
-        public async Task<IActionResult> LogOff()
-        {
-            await HttpContext.SignOutAsync();
-            HttpContext.Session.Clear();
-            await HttpContext.Session.CommitAsync();
-            return RedirectToAction(nameof(WorkshopController.Index), "Workshop");
-        }
 
+        /// <summary>
+        /// Configuration Page.
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Configuration()
         {
             _logger?.LogDebug("Index");
@@ -322,15 +379,6 @@ namespace FortuneTeller.Controllers
                 ViewData["sourceString"] = "User Provided Service";
             }
 
-            //if (Services.Value != null)
-            //{
-            //    foreach (var service in Services.Value.ServicesList)
-            //    {
-            //        ViewData[service.Name] = service.Name;
-            //        ViewData[service.Plan] = service.Plan;
-            //    }
-            //}
-
             if (Config.GetSection("spring") != null)
             {
                 ViewData["AccessTokenUri"] = Config["spring:cloud:config:access_token_uri"];
@@ -370,15 +418,40 @@ namespace FortuneTeller.Controllers
                 srvInstCount,
                 fortunes));
         }
+
+        /// <summary>
+        /// Creates a load.
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult CreateLoad()
+        {
+           var allFortunes = new ArrayList();
+
+            for (var i = 0; i < 100; i++)
+            {
+                allFortunes.Add(_fortunes.RandomFortuneAsync());
+            }
+
+            Task.WaitAll((Task[]) allFortunes.ToArray());
+
+            return RedirectToAction(nameof(WorkshopController.Services), "Services");
+        }
+
+        /// <summary>
+        /// Login Page.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
-        // Lab10 Start
         [Authorize]
-        // Lab10 Start
         public IActionResult Login()
         {
             return RedirectToAction(nameof(WorkshopController.Index), "Workshop");
         }
 
+        /// <summary>
+        /// Kills this instance.
+        /// </summary>
+        /// <returns></returns>
         [Authorize]
         public IActionResult Kill()
         {
@@ -386,24 +459,53 @@ namespace FortuneTeller.Controllers
             return RedirectToAction(nameof(WorkshopController.Platform), "Workshop"); 
         }
 
+        /// <summary>
+        /// Reloads the configuration.
+        /// </summary>
+        /// <returns></returns>
         public IActionResult ReloadConfig()
         {
             ConfigRoot.Reload();
             return RedirectToAction(nameof(WorkshopController.Configuration), "Workshop");
         }
 
+        /// <summary>
+        /// Manages this instance.
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Manage()
         {
             ViewData["Message"] = "Manage accounts using UAA or CF command line.";
             return View();
         }
 
+        /// <summary>
+        /// Logoff.
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public async Task<IActionResult> LogOff()
+        {
+            await HttpContext.SignOutAsync();
+            HttpContext.Session.Clear();
+            await HttpContext.Session.CommitAsync();
+            return RedirectToAction(nameof(WorkshopController.Index), "Workshop");
+        }
+
+        /// <summary>
+        /// Accesses denied.
+        /// </summary>
+        /// <returns></returns>
         public IActionResult AccessDenied()
         {
             ViewData["Message"] = "Insufficient permissions.";
             return View();
         }
 
+        /// <summary>
+        /// Error
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Error()
         {
             return View();

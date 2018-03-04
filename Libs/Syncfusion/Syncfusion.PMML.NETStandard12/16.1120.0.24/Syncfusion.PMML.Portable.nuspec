@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Syncfusion.PMML.NETStandard12</id>
+    <version>16.1120.0.24</version>
+    <authors>Syncfusion Inc.</authors>
+    <owners>Syncfusion Inc.</owners>
+    <licenseUrl>http://www.syncfusion.com/nuget/license</licenseUrl>
+    <projectUrl>http://www.syncfusion.com/</projectUrl>
+    <iconUrl>http://www.syncfusion.com/content/images/nuget/sync_logo_icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>NuGet Package contains Syncfusion.PMML.Portable assembly</description>
+    <copyright>Copyright 2001 - 2017 Syncfusion Inc.</copyright>
+    <tags>Syncfusion,PMML,NETStandard</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard1.2">
+        <dependency id="Microsoft.NETCore.Portable.Compatibility" version="[1.0.1, )" />
+        <dependency id="NETStandard.Library" version="[1.6.0, )" />      
+      </group>
+    </dependencies>
+  </metadata>
+</package>

@@ -1,0 +1,682 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.EJ.ReportViewer</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.EJ.ReportViewer.Internal.ReportPageData">
+            <summary>
+            Class for ReportPageData
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportPageData.HeaderHeight">
+            <summary>
+            Gets or sets the integer value of HeaderHeight.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportPageData.FooterHeight">
+            <summary>
+            Gets or sets the integer value of FooterHeight.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportPageData.Height">
+            <summary>
+            Gets or sets the integer value of Height.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportPageData.Width">
+            <summary>
+            Gets or sets the integer value of Width.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportPageData.MarginLeft">
+            <summary>
+            Gets or sets the integer value of Width.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportPageData.MarginTop">
+            <summary>
+            Gets or sets the integer value of MarginTop.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportPageData.HeaderModel">
+            <summary>
+            Gets or sets the HeaderModel.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportPageData.FooterModel">
+            <summary>
+            Gets or sets the FooterModel.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportPageData.PageModel">
+            <summary>
+            Gets or sets the PageModel.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportPageData.HeaderStyleModel">
+            <summary>
+            Gets or sets the HeaderStyleModel.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportPageData.FooterStyleModel">
+            <summary>
+            Gets or sets the FooterStyleModel.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportPageData.BodyStyleModel">
+            <summary>
+            Gets or sets the BodyStyleModel.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportPageData.ReportStyleModel">
+            <summary>
+            Gets or sets the ReportStyleModel.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.EJ.ReportViewer.Internal.ReportsInfo">
+            <summary>
+            class for ReportsInfo
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsInfo.PageData">
+            <summary>
+            Gets or sets the PageData.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsInfo.PaperHeight">
+            <summary>
+            Gets or sets the double value of PaperHeight.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsInfo.PaperWidth">
+            <summary>
+            Gets or sets the double value of PaperWidth.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsInfo.MarginLeft">
+            <summary>
+            Gets or sets the double value of MarginLeft.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsInfo.MarginTop">
+            <summary>
+            Gets or sets the double value of MarginTop.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsInfo.MarginRight">
+            <summary>
+            Gets or sets the double value of MarginRight.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsInfo.MarginBottom">
+            <summary>
+            Gets or sets the double value of MarginBottom.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsInfo.TotalPages">
+            <summary>
+            Gets or sets the integer value of MarginBottom.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.EJ.ReportViewer.Internal.PageSetting">
+            <summary>
+            Class for PageSetting.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.PageSetting.PaperHeight">
+            <summary>
+            Gets or sets the double value of PaperHeight.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.PageSetting.PaperWidth">
+            <summary>
+            Gets or sets the double value of PaperWidth.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.PageSetting.MarginLeft">
+            <summary>
+            Gets or sets the double value of MarginLeft.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.PageSetting.MarginTop">
+            <summary>
+            Gets or sets the double value of MarginTop.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.PageSetting.MarginRight">
+            <summary>
+            Gets or sets the double value of MarginRight.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.PageSetting.MarginBottom">
+            <summary>
+            Gets or sets the double value of MarginBottom.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.EJ.ReportViewer.Internal.ReportsDataSource">
+            <summary>
+            Class for ReportsDataSource
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsDataSource.ControlId">
+            <summary>
+            Gets or sets string value of ControlId.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsDataSource.Name">
+            <summary>
+            Gets or sets string value of Name.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsDataSource.Prompt">
+            <summary>
+            Gets or sets string value of Prompt.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.EJ.ReportViewer.Internal.ReportsParameter">
+            <summary>
+             Class for ReportsParameter
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsParameter.ControlId">
+            <summary>
+             Gets or sets ControlId of report parameter.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsParameter.Name">
+            <summary>
+             Gets or sets Name of report parameter.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsParameter.Prompt">
+            <summary>
+             Gets or sets Prompt of report parameter.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsParameter.AvailableLabels">
+            <summary>
+             Gets or sets list of AvailableLabels for report parameter.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsParameter.AvailableValues">
+            <summary>
+             Gets or sets list of AvailableValues for report parameter.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsParameter.Labels">
+            <summary>
+             Gets or sets list of Labels for report parameter.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsParameter.Values">
+            <summary>
+             Gets or sets list of Values for report parameter.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsParameter.DefaultValues">
+            <summary>
+             Gets or sets list of Default Values for report parameter.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsParameter.DefaultValuesfields">
+            <summary>
+             Gets or sets list of Default Values fields for report parameter.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsParameter.Label">
+            <summary>
+             Gets or sets Label for report parameter.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsParameter.Value">
+            <summary>
+             Gets or sets Value for report parameter.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsParameter.DataType">
+            <summary>
+             Gets or sets Data Type for report parameter.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsParameter.IsMultiValue">
+            <summary>
+             Gets or sets boolean value of IsMultiValue for report parameter.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsParameter.IsNullable">
+            <summary>
+             Gets or sets boolean value of IsNullable for report parameter.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsParameter.AllowBlank">
+            <summary>
+             Gets or sets boolean value of AllowBlank for report parameter.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsParameter.Hidden">
+            <summary>
+             Gets or sets boolean value of Hidden for report parameter.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsParameter.IsDependent">
+            <summary>
+             Gets or sets boolean value of IsDependent for report parameter.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportsParameter.ParameterElementType">
+            <summary>
+             Gets or sets element type of report parameter.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.EJ.ReportViewer.Internal.SortingModel">
+            <summary>
+             Class for SortingModel
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.SortingModel.ItemName">
+            <summary>
+             Gets or sets ItemName for sorting model.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.SortingModel.RowNo">
+            <summary>
+             Gets or sets RowNo for sorting model.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.SortingModel.ColNo">
+            <summary>
+             Gets or sets ColNo for sorting model.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.SortingModel.TablixName">
+            <summary>
+             Gets or sets TablixName for sorting model.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.SortingModel.Sorting">
+            <summary>
+             Gets or sets Sorting for sorting model.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.EJ.ReportViewer.Internal.DrillDownClientModel">
+            <summary>
+             Class for DrillDownClientModel.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.DrillDownClientModel.ToggleName">
+            <summary>
+             Gets or sets ToggleName for drill down client model.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.DrillDownClientModel.IsTablixModel">
+            <summary>
+             Gets or sets boolean value of IsTablixModel for drill down client model.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.DrillDownClientModel.RowNo">
+            <summary>
+             Gets or sets RowNo for drill down client model.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.DrillDownClientModel.ColNo">
+            <summary>
+             Gets or sets ColNo for drill down client model.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.DrillDownClientModel.ParentName">
+            <summary>
+             Gets or sets ParentName for drill down client model.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.DrillDownClientModel.PageIndex">
+            <summary>
+             Gets or sets PageIndex for drill down client model.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.ReportViewerLayoutModel.ResourceHandler">
+            <summary>
+            Gets the resource holder.
+            </summary>
+            <value>The resource holder.</value>
+        </member>
+        <member name="T:Syncfusion.EJ.ReportViewer.Internal.DataSource">
+            <summary>
+            Class for DataSource
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.DataSource.Name">
+            <summary>
+            Gets or sets the name of the data source.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.DataSource.UserName">
+            <summary>
+            Gets or sets the UserName of the data source.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.DataSource.Password">
+            <summary>
+            Gets or sets the Password for the data source.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.EJ.ReportViewer.Internal.UpdateParameter">
+            <summary>
+            Class for UpdateParameter
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.UpdateParameter.Name">
+            <summary>
+            Gets or sets the name of the update parameter.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.UpdateParameter.Labels">
+            <summary>
+            Gets or sets the list of labels of the update parameter.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.Internal.UpdateParameter.Values">
+            <summary>
+            Gets or sets the list of Values of the update parameter.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.ReportViewer.IReportController.PostReportAction(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Reporting Actions
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.ReportViewer.IReportController.OnInitReportOptions(Syncfusion.EJ.ReportViewer.ReportViewerOptions)">
+            <summary>
+            Report Initialize
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.ReportViewer.IReportController.OnReportLoaded(Syncfusion.EJ.ReportViewer.ReportViewerOptions)">
+            <summary>
+            Report Loaded
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.EJ.ReportViewer.IReportController.GetResource(Syncfusion.EJ.ReportViewer.ReportResource)">
+            <summary>
+            Get Image source for the processed report.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.EJ.ReportViewer.ReportHelper">
+            <summary>
+            static class for ReportHelper.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.EJ.ReportViewer.DataSourceInfo">
+            <summary>
+            Class for DataSourceInfo.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.DataSourceInfo.DataSourceName">
+            <summary>
+             Gets or sets string value of DataSource Name.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.DataSourceInfo.SharedDataSourceName">
+            <summary>
+             Gets or sets string value of Shared DataSource Name.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.DataSourceInfo.DataProvider">
+            <summary>
+             Gets or sets string value of DataProvider.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.DataSourceInfo.ConnectString">
+            <summary>
+             Gets or sets string value of ConnectString.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.DataSourceInfo.IntegratedSecurity">
+            <summary>
+             Gets or sets boolean value of IntegratedSecurity.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.DataSourceInfo.UserName">
+            <summary>
+             Gets or sets string value of UserName.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.EJ.ReportViewer.PageSetup">
+            <summary>
+            Class for PageSetup.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.PageSetup.PaperHeight">
+            <summary>
+            Gets or sets the PaperHeight.
+            </summary>
+            <value>The Paper Height.</value>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.PageSetup.PaperWidth">
+            <summary>
+            Gets or sets the PaperWidth.
+            </summary>
+            <value>The Paper Width.</value>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.PageSetup.MarginTop">
+            <summary>
+            Gets or sets the MarginTop.
+            </summary>
+            <value>The Margin Top.</value>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.PageSetup.MarginRight">
+            <summary>
+            Gets or sets the MarginRight.
+            </summary>
+            <value>The Margin Right.</value>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.PageSetup.MarginBottom">
+            <summary>
+            Gets or sets the MarginBottom.
+            </summary>
+            <value>The Margin Bottom.</value>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.PageSetup.MarginLeft">
+            <summary>
+            Gets or sets the MarginLeft.
+            </summary>
+            <value>The Margin Left.</value>
+        </member>
+        <member name="T:Syncfusion.EJ.ReportViewer.JsonModel.LineJsonModel">
+            <summary>
+                This class is used to set the properties of Line from Line ReportItem.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.JsonModel.LineJsonModel.BookMark">
+            <summary>
+                Basic Line ReportItem  Properties
+            </summary>
+        </member>
+        <member name="T:Syncfusion.EJ.ReportViewer.ReportViewerModel">
+            <summary>
+            ReportViewerModel class Contains all the properties and Events of the <b>ReportViewer</b>
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.ReportViewerModel.DataSources">
+            <summary>
+            Gets or sets the DataSources.
+            </summary>
+            <value>The data sources.</value>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.ReportViewerModel.Parameters">
+            <summary>
+            Gets or sets the Parameters.
+            </summary>
+            <value>The parameters.</value>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.ReportViewerModel.ReportServer">
+            <summary>
+            Gets or sets the ReportingServer.
+            </summary>
+            <value>The reporting server.</value>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.ReportViewerModel.ReportPath">
+            <summary>
+            Specifies the report path to the ReporViewer
+            </summary>
+            <value>The reporting server.</value>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.ReportViewerModel.Stream">
+            <summary>
+            Specifies the report stream to the ReporViewer
+            </summary>
+            <value>The reporting server.</value>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.ReportViewerModel.ReportServerUrl">
+            <summary>
+            Gets or sets the ReportServerUrl.
+            </summary>
+            <value>The Report Server Url.</value>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.ReportViewerModel.IsDrillthroughReport">
+            <summary>
+            Specifies the Boolean value of DrillThroughReport.
+            </summary>
+            <value>Boolean</value>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.ReportViewerModel.ReportServerCredential">
+            <summary>
+            Specifies the ReportServerCredential to the ReporViewer
+            </summary>
+            <value>The reporting server.</value>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.ReportViewerModel.ReportServerFormsCredential">
+            <summary>
+            Gets or sets the ReportServerFormsCredential.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.ReportViewerModel.DataSourceCredentials">
+            <summary>
+            Gets or sets the DataSourceCredentials.
+            </summary>
+            <value>The data source credentials.</value>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.ReportViewerModel.EnableVirtualEvaluation">
+            <summary>
+            Gets or sets the boolean value of EnableVirtualEvaluation.
+            </summary>
+            <value>The enable virtual evaluation</value>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.ReportViewerModel.ReportServerPreAuthentication">
+            <summary>
+            Gets or sets the boolean value of ReportServerPreAuthentication.
+            </summary>
+            <value>The report server pre authentication</value>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.ReportViewerModel.ProcessingMode">
+            <summary>
+            Gets or sets the ProcessingMode.
+            </summary>
+            <value>The Processing Mode.</value>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.ReportViewerModel.WordOptions">
+            <summary>
+            Gets or Sets the word writer options.
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.ReportViewerModel.ExcelOptions">
+            <summary>
+            Gets or Sets the excel writer options.
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.ReportViewerModel.PDFOptions">
+            <summary>
+            Gets or Sets the PDF writer options.
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="T:Syncfusion.EJ.ReportViewer.ProcessingMode">
+            <summary>
+            Defines the support for RDL and RDLC in Reportviewer
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.ReportViewer.ProcessingMode.Remote">
+            <summary>
+            The child element is denotes report is RDL.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.EJ.ReportViewer.ProcessingMode.Local">
+            <summary>
+            The child element is denotes report is RDLC.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.EJ.ReportViewer.ReportViewerOptions">
+            <summary>
+            class for ReportViewerOptions
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.ReportViewerOptions.ControlId">
+            <summary>
+            Gets or sets the ControlId.
+            </summary>
+            <value>The control Id.</value>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.ReportViewerOptions.ReportModel">
+            <summary>
+            Gets or sets the ReportViewerModel.
+            </summary>
+            <value>The ReportViewer Model.</value>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.ReportViewerOptions.SubReportModel">
+            <summary>
+            Gets or sets the SubReportModel.
+            </summary>
+            <value>The Sub Report Model.</value>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.SubReportModel.ReportPath">
+            <summary>
+            Gets or sets report path of the subreport .
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="F:Syncfusion.EJ.ReportViewer.ImageResource.format">
+            <summary>
+            Initializes the image format as null
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.ImageResource.Byte">
+            <summary>
+            get and set the byte data of image
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.ImageResource.ResourceID">
+            <summary>
+            get and set the resource id
+            </summary>
+        </member>
+        <member name="P:Syncfusion.EJ.ReportViewer.ImageResource.ContentType">
+            <summary>
+            Gets the HTTP MIME type of the output stream.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.EJ.ReportViewer.ImageResource.#ctor(System.Byte[],Syncfusion.RDL.Internal.ImageFormats,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="!:ImageResourceInfo"/> class.
+            </summary>
+            <param name="img">Image instance.</param>
+            <param name="format">Image format.</param>
+            <param name="parentGUID">Parent control id.</param>
+        </member>
+        <member name="M:Syncfusion.EJ.ReportViewer.ImageResource.GetMimeType(Syncfusion.RDL.Internal.ImageFormats)">
+            <summary>
+            Gets MIME type.
+            </summary>
+            <param name="format">The format.</param>
+            <returns>The MIME type</returns>
+        </member>
+    </members>
+</doc>
