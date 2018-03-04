@@ -11,10 +11,18 @@ using RabbitMQ.Client;
 
 namespace FortuneTeller.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <seealso cref="Microsoft.AspNetCore.Mvc.Controller" />
     public class MessagingController : Controller
     {
         ConnectionFactory ConnectionFactory { get; set; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MessagingController"/> class.
+        /// </summary>
+        /// <param name="connectionFactory">The connection factory.</param>
         public MessagingController([FromServices] ConnectionFactory connectionFactory)
         {
             // Set up RabbitMQ Connection
@@ -38,6 +46,10 @@ namespace FortuneTeller.Controllers
         }
 
         // GET: Messaging/Receive
+        /// <summary>
+        /// Receives a message.
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Receive()
         {
 
@@ -56,6 +68,10 @@ namespace FortuneTeller.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Creates the queue.
+        /// </summary>
+        /// <param name="channel">The channel.</param>
         protected void CreateQueue(IModel channel)
         {
             channel.QueueDeclare(queue: "rabbit-test",
@@ -67,6 +83,11 @@ namespace FortuneTeller.Controllers
 
 
         // POST: Messaging/Send
+        /// <summary>
+        /// Sends the specified message.
+        /// </summary>
+        /// <param name="message">The message.</param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Send(string message)
@@ -101,6 +122,11 @@ namespace FortuneTeller.Controllers
         }
 
         // POST: Messaging/Send
+        /// <summary>
+        /// Sends messages based on the specified count.
+        /// </summary>
+        /// <param name="count">The count.</param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Blast(int? count)
@@ -111,7 +137,7 @@ namespace FortuneTeller.Controllers
             {
                 if (count != null && count > 0)
                 {
-                    for (var idx = 0; idx <= count; idx++)
+                    for (var idx = 1; idx <= count; idx++)
                     {
                         using (var connection = ConnectionFactory.CreateConnection())
                         using (var channel = connection.CreateModel())

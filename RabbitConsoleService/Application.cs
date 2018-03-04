@@ -17,6 +17,12 @@ namespace RabbitConsoleService
         IConfiguration Config { get; set; }
         ConnectionFactory ConnectionFactory { get; set; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Application"/> class.
+        /// </summary>
+        /// <param name="logger">The logger.</param>
+        /// <param name="configApp">The configuration application.</param>
+        /// <param name="connectionFactory">The connection factory.</param>
         public Application(ILogger<Application> logger, IConfiguration configApp, [FromServices] ConnectionFactory connectionFactory)
         {
             ConnectionFactory = connectionFactory;
@@ -34,6 +40,9 @@ namespace RabbitConsoleService
             _logger = logger;
         }
 
+        /// <summary>
+        /// Runs this instance.
+        /// </summary>
         public void Run()
         {
             try
@@ -56,6 +65,9 @@ namespace RabbitConsoleService
         }
 
         // Receives messages from the queue in a loop
+        /// <summary>
+        /// Receives the messages.
+        /// </summary>
         private void ReceiveMessages()
         {
             try
