@@ -28,7 +28,7 @@
         <h5><b>Request URL</b></h5>
         <h5>@ViewData["FortuneUrl"]</h5>
         <h5><b>Service Discovery URL</b></h5>
-        <h5><a class="nav-link" href="@ViewData["FortuneDiscoveryUrl"]/swagger">@ViewData["FortuneDiscoveryUrl"]</a></h5>
+        <h5><a class="nav-link" href="@ViewData["FortuneDiscoveryUrl"]swagger" target="_blank">@ViewData["FortuneDiscoveryUrl"]</a></h5>
         <div class="panel-group">
             <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="Refresh">Refresh</a>
             <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="ResetServiceStats">Reset Stats</a>
@@ -38,7 +38,7 @@
     <div class="col-md-3">
         <ej-chart id="container" can-resize="true" load="loadTheme">
             <e-primary-x-axis start-from-zero="false" range-padding="@ChartRangePadding.Auto">
-                <e-title text="Instance"></e-title>
+                <e-title text="Instance #"></e-title>
                 <e-range max="@(Model.GetServiceInstanceCounts().Max(w => w.Key) + 1);" min="-1" interval="1"></e-range>
             </e-primary-x-axis>
             <e-primary-y-axis range-padding="@ChartRangePadding.Auto" start-from-zero="false" label-format="{value}" edge-label-placement="None">
@@ -46,8 +46,8 @@
                 <e-range min="0" max="@(Model.GetServiceInstanceCounts().Max(w=> w.Value) + 10);" interval="25"></e-range>
             </e-primary-y-axis>
             <e-title text="Fortune Service Instance Counts"></e-title>
-            <e-size height="300"></e-size>
-            <e-legend visible="true"></e-legend>
+            <e-size height="250"></e-size>
+            <e-legend visible="false"></e-legend>
             <e-common-series-options type="@SeriesType.Column" enable-animation="true">
                 <e-marker shape="@ChartShape.None" visible="false">
                     <e-border width="2"></e-border>
