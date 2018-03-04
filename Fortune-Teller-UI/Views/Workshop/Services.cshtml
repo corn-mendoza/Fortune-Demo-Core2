@@ -28,7 +28,7 @@
         <h5><b>Request URL</b></h5>
         <h5>@ViewData["FortuneUrl"]</h5>
         <h5><b>Service Discovery URL</b></h5>
-        <h5>@ViewData["FortuneDiscoveryUrl"]</h5>
+        <h5><a class="nav-link" href="@ViewData["FortuneDiscoveryUrl"]/swagger">@ViewData["FortuneDiscoveryUrl"]</a></h5>
         <div class="panel-group">
             <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="Refresh">Refresh</a>
             <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="ResetServiceStats">Reset Stats</a>
