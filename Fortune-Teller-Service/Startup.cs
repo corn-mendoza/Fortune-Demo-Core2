@@ -25,6 +25,7 @@ using Steeltoe.Security.Authentication.CloudFoundry;
 using Steeltoe.Management.Endpoint.Health;
 using Steeltoe.Management.CloudFoundry;
 using Steeltoe.Extensions.Configuration.CloudFoundry;
+using Swashbuckle.AspNetCore.Swagger;
 // Lab11 End
 
 namespace Fortune_Teller_Service
@@ -45,31 +46,22 @@ namespace Fortune_Teller_Service
         {
             services.AddOptions();
 
-            // Lab08 add
             if (Environment.IsDevelopment())
             {
-                // Lab05 Start
                 services.AddEntityFrameworkInMemoryDatabase()
                     .AddDbContext<FortuneContext>(
                         options => options.UseInMemoryDatabase("Fortunes"));
-                // Lab05 End
             }
             else
             {
-                // Lab08 add
                 services.AddDbContext<FortuneContext>(
                     options => options.UseMySql(Configuration));
             }
 
-            // Lab05 Start
             services.AddScoped<IFortuneRepository, FortuneRepository>();
-            // Lab05 End
 
-            // Lab07 Start
             services.AddDiscoveryClient(Configuration);
-            // Lab07 End
 
-            // Lab10 Start
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddCloudFoundryJwtBearer(Configuration);
 
@@ -77,16 +69,17 @@ namespace Fortune_Teller_Service
             {
                 options.AddPolicy("read.fortunes", policy => policy.RequireClaim("scope", "read.fortunes"));
             });
-            // Lab10 End
 
-            // Lab11 Start
             services.AddSingleton<IHealthContributor, MySqlHealthContributor>();
             services.AddCloudFoundryActuators(Configuration);
-            // Lab11 End
 
             services.ConfigureCloudFoundryOptions(Configuration);
 
             services.AddMvc();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "Fortune Service .NET Core 2.x API", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -107,6 +100,11 @@ namespace Fortune_Teller_Service
 
             app.UseMvc();
 
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Fortune Service .NET Core 2.x");
+            });
             // Lab05 Start
             SampleData.InitializeFortunesAsync(app.ApplicationServices).Wait();
             // Lab05 End

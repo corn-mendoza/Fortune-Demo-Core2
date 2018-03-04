@@ -57,8 +57,8 @@ namespace FortuneTellerService4.Controllers
         /// Return all fortunes
         /// </summary>
         /// <returns>IEnumerable</returns>
-        [HttpGet]
-        public IEnumerable<Fortune> Get()
+        [HttpGet, Route("all")]
+        public IEnumerable<Fortune> All()
         {
             _logger?.LogInformation("api/fortunes");
             return _fortunes.GetAll();
@@ -69,7 +69,7 @@ namespace FortuneTellerService4.Controllers
         /// Return a random fortune
         /// </summary>
         /// <returns>Fortune</returns>
-        [HttpGet]
+        [HttpGet, Route("random")]
         public Fortune Random()
         {
             _logger?.LogInformation("api/fortunes/random");

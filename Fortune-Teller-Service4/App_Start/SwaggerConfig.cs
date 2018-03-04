@@ -46,7 +46,7 @@ namespace FortuneTellerService4
                         // hold additional metadata for an API. Version and title are required but you can also provide
                         // additional fields by chaining methods off SingleApiVersion.
                         //
-                        c.SingleApiVersion("v1", "FortuneTellerService4");
+                        c.SingleApiVersion("v1", "Fortune Service .NET 4.6 API");
 
                         // Taking to long to load the swagger docs? Enable this option to start caching it
                         //

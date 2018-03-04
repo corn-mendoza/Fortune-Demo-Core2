@@ -35,6 +35,8 @@
     <PackageReference Include="Steeltoe.Management.CloudFoundryCore" Version="2.0.0" />
     
     <PackageReference Include="GitInfo" Version="2.0.10" />
+    
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="2.2.0" />
     <None Include="git.properties">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
