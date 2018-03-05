@@ -18,7 +18,7 @@ namespace Fortune_Teller_Service.Controllers
         ILogger<FortunesController> _logger;
         CloudFoundryServicesOptions CloudFoundryServices { get; set; }
         CloudFoundryApplicationOptions CloudFoundryApplication { get; set; }
-        // Lab05 Start
+
         private IFortuneRepository _fortunes;
         public FortunesController(ILogger<FortunesController> logger, IFortuneRepository fortunes,
             IOptions<CloudFoundryApplicationOptions> appOptions,
@@ -30,14 +30,11 @@ namespace Fortune_Teller_Service.Controllers
             CloudFoundryServices = servOptions.Value;
             CloudFoundryApplication = appOptions.Value;
         }
-        // Lab05 End
 
 
         // GET: api/fortunes/all
         [HttpGet("all")]
-        // Lab10 Start
         [Authorize(Policy = "read.fortunes")]
-        // Lab10 End
         public async Task<List<Fortune>> AllFortunesAsync()
         {
             _logger?.LogDebug("AllFortunesAsync");
@@ -57,19 +54,15 @@ namespace Fortune_Teller_Service.Controllers
 
         // GET api/fortunes/random
         [HttpGet("random")]
-        // Lab10 Start
         //[Authorize(Policy = "read.fortunes")]
-        // Lab10 End
         public async Task<Fortune> RandomFortuneAsync()
         {
             _logger?.LogDebug("RandomFortuneAsync");
 
             var idx = CloudFoundryApplication.InstanceIndex;
 
-            // Lab05 Start
             var entity = await _fortunes.RandomFortuneAsync();
             return new Fortune() { Id = entity.Id, InstanceIndex = idx, Text = entity.Text };
-            // Lab05 End
         }
     }
 }

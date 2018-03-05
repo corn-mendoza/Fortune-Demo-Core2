@@ -19,6 +19,7 @@ using Steeltoe.Extensions.Configuration.CloudFoundry;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Security;
 using System.Security.Authentication;
 using System.Threading.Tasks;
@@ -423,18 +424,17 @@ namespace FortuneTeller.Controllers
         /// Creates a load.
         /// </summary>
         /// <returns></returns>
-        public IActionResult CreateLoad()
+        public async Task<IActionResult> CreateLoad()
         {
-           var allFortunes = new ArrayList();
-
-            for (var i = 0; i < 100; i++)
-            {
-                allFortunes.Add(_fortunes.RandomFortuneAsync());
+            _logger?.LogInformation($"Starting load generation");
+            for (var i = 0; i < 1000; i++)
+            {                
+                var _f = await _fortunes._fortuneService.RandomFortuneAsync();                
             }
 
-            Task.WaitAll((Task[]) allFortunes.ToArray());
+            _logger?.LogInformation($"End load generation");
 
-            return RedirectToAction(nameof(WorkshopController.Services), "Services");
+            return RedirectToAction(nameof(WorkshopController.Services), "Workshop");
         }
 
         /// <summary>

@@ -9,8 +9,8 @@ namespace FortuneService.Client
     // Lab09 Start
     public class FortuneServiceCommand : HystrixCommand<Fortune>
     {
-        IFortuneService _fortuneService;
-        ILogger<FortuneServiceCommand> _logger;
+        public IFortuneService _fortuneService;
+        public ILogger<FortuneServiceCommand> _logger;
 
         public FortuneServiceCommand(IHystrixCommandOptions options,
             IFortuneService fortuneService, 
