@@ -16,6 +16,7 @@
 </div>
 <div class="row">
     <div class="col-lg-12">
+        <h4><b>Configuration Sources</b></h4>
         <center>
             <a class="btn btn-default" href="@(Model.ConfigData.AppBaseUrl)+ @ViewData["appId"])/settings" target="_blank"><b>Environment Variables</b></a>
             <a class="btn btn-default" href="@(Model.ConfigData.ManifestUrl)" target="_blank"><b>Manifest File</b></a>
@@ -80,7 +81,11 @@
 <div class="row">
     <div class="col-lg-12">
         <h4><b>Connection Strings</b></h4>
-        <h5>@ViewData["sourceString"]     <b>&laquo;--<i>Connection string was loaded from this source</i></b></h5>
-        <h6>@ViewData["jsonDBString"]</h6>
+        <p>Connection strings can be loaded from different sources. In this example, if you bind a User Provided Service with a name that matches the connection string name, the connection string will be loaded from the bound service. The User Provided Service must contain a property named "connectionstring".</p>
+        @foreach (var s in Model.ConnectionStrings)
+        {
+            <h5><b>@s.Key</b></h5>
+            <h6>@s.Value</h6>
+        }
     </div>
 </div>

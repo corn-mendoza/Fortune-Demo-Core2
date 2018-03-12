@@ -7,7 +7,7 @@ namespace FortuneTeller.ViewModels.Workshop
 {
     public class CloudFoundryViewModel
     {
-        public CloudFoundryViewModel(CloudFoundryApplicationOptions appOptions, CloudFoundryServicesOptions servOptions, ConfigServerData configData, IDiscoveryClient client, SortedList<int, int> appCounts, SortedList<int, int> srvCounts, List<string> fortunes)
+        public CloudFoundryViewModel(CloudFoundryApplicationOptions appOptions, CloudFoundryServicesOptions servOptions, ConfigServerData configData, IDiscoveryClient client, SortedList<int, int> appCounts, SortedList<int, int> srvCounts, List<string> fortunes, Dictionary<string,string> connectionStrings)
         {
             CloudFoundryServices = servOptions;
             CloudFoundryApplication = appOptions;
@@ -16,6 +16,7 @@ namespace FortuneTeller.ViewModels.Workshop
             ServiceInstanceCounts = srvCounts;
             FortuneHistory = fortunes;
             AppInstanceCounts = appCounts;
+            ConnectionStrings = connectionStrings;
         }
 
         public IDiscoveryClient discoveryClient { get; }
@@ -25,6 +26,7 @@ namespace FortuneTeller.ViewModels.Workshop
         public SortedList<int, int> ServiceInstanceCounts { get; }
         public SortedList<int, int> AppInstanceCounts { get; }
         public List<string> FortuneHistory { get; }
+        public Dictionary<string, string> ConnectionStrings { get; }
 
         public List<KeyValuePair<int, int>> GetServiceInstanceCounts()
         {

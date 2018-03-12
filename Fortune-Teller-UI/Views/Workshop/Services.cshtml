@@ -32,7 +32,7 @@
         <div class="panel-group">
             <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="Refresh">Refresh</a>
             <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="ResetServiceStats">Reset Stats</a>
-            <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="CreateLoad">Create Load</a>
+
         </div>
     </div>
     <div class="col-md-3">
@@ -102,12 +102,22 @@
         </ul>
     </div>
     <div class="col-md-4">
+        <h4>Create a web server load </h4>
+        <p>Pivotal Application Services can scale to meet the needs of your applications. Don't let blocking calls to things like logging slow your application down.</p>
+        <form asp-controller="Workshop"
+              asp-action="CreateLoad"
+              method="post">
+            Number of calls:
+            <input width="30" type="number" name="Count" value="100" />
+            <input type="submit" value="Go" />
+        </form>
+        <div class="clearfix"><hr /></div>
         <h4>Last 10 Fortunes stored in cache</h4>
         <ul>
             @foreach (var fortune in Model.FortuneHistory)
-            {
-                <li>@fortune</li>
-            }
+        {
+            <li>@fortune</li>
+    }
         </ul>
     </div>
 </div>

@@ -47,6 +47,7 @@ namespace FortuneTeller.Controllers
         private SortedList<int, int> appInstCount = new SortedList<int, int>();
         private SortedList<int, int> srvInstCount = new SortedList<int, int>();
         private List<string> fortunes = new List<string>();
+        private Dictionary<string, string> connects = new Dictionary<string,string>();
 
         private FortuneServiceCommand _fortunes;
 
@@ -119,7 +120,8 @@ namespace FortuneTeller.Controllers
                 discoveryClient,
                 appInstCount,
                 srvInstCount,
-                fortunes));
+                fortunes,
+                connects));
         }
 
         /// <summary>
@@ -136,7 +138,8 @@ namespace FortuneTeller.Controllers
                 discoveryClient,
                 appInstCount,
                 srvInstCount,
-                fortunes));
+                fortunes,
+                connects));
         }
 
         /// <summary>
@@ -255,7 +258,8 @@ namespace FortuneTeller.Controllers
                 discoveryClient,
                 appInstCount,
                 srvInstCount,
-                fortunes));
+                fortunes,
+                connects));
         }
 
         /// <summary>
@@ -290,7 +294,8 @@ namespace FortuneTeller.Controllers
                 discoveryClient,
                 appInstCount,
                 srvInstCount,
-                fortunes));
+                fortunes,
+                connects));
         }
 
         /// <summary>
@@ -327,7 +332,8 @@ namespace FortuneTeller.Controllers
                 discoveryClient,
                 appInstCount,
                 srvInstCount,
-                fortunes));
+                fortunes,
+                connects));
         }
 
 
@@ -410,6 +416,13 @@ namespace FortuneTeller.Controllers
                 ViewData["Username"] = "Not Available";
                 ViewData["ValidateCertificates"] = "Not Available";
             }
+
+            var cstrings = Config.GetSection("ConnectionStrings");
+            foreach(var s in cstrings.GetChildren())
+            {
+                connects.Add(s.Key, s.Value);
+            }
+
             return View(new CloudFoundryViewModel(
                 CloudFoundryApplication == null ? new CloudFoundryApplicationOptions() : CloudFoundryApplication,
                 CloudFoundryServices == null ? new CloudFoundryServicesOptions() : CloudFoundryServices,
@@ -417,17 +430,21 @@ namespace FortuneTeller.Controllers
                 discoveryClient,
                 appInstCount,
                 srvInstCount,
-                fortunes));
+                fortunes,
+                connects));
         }
 
         /// <summary>
         /// Creates a load.
         /// </summary>
+        /// <param name="count">The count.</param>
         /// <returns></returns>
-        public async Task<IActionResult> CreateLoad()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> CreateLoad(int? count)
         {
             _logger?.LogInformation($"Starting load generation");
-            for (var i = 0; i < 1000; i++)
+            for (var i = 0; i < count.GetValueOrDefault(1); i++)
             {                
                 var _f = await _fortunes._fortuneService.RandomFortuneAsync();                
             }
