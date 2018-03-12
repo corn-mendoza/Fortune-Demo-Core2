@@ -118,9 +118,10 @@ namespace FortuneTeller
 
             services.AddMvc();
 
-            // Get the connection string from appSettings.json or Config Server or a User Provided Service
+            // Update the connection strings from appSettings.json or Config Server from any User Provided Service of the same name
             // User Provided Service will take presidence over other sources
-            string dbString = CFEnvironmentVariables.GetConfigurationConnectionString(Configuration, "AttendeeContext");
+            CFEnvironmentVariables.UpdateConnectionStrings(Configuration);
+            var dbString = Configuration.GetConnectionString("AttendeeContext");
 
             services.AddDbContext<AttendeeContext>(options => options.UseSqlServer(dbString));
             // End connection strings

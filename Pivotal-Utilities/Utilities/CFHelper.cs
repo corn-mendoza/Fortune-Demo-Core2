@@ -228,6 +228,26 @@ namespace Pivotal.Helper
             return null;
         }
 
+        /// <summary>
+        /// Updates the connection strings with a User Provided Service of the same name
+        /// </summary>
+        /// <param name="configuration">The configuration.</param>
+        public static void UpdateConnectionStrings(IConfiguration configuration)
+        {
+            var cstrings = configuration.GetSection("ConnectionStrings");
+            foreach(var s in cstrings.GetChildren())
+            {
+                Console.WriteLine($"{s.Key} : {s.Value}");
+                var newConnect = GetConfigurationConnectionString(configuration, s.Key);
+            }
+        }
+
+        /// <summary>
+        /// Gets the configuration connection string.
+        /// </summary>
+        /// <param name="configuration">The configuration.</param>
+        /// <param name="dbName">Name of the database.</param>
+        /// <returns></returns>
         public static string GetConfigurationConnectionString(IConfiguration configuration, string dbName)
         {
             // Use the Bound Service for connection string if it is found in a User Provided Service
@@ -239,7 +259,7 @@ namespace Pivotal.Helper
             if (!string.IsNullOrEmpty(_connect))
             {
                 sourceString = "User Provided Service";
-                configuration.GetConnectionString(dbName).Replace(dbString, _connect);
+                configuration.GetSection("ConnectionStrings")[dbName] = _connect;
                 dbString = _connect;
             }
 

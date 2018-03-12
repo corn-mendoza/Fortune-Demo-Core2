@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  fortune-teller-service:
+    image: fortune-teller-service
+    build:
+      context: .
+      dockerfile: Fortune-Teller-Service/Dockerfile
