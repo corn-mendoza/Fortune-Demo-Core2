@@ -88,7 +88,7 @@
         @foreach (var s in Model.ConnectionStrings)
         {
             <h5><b>Name: @s.Key</b></h5>
-            <h5><b>Connection String:</b> @Pivotal.Utilities.StringCleaner.GetDisplayString("Password=", ";", s.Value, "*****").Replace("dbadmin","userid")</h5>
+            <h5><b>Connection String:</b> @Pivotal.Utilities.StringCleaner.GetDisplayString("User ID=", ";", Pivotal.Utilities.StringCleaner.GetDisplayString("Password=", ";", s.Value, "*****"), "*****")</h5>
         }
     </div>
 </div>
