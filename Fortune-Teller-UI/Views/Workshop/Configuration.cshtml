@@ -29,7 +29,7 @@
         </center>
     </div>
 </div>
-<div class="clearfix"><hr /></div>
+<div class="media-object"><hr /></div>
 <div class="row">
     <div class="col-lg-12">
         <h4><b>Application Details</b></h4>
@@ -39,7 +39,7 @@
         <h5>Disk Quota: @ViewData["disk"]</h5>
     </div>
 </div>
-<div class="clearfix"><hr /></div>
+<div class="media-object"><hr /></div>
 <div class="row">
     <div class="col-lg-12">
         <h4><b>Config Server Settings</b></h4>
@@ -58,7 +58,7 @@
         <h5>spring:cloud:config:validate_certificates = @ViewData["ValidateCertificates"]</h5>
     </div>
 </div>
-<div class="clearfix"><hr /></div>
+<div class="media-object"><hr /></div>
 <div class="row">
     <div class="col-lg-12">
         <h4><b>Config Server Data</b></h4>
@@ -79,7 +79,7 @@
         <h5><b>SwaggerUrl</b> = @Model.ConfigData.SwaggerUrl</h5>
     </div>
 </div>
-<div class="clearfix"><hr /></div>
+<div class="media-object"><hr /></div>
 <div class="row">
     <div class="col-lg-12">
         <h4><b>Connection Strings</b></h4>
@@ -87,8 +87,7 @@
         @foreach (var s in Model.ConnectionStrings)
         {
             <h5><b>Name: @s.Key</b></h5>
-            <h5><b>Connection String</b></h5>
-            <h6>@s.Value</h6>
+            <h6><b>Connection String:</b>@s.Value</h6>
         }
     </div>
 </div>

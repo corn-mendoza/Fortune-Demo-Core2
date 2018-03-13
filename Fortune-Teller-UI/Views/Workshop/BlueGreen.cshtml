@@ -16,6 +16,7 @@
     <p class="lead">Blue/Green Application Deployments</p>
     <p class="body-content">Deploy your application with no downtime and without impacting your customers.  Zero downtime Blue/Green application deployments are easy on PCF.  See how you can get your weekends back.</p>
 </div>
+<div class="media-object"><hr /></div>
 <div class="row">
     <div class="col-md-5">
         <h4><font color="@ViewData["AppColor"]"><b>@Model.CloudFoundryApplication.ApplicationName</b></font></h4>
@@ -35,7 +36,7 @@
     {
         <div class="col-md-3">
             <center>
-                <ej-circular-gauge id="CircularGauge@_key" is-responsive="true" load="loadGaugeTheme" background-color="transparent" radius="90" width="180" height="170">
+                <ej-circular-gauge id="CircularGauge@_key" is-responsive="true" load="loadGaugeTheme" background-color="transparent" radius="90" width="160" height="150">
                     <e-circular-scale-collections>
                         <e-circular-scales radius="70" minimum="0" maximum="1000" major-interval-value="200" minor-interval-value="100" show-scale-bar="true" size="1" show-ranges="true">
                             <e-pointer-cap radius="10"></e-pointer-cap>
@@ -54,12 +55,12 @@
         </div>
     }
 </div>
-<div class="clearfix"></div>
+<div class="media-object"><hr /></div>
 <div class="row">
     <div class="col-lg-12">
         <h4>Instructions</h4>
         <p class="panel-body">
-            To see Blue Green deployments demonstrated, push a second copy of this application using a different application name (i.e. <i>cf push workshopui-green</i>) and then map the route for this application to the newly pushed application. 
+            To see Blue Green deployments demonstrated, push a second copy of this application using a different application name (i.e. <i>cf push workshopui-green</i>) and then map the route for this application to the newly pushed application.
             If you use the word "green", "purple", "pink", "yellow", or "red", this application will change the color for the newly mapped application.  By default, the interface will display a "blue" color for highlights.
         </p>
     </div>
