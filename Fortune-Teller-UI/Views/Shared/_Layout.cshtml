@@ -58,9 +58,9 @@
                     <li><a asp-area="" asp-controller="Workshop" asp-action="Platform">Platform</a></li>
                     <li><a asp-area="" asp-controller="Workshop" asp-action="Configuration">Configuration</a></li>
                     <li><a asp-area="" asp-controller="Workshop" asp-action="Services">Services</a></li>
-                    <li><a asp-area="" asp-controller="Attendee" asp-action="Index">Connections</a></li>
                     <li><a asp-area="" asp-controller="Workshop" asp-action="BlueGreen">Zero Downtime</a></li>
                     <li><a asp-area="" asp-controller="Messaging" asp-action="Index">Messaging</a></li>
+                    <li><a asp-area="" asp-controller="Attendee" asp-action="Index">Connections</a></li>
                     @*<li><a asp-area="" asp-controller="Exchange" asp-action="Index">Exchange</a></li>
         <li><a asp-area="" asp-controller="Workshop" asp-action="Steeltoe">Steeltoe</a></li>*@
                 </ul>
@@ -72,7 +72,7 @@
         @RenderBody()
         <hr>
         <footer>
-            <p>&copy; 2017 - Pivotal Software, Inc. All Rights Reserved</p>
+            <p>&copy; @DateTime.Now.Year.ToString() - Pivotal Software, Inc. All Rights Reserved</p>
         </footer>
     </div>
     <environment include="Development">
