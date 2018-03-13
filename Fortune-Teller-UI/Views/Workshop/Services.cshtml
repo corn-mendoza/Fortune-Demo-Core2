@@ -82,10 +82,11 @@
         <hr />
         <h4>Steeltoe support for .NET Framework</h4>
         <p>Pivotal Application Services can support services written using .NET Framework. .NET Framework applications can also implement Cloud Native Patterns using Steeltoe.</p>
-        <a class="btn-link" href="@Model.ConfigData.SwaggerUrl" target="_blank">Fortune Service .NET4.6 using Swagger</a>
+        <a class="btn-link" href="@Model.ConfigData.SwaggerUrl" target="_blank">Fortune Service .NET4.6 using Swagger &raquo;</a>
     </div>
     <div class="col-md-4">
-        <h4>Other services found through discovery</h4>
+        <h4>Web API Services found through discovery</h4>
+        <p>Service discovery helps applications find and access available endpoints through a scalable and resilient directory.</p>
         <ul>
             @foreach (var service in Model.discoveryClient.Services)
         {
@@ -93,7 +94,8 @@
         }
         </ul>
         <hr />
-        <h4>Services bound to this application</h4>
+        <h4>Bound services for this application</h4>
+        <p>Binding to services is one way .NET applications can integrate with functionality required for business applications. Developers can take advantage of services made available through the platform or continue to use existing services.</p>
         <ul>
             @foreach (var service in Model.CloudFoundryServices.ServicesList)
         {
@@ -103,7 +105,7 @@
         <hr />
         <h4>Available services on the marketplace</h4>
         <p>The marketplace is where you can access the services available to your organization. There is a large and ever growing number of vendors that have integrated their services into Pivotal Cloud Foundry. The marketplace can also be leveraged to distribute your application or services to others in your company.</p>
-        <a class="btn-link" href="@Model.ConfigData.MarketplaceUrl" target="_blank">Marketplace for PAS</a>
+        <a class="btn-link" href="@Model.ConfigData.MarketplaceUrl" target="_blank">Marketplace for PAS &raquo;</a>
     </div>
     <div class="col-md-4">
         <h4>Create a web server load </h4>
