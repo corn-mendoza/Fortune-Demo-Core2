@@ -69,8 +69,7 @@ To complete the configuration, update the location of the Config Server reposito
 
 or
 
-`> cf update-service myConfigServer -c '{\"git\":{\"uri\":\"https://github.com/corn-pivotal/configserver-
-repo\"}}'`
+`> cf update-service myConfigServer -c '{\"git\":{\"uri\":\"https://github.com/corn-pivotal/configserver-repo\"}}'`
 
 Add a configuration file for the environment that is being setup. For example: if the ASPNETCORE_ENVIRONMENT is set to Azure, a WorkshopUI-Azure.yml file should be placed in the config server repository. The configuration file should be modified to provide the following URLs:
 
@@ -84,10 +83,14 @@ Add a configuration file for the environment that is being setup. For example: i
 - PCFMetricsUrl: PCF Metrics URI
 - GithubRepoUrl: Workshop Source Repo URI
 - SwaggerUrl: URI for the .NET46 version of the Fortune Service
+- MarketplaceUrl: URI to the marketplace in Apps Manager
 
 #### Connection Strings
 The workshop application demonstrates the ability to load connection string information from both a user provided service and from the config server. In order for the application to function correctly for this demonstration, a SQL Server database 
-needs to be setup to access. The following fields are required for the AttendeeContext database:
+needs to be setup to access. There are three connection strings in the project to demonstrate loading from the appsettings.json, config server, and a user provided service. The AttendeeContext database and connection string is the only one that is required for the application. 
+An Entity Frameworks migration is executed at the beginning of startup to initialize the database if it is not already configured.
+
+If you are setting up the database manually, the following fields are required for the AttendeeContext database:
 
 ##### Database Schema
         int Id

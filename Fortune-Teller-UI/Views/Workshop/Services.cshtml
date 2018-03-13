@@ -88,18 +88,22 @@
         <h4>Services bound to this application</h4>
         <ul>
             @foreach (var service in Model.CloudFoundryServices.ServicesList)
-            {
-                <li>@service.Label: @service.Name</li>
-            }
+        {
+            <li>@service.Label: @service.Name</li>
+    }
         </ul>
-        <div class="clearfix"><hr /></div>
+        <hr />
         <h4>REST Services available through discovery</h4>
         <ul>
             @foreach (var service in Model.discoveryClient.Services)
-            {
-                <li>@service</li>
-            }
+        {
+            <li>@service</li>
+    }
         </ul>
+        <hr />
+        <h4>Available services on the marketplace</h4>
+        <p>The marketplace is where you can access the services available to your organization. There is a large and ever growing number of vendors that have integrated their services into Pivotal Cloud Foundry. The marketplace can also be leveraged to distribute your application or services to others in your company.</p>
+        <a class="btn-link" href="@Model.ConfigData.MarketplaceUrl" target="_blank">Marketplace for PAS</a>
     </div>
     <div class="col-md-4">
         <h4>Create a web server load </h4>
