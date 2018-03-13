@@ -16,7 +16,7 @@
     <p class="lead">Cloud Native Design Patterns using Spring Cloud Services and Steeltoe</p>
     <p class="body-content">Designing applications to run natively in the cloud can be hard. Steeltoe can help developers quickly implement these design patterns by leveraging configuration services, service discovery, circuit breakers, and management services available in Spring Cloud Services.</p>
 </div>
-<div class="clearfix"><hr /></div>
+<div class="media-object"><hr /></div>
 <div class="panel-primary" align="center">
     <h3>Your New Fortune sent from the Fortune Service</h3>
     <h4><i>@ViewData["MyFortune"]</i></h4>
@@ -25,15 +25,14 @@
 <div class="row">
     <div class="col-md-6">
         <h4><b>Service Information</b></h4>
-        <h5>Fortune Service Instance: @ViewData["FortuneIndex"]</h5>
-        <h5><b>Request URL</b></h5>
+        <h5>Responding Fortune Service instance: <b>@ViewData["FortuneIndex"]</b></h5>
+        <h5><b>Requested URL sent to discovery service</b></h5>
         <h5>@ViewData["FortuneUrl"]</h5>
-        <h5><b>Service Discovery URL</b></h5>
+        <h5><b>Service URL sent back from discovery service</b></h5>
         <h5><a class="nav-link" href="@ViewData["FortuneDiscoveryUrl"]swagger" target="_blank">@ViewData["FortuneDiscoveryUrl"]</a></h5>
         <div class="panel-group">
             <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="Refresh">Refresh</a>
             <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="ResetServiceStats">Reset Stats</a>
-
         </div>
     </div>
     <div class="col-md-3">

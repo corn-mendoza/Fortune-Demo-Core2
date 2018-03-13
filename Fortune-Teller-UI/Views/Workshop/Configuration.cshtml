@@ -14,6 +14,7 @@
     <p class="lead">Managing configuration information for applications</p>
     <p class="body-content">Strict separation of config from code has become a cloud mandate, but that begs the question, where do you put it? And once you’ve externalized your config from your app, how do you track who changed what, when? Steeltoe leverages Spring Cloud Config Server so you can store your app’s config in a centralized, version-controlled git repo and then load it at runtime.</p>
 </div>
+<div class="media-object"><hr /></div>
 <div class="row">
     <div class="col-lg-12">
         <h4><b>Configuration Sources</b></h4>
@@ -61,20 +62,21 @@
 <div class="row">
     <div class="col-lg-12">
         <h4><b>Config Server Data</b></h4>
+        <p>Configuration data loaded from a configuration server can be reloaded without having to push a new build or restart the application.</p>
         <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="ReloadConfig">Reload</a>
-        <h5>AppBaseUrl = @Model.ConfigData.AppBaseUrl</h5>
-        <h5>AppsManagerUrl = @Model.ConfigData.AppsManagerUrl</h5>
-        <h5>ConfigRepoUrl = @Model.ConfigData.ConfigRepoUrl</h5>
-        <h5>ConfigServerUrl = @Model.ConfigData.ConfigServerUrl</h5>
-        <h5>EurekaDashboardUrl = @Model.ConfigData.EurekaDashboardUrl</h5>
-        <h5>ExchangeUrl = @Model.ConfigData.ExchangeUrl</h5>
-        <h5>GithubRepoUrl = @Model.ConfigData.GithubRepoUrl</h5>
-        <h5>HystrixDashboardUrl = @Model.ConfigData.HystrixDashboardUrl</h5>
-        <h5>ManifestUrl = @Model.ConfigData.ManifestUrl</h5>
-        <h5>OpsManagerUrl = @Model.ConfigData.OpsManagerUrl</h5>
-        <h5>PCFMetricsUrl = @Model.ConfigData.PCFMetricsUrl</h5>
-        <h5>PipelineUrl = @Model.ConfigData.PipelineUrl</h5>
-        <h5>SwaggerUrl = @Model.ConfigData.SwaggerUrl</h5>
+        <h5><b>AppBaseUrl</b> = @Model.ConfigData.AppBaseUrl</h5>
+        <h5><b>AppsManagerUrl</b> = @Model.ConfigData.AppsManagerUrl</h5>
+        <h5><b>ConfigRepoUrl</b> = @Model.ConfigData.ConfigRepoUrl</h5>
+        <h5><b>ConfigServerUrl</b> = @Model.ConfigData.ConfigServerUrl</h5>
+        <h5><b>EurekaDashboardUrl</b> = @Model.ConfigData.EurekaDashboardUrl</h5>
+        <h5><b>ExchangeUrl</b> = @Model.ConfigData.ExchangeUrl</h5>
+        <h5><b>GithubRepoUrl</b> = @Model.ConfigData.GithubRepoUrl</h5>
+        <h5><b>HystrixDashboardUrl</b> = @Model.ConfigData.HystrixDashboardUrl</h5>
+        <h5><b>ManifestUrl</b> = @Model.ConfigData.ManifestUrl</h5>
+        <h5><b>OpsManagerUrl</b> = @Model.ConfigData.OpsManagerUrl</h5>
+        <h5><b>PCFMetricsUrl</b> = @Model.ConfigData.PCFMetricsUrl</h5>
+        <h5><b>PipelineUrl</b> = @Model.ConfigData.PipelineUrl</h5>
+        <h5><b>SwaggerUrl</b> = @Model.ConfigData.SwaggerUrl</h5>
     </div>
 </div>
 <div class="clearfix"><hr /></div>
@@ -84,7 +86,8 @@
         <p>Connection strings can be loaded from different sources. In this example, if you bind a User Provided Service with a name that matches the connection string name, the connection string will be loaded from the bound service. The User Provided Service must contain a property named "connectionstring".</p>
         @foreach (var s in Model.ConnectionStrings)
         {
-            <h5><b>@s.Key</b></h5>
+            <h5><b>Name: @s.Key</b></h5>
+            <h5><b>Connection String</b></h5>
             <h6>@s.Value</h6>
         }
     </div>

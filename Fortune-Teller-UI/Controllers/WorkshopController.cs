@@ -374,18 +374,6 @@ namespace FortuneTeller.Controllers
             ViewData["disk"] = Config["vcap:application:limits:disk"];
             ViewData["sourceString"] = "appsettings.json/Config Server";
 
-            var _connectJson = Config.GetConnectionString("AttendeeContext");
-            if (!string.IsNullOrEmpty(_connectJson))
-                ViewData["jsonDBString"] = StringCleaner.GetDisplayString("Password=", ";", _connectJson ,"*****");
-
-            var cfe = new CFEnvironmentVariables();
-            var _connect = cfe.getConnectionStringForDbService("user-provided", "AttendeeContext");
-            if (!string.IsNullOrEmpty(_connect))
-            {
-                ViewData["jsonDBString"] = StringCleaner.GetDisplayString("Password=", ";", _connect, "*****");
-                ViewData["sourceString"] = "User Provided Service";
-            }
-
             if (Config.GetSection("spring") != null)
             {
                 ViewData["AccessTokenUri"] = Config["spring:cloud:config:access_token_uri"];
