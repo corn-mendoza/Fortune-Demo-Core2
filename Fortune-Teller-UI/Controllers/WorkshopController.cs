@@ -408,7 +408,16 @@ namespace FortuneTeller.Controllers
             var cstrings = Config.GetSection("ConnectionStrings");
             foreach(var s in cstrings.GetChildren())
             {
-                connects.Add(s.Key, s.Value);
+                string connect = s.Value;
+                if (s.Value.Contains("Password"))
+                {
+                    connect = StringCleaner.GetDisplayString("Password=", ";", connect, "*****");
+                }
+                if (s.Value.Contains("User ID"))
+                {
+                    connect = StringCleaner.GetDisplayString("User ID=", ";", connect, "*****");
+                }
+                connects.Add(s.Key, connect);
             }
 
             return View(new CloudFoundryViewModel(

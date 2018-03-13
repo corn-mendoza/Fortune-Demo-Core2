@@ -6,7 +6,7 @@ namespace Pivotal.Utilities
     {
         static public string GetDisplayString(string searchString, string endingString, string stringToClean, string replaceString)
         {
-            string ret = string.Empty;
+            string ret = stringToClean;
 
             try
             {
