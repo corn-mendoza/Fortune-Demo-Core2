@@ -85,20 +85,20 @@
         <a class="btn-link" href="@Model.ConfigData.SwaggerUrl" target="_blank">Fortune Service .NET4.6 using Swagger</a>
     </div>
     <div class="col-md-4">
+        <h4>Other services found through discovery</h4>
+        <ul>
+            @foreach (var service in Model.discoveryClient.Services)
+        {
+            <li>@service</li>
+        }
+        </ul>
+        <hr />
         <h4>Services bound to this application</h4>
         <ul>
             @foreach (var service in Model.CloudFoundryServices.ServicesList)
         {
             <li>@service.Label: @service.Name</li>
-    }
-        </ul>
-        <hr />
-        <h4>REST Services available through discovery</h4>
-        <ul>
-            @foreach (var service in Model.discoveryClient.Services)
-        {
-            <li>@service</li>
-    }
+        }
         </ul>
         <hr />
         <h4>Available services on the marketplace</h4>
