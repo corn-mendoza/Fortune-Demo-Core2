@@ -20,15 +20,15 @@
     <PackageReference Include="Steeltoe.Security.Authentication.CloudFoundryCore" Version="2.0.0" />
     <PackageReference Include="Steeltoe.Management.CloudFoundryCore" Version="2.0.1" />
     <PackageReference Include="GitInfo" Version="2.0.10" />
-    <PackageReference Include="Syncfusion.Compression.NETStandard20" Version="16.1200.0.24" />
-    <PackageReference Include="Syncfusion.EJ.Pivot" Version="16.1600.0.24" />
-    <PackageReference Include="Syncfusion.XlsIO.NETStandard20" Version="16.1200.0.24" />
-    <PackageReference Include="Syncfusion.DocIO.NETStandard20" Version="16.1200.0.24" />
-    <PackageReference Include="Syncfusion.EJ.AspNet.Core" Version="16.1600.0.24" />
-    <PackageReference Include="Syncfusion.Presentation.NETStandard20" Version="16.1200.0.24" />
-    <PackageReference Include="Syncfusion.Pdf.NETStandard20" Version="16.1200.0.24" />
-    <PackageReference Include="Syncfusion.PMML.NETStandard20" Version="16.1200.0.24" />
-    <PackageReference Include="Syncfusion.EJ.Export" Version="16.1600.0.24" />
+    <PackageReference Include="Syncfusion.Compression.NETStandard20" Version="16.1200.0.26" />
+    <PackageReference Include="Syncfusion.EJ.Pivot" Version="16.1600.0.26" />
+    <PackageReference Include="Syncfusion.XlsIO.NETStandard20" Version="16.1200.0.26" />
+    <PackageReference Include="Syncfusion.DocIO.NETStandard20" Version="16.1200.0.26" />
+    <PackageReference Include="Syncfusion.EJ.AspNet.Core" Version="16.1600.0.26" />
+    <PackageReference Include="Syncfusion.Presentation.NETStandard20" Version="16.1200.0.26" />
+    <PackageReference Include="Syncfusion.Pdf.NETStandard20" Version="16.1200.0.26" />
+    <PackageReference Include="Syncfusion.PMML.NETStandard20" Version="16.1200.0.26" />
+    <PackageReference Include="Syncfusion.EJ.Export" Version="16.1600.0.26" />
     <PackageReference Include="RabbitMQ.Client" Version="5.1.0-pre2" />
   </ItemGroup>
 
