@@ -12,14 +12,14 @@
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.0.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
     <PackageReference Include="Pivotal.Extensions.Configuration.ConfigServerCore" Version="2.0.0" />
     <PackageReference Include="Steeltoe.CloudFoundry.ConnectorCore" Version="2.0.0" />
     <PackageReference Include="Steeltoe.Security.DataProtection.RedisCore" version="2.0.0" />
     <PackageReference Include="Steeltoe.Management.CloudFoundryCore" Version="2.0.0" />
     <PackageReference Include="GitInfo" Version="2.0.10" />
-    <PackageReference Include="Steeltoe.Extensions.Logging.DynamicLogger" Version="2.0.0" />
-    <PackageReference Include="RabbitMQ.Client" Version="5.0.1" />
+    <PackageReference Include="Steeltoe.Extensions.Logging.DynamicLogger" Version="2.0.1" />
+    <PackageReference Include="RabbitMQ.Client" Version="5.1.0-pre2" />
   </ItemGroup>
 
   <ItemGroup>

@@ -18,7 +18,7 @@
     <PackageReference Include="Steeltoe.CircuitBreaker.Hystrix.Core" version="2.0.0-dev-00084" />
     <PackageReference Include="Steeltoe.Security.DataProtection.RedisCore" version="2.0.0" />
     <PackageReference Include="Steeltoe.Security.Authentication.CloudFoundryCore" Version="2.0.0" />
-    <PackageReference Include="Steeltoe.Management.CloudFoundryCore" Version="2.0.0" />
+    <PackageReference Include="Steeltoe.Management.CloudFoundryCore" Version="2.0.1" />
     <PackageReference Include="GitInfo" Version="2.0.10" />
     <PackageReference Include="Syncfusion.Compression.NETStandard20" Version="16.1200.0.24" />
     <PackageReference Include="Syncfusion.EJ.Pivot" Version="16.1600.0.24" />
