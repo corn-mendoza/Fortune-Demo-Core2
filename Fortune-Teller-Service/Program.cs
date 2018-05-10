@@ -10,6 +10,7 @@ using Pivotal.Extensions.Configuration.ConfigServer;
 
 // Lab11 Start
 using Steeltoe.Extensions.Logging;
+using Steeltoe.Security.DataProtection.CredHubCore;
 // Lab11 End
 
 namespace Fortune_Teller_Service
@@ -59,6 +60,7 @@ namespace Fortune_Teller_Service
                 {
                     options.ValidateScopes = context.HostingEnvironment.IsDevelopment();
                 })
+                .UseCredHubInterpolation(new LoggerFactory().AddConsole())
                 .UseStartup<Startup>();
 
             if (args != null)

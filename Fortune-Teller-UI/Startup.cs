@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Pivotal.Discovery.Client;
 using Pivotal.Extensions.Configuration.ConfigServer;
 using Pivotal.Helper;
@@ -19,20 +20,23 @@ using Steeltoe.Management.CloudFoundry;
 using Steeltoe.Management.Endpoint.Health;
 using Steeltoe.Security.Authentication.CloudFoundry;
 using Steeltoe.Security.DataProtection;
+using Steeltoe.Security.DataProtection.CredHubCore;
 using System;
 
 namespace FortuneTeller
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration, IHostingEnvironment env)
+        public Startup(IConfiguration configuration, IHostingEnvironment env, ILoggerFactory logFactory)
         {
             Configuration = configuration;
             Environment = env;
+            this.logFactory = logFactory;
         }
 
         public IConfiguration Configuration { get; }
         public IHostingEnvironment Environment { get; }
+        private ILoggerFactory logFactory;
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -64,6 +68,10 @@ namespace FortuneTeller
 
             // Add for Service Options
             services.ConfigureCloudFoundryOptions(Configuration);
+            //
+
+            // Add Credhub Client
+            services.AddCredHubClient(Configuration, logFactory);
             //
 
             // Add Service Discovery

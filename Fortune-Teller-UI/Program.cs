@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Pivotal.Extensions.Configuration.ConfigServer;
 using Steeltoe.Extensions.Logging;
+using Steeltoe.Security.DataProtection.CredHubCore;
 
 namespace FortuneTeller
 {
@@ -47,6 +48,7 @@ namespace FortuneTeller
                 {
                     options.ValidateScopes = context.HostingEnvironment.IsDevelopment();
                 })
+                .UseCredHubInterpolation(new LoggerFactory().AddConsole())
                 .UseStartup<Startup>();
 
             if (args != null)

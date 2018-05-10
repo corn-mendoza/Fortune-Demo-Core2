@@ -6,6 +6,7 @@ using Steeltoe.Extensions.Logging;
 using System.IO;
 using System.Threading.Tasks;
 using RabbitMQ.Client;
+using Steeltoe.Security.DataProtection.CredHubCore;
 
 namespace RabbitConsoleService
 {
@@ -47,6 +48,7 @@ namespace RabbitConsoleService
                 {
                     options.ValidateScopes = context.HostingEnvironment.IsDevelopment();
                 })
+                .UseCredHubInterpolation(new LoggerFactory().AddConsole())
                 .UseKestrel()
                 .UseStartup<Startup>();
 

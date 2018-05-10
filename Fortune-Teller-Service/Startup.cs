@@ -26,20 +26,24 @@ using Steeltoe.Management.Endpoint.Health;
 using Steeltoe.Management.CloudFoundry;
 using Steeltoe.Extensions.Configuration.CloudFoundry;
 using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.Extensions.Logging;
+using Steeltoe.Security.DataProtection.CredHubCore;
 // Lab11 End
 
 namespace Fortune_Teller_Service
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration, IHostingEnvironment env)
+        public Startup(IConfiguration configuration, IHostingEnvironment env, ILoggerFactory logFactory)
         {
             Configuration = configuration;
             Environment = env;
+            this.logFactory = logFactory;
         }
 
         public IConfiguration Configuration { get; }
         public IHostingEnvironment Environment { get; }
+        private ILoggerFactory logFactory;
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -72,6 +76,10 @@ namespace Fortune_Teller_Service
 
             services.AddSingleton<IHealthContributor, MySqlHealthContributor>();
             services.AddCloudFoundryActuators(Configuration);
+
+            // Add Credhub Client
+            services.AddCredHubClient(Configuration, logFactory);
+            //
 
             services.ConfigureCloudFoundryOptions(Configuration);
 

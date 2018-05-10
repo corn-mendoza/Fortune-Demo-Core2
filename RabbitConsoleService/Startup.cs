@@ -1,21 +1,26 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Steeltoe.CloudFoundry.Connector.RabbitMQ;
 using Steeltoe.Extensions.Configuration.CloudFoundry;
+using Steeltoe.Security.DataProtection.CredHubCore;
 
 namespace RabbitConsoleService
 {
     public class Startup
     {
-        public Startup(Microsoft.Extensions.Configuration.IConfiguration configuration, IHostingEnvironment env)
+        public Startup(IConfiguration configuration, IHostingEnvironment env, ILoggerFactory logFactory)
         {
             Configuration = configuration;
             Environment = env;
+            this.logFactory = logFactory;
         }
 
         public Microsoft.Extensions.Configuration.IConfiguration Configuration { get; }
         public IHostingEnvironment Environment { get; }
+        private ILoggerFactory logFactory;
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -42,6 +47,10 @@ namespace RabbitConsoleService
             // Add for Service Options
             services.ConfigureCloudFoundryOptions(Configuration);
             services.Configure<Application>(Configuration);
+
+            // Add Credhub Client
+            services.AddCredHubClient(Configuration, logFactory);
+            //
 
             //if (Environment.IsDevelopment())
             //{

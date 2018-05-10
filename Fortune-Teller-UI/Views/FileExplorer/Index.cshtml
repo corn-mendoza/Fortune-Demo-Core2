@@ -1,0 +1,27 @@
+﻿@using Syncfusion.JavaScript;
+@using Syncfusion.JavaScript.DataVisualization.DiagramEnums;
+@{
+    ViewData["Title"] = "File Handling";
+}
+<div class="panel-heading">
+    <div class="media">
+        <a class="pull-left" href="http://pivotal.io">
+            <img class="" src="~/images/icon_pivotal_generic@2x.png" title="Cloud Foundry" alt="PCF" width="40" height="40" />
+        </a>
+        <div class="media-body">
+            <h2 class="media-heading">File Handling for Cloud Native .NET</h2>
+        </div>
+    </div>
+    <p class="lead">Changing the way you handle files on the cloud</p>
+    <p class="body-content"></p>
+</div>
+<div class="media-object"><hr /></div>
+<div id="ControlRegion">
+    <ej-file-explorer id="custom" path="wwwroot/images/FileExplorer" ajax-action="@Url.Content("FileActionDefault")" show-navigation-pane="false">
+        <e-file-ajax-settings>
+            <e-download url="/FileExplorer/Download{0}"></e-download>
+            <e-get-image url="/FileExplorer/GetImage{0}"></e-get-image>
+            <e-upload url="/FileExplorer/Upload{0}"></e-upload>
+        </e-file-ajax-settings>
+    </ej-file-explorer>
+</div>
