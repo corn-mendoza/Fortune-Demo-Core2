@@ -1,6 +1,7 @@
 ﻿
 using Microsoft.Extensions.Configuration;
 using Steeltoe.Extensions.Configuration.CloudFoundry;
+using Steeltoe.Security.DataProtection.CredHub;
 using System;
 using System.IO;
 
@@ -31,10 +32,11 @@ namespace FortuneTellerService4
                 .SetBasePath(GetContentRoot())
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: false)
                 .AddJsonFile($"appsettings.{environment}.json", optional: true)
-                .AddCloudFoundry()
+                .AddCloudFoundry()                
                 .AddEnvironmentVariables();
 
             Configuration = builder.Build();
+            
         }
         /// <summary>
         /// Gets the content root.
