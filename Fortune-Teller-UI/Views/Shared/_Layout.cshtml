@@ -11,11 +11,11 @@
                 integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
                 crossorigin="anonymous"></script>
         @*<script src="http://knockoutjs.com/downloads/knockout-3.4.2.debug.js"></script>
-        <script src="/js/knockout.mapping-latest.debug.js"></script>
-        <script src="/js/signalr-client.min.js"></script>
-        <link rel="stylesheet" href="/css/foundation.css" />
-        <link rel="stylesheet" href="/css/app.css" />
-        <script src="/js/vendor/modernizr.js"></script>*@
+            <script src="/js/knockout.mapping-latest.debug.js"></script>
+            <script src="/js/signalr-client.min.js"></script>
+            <link rel="stylesheet" href="/css/foundation.css" />
+            <link rel="stylesheet" href="/css/app.css" />
+            <script src="/js/vendor/modernizr.js"></script>*@
         @*<link href="~/lib/syncfusion-javascript/content/ej/web/bootstrap-theme/ej.web.all.min.css" rel="stylesheet">*@
         <link href="@Url.Content("~/css/ej/web/default-theme/ej.web.all.min.css")" rel="stylesheet" />
 
@@ -29,11 +29,11 @@
                 integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
                 crossorigin="anonymous"></script>
         @*<script src="http://knockoutjs.com/downloads/knockout-3.4.2.debug.js"></script>
-        <script src="/js/knockout.mapping-latest.debug.js"></script>
-        <script src="/js/signalr-client.min.js"></script>
-        <link rel="stylesheet" href="/css/foundation.css" />
-        <link rel="stylesheet" href="/css/app.css" />
-        <script src="/js/vendor/modernizr.js"></script>*@
+            <script src="/js/knockout.mapping-latest.debug.js"></script>
+            <script src="/js/signalr-client.min.js"></script>
+            <link rel="stylesheet" href="/css/foundation.css" />
+            <link rel="stylesheet" href="/css/app.css" />
+            <script src="/js/vendor/modernizr.js"></script>*@
         @*<link href="~/lib/syncfusion-javascript/content/ej/web/bootstrap-theme/ej.web.all.min.css" rel="stylesheet">*@
         <link href="@Url.Content("~/css/ej/web/default-theme/ej.web.all.min.css")" rel="stylesheet" />
 
@@ -41,7 +41,7 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" >
+    @*<nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -62,19 +62,98 @@
                     <li><a asp-area="" asp-controller="Messaging" asp-action="Index">Messaging</a></li>
                     <li><a asp-area="" asp-controller="Attendee" asp-action="Index">Connections</a></li>
                     @*<li><a asp-area="" asp-controller="Exchange" asp-action="Index">Exchange</a></li>
-        <li><a asp-area="" asp-controller="Workshop" asp-action="Steeltoe">Steeltoe</a></li>*@
+                        <li><a asp-area="" asp-controller="Workshop" asp-action="Steeltoe">Steeltoe</a></li>
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>
         </div>
-    </nav>
-    <div class="container body-content">
-        @RenderBody()
-        <hr>
-        <footer>
-            <p>&copy; @DateTime.Now.Year.ToString() - Pivotal Software, Inc. All Rights Reserved</p>
-        </footer>
-    </div>
+    </nav>*@
+
+        <div style="padding: 0px; position: relative; margin: 0px; min-height: 451px;">
+            <div>
+                <div>
+                    <div id="container">
+                        <div class="e-lv">
+                            <div class="navbar-header">
+                                <div id="butdrawer" class="drawericon e-icon"></div>
+                            </div>
+                        </div>
+                        <ej-navigation-drawer id="navpane" direction="Left" type="Overlay" position="Fixed" enable-list-view="false" target-id="butdrawer">
+                            <e-list-view-settings width="300" />                            
+                            <e-content-template>
+                                <table class="table-responsive-md">
+                                    <tr class="flex-row">
+                                        <td width="48" height="48" margin="5,5">
+                                            <img src="~/images/Home.png" />
+                                        </td>
+                                        <td class="col-auto">
+                                            <h4><b><a asp-area="" asp-controller="Workshop" asp-action="Index">Home</a></b></h4>
+                                        </td>
+                                    </tr>
+                                    <tr class="flex-row">
+                                        <td width="48" height="48" margin="5,5">
+                                            <img src="~/images/Platform.png" />
+                                        </td>
+                                        <td class="col-auto">
+                                            <h4><b><a asp-area="" asp-controller="Workshop" asp-action="Platform">Platform</a></b></h4>
+                                        </td>
+                                    </tr>
+                                    <tr class="flex-row">
+                                        <td width="48" height="48" margin="5,5">
+                                            <img src="~/images/Configuration.png" />
+                                        </td>
+                                        <td class="col-auto">
+                                            <h4><b><a asp-area="" asp-controller="Workshop" asp-action="Configuration">Configuration</a></b></h4>
+                                        </td>
+                                    </tr>
+                                    <tr class="flex-row">
+                                        <td width="48" height="48" margin="5,5">
+                                            <img src="~/images/Services.png" />
+                                        </td>
+                                        <td class="col-auto">
+                                            <h4><b><a asp-area="" asp-controller="Workshop" asp-action="Services">Services</a></b></h4>
+                                        </td>
+                                    </tr>
+                                    <tr class="flex-row">
+                                        <td width="48" height="48" margin="5,5">
+                                            <img src="~/images/ZeroDowntime.png" />
+                                        </td>
+                                        <td class="col-auto">
+                                            <h4><b><a asp-area="" asp-controller="Workshop" asp-action="BlueGreen">Zero Downtime</a></b></h4>
+                                        </td>
+                                    </tr>
+                                    <tr class="flex-row">
+                                        <td width="48" height="48" margin="5,5">
+                                            <img src="~/images/Messaging.png" />
+                                        </td>
+                                        <td class="col-auto">
+                                            <h4><b><a asp-area="" asp-controller="Messaging" asp-action="Index">Messaging</a></b></h4>
+                                        </td>
+                                    </tr>
+                                    <tr class="flex-row">
+                                        <td width="48" height="48" margin="5,5">
+                                            <img src="~/images/Connections.png" />
+                                        </td>
+                                        <td class="col-auto">
+                                            <h4><b><a asp-area="" asp-controller="Attendee" asp-action="Index">Connections</a></b></h4>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </e-content-template>
+                        </ej-navigation-drawer>
+                        @await Html.PartialAsync("_LoginPartial")
+                        <div class="container body-content">
+                            @RenderBody()
+                            <hr>
+                            <footer>
+                                <p>&copy; @DateTime.Now.Year.ToString() - Pivotal Software, Inc. All Rights Reserved</p>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     <environment include="Development">
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
@@ -90,6 +169,129 @@
         <script src="@Url.Content("~/js/ej/ej.web.all.min.js")"></script>
     </environment>
     <ej-script-manager></ej-script-manager>
-@RenderSection("Scripts", required: false)
+    <script>
+        function headChange(e) {
+            $("#butdrawer").parent().children("h2").text(e.text);
+        }
+    </script>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
+<style>
+    #butdrawer {
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+
+    .navbar-right {
+        padding-right: 10px;
+    }
+
+    #navpane {
+        z-index: 99998 !important;
+        padding-right: 10px;
+        padding-left: 15px;
+        min-width: 220px;
+    }
+
+    #navpane_Overlay {
+        z-index: 99997 !important;
+    }
+
+    #navpane_listbox img.e-list-img {
+        padding-right: 10px;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .e-header {
+        padding-top: 8px;
+    }
+
+    #container p {
+        padding: 10px;
+        text-align: justify;
+    }
+
+    #container {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        position: relative;
+        overflow: hidden;
+        min-height: 451px;
+    }
+
+    .peopleimage {
+        background: none no-repeat scroll center center / 70px 70px rgba(0, 0, 0, 0);
+        height: 100px;
+        margin: auto;
+        width: 100px;
+        border: 1px solid #737373;
+    }
+
+    .profileimage {
+        background: none no-repeat scroll center center / 90px 90px rgba(0, 0, 0, 0);
+        height: 95px;
+        border: 1px solid #b3b3b3;
+        margin-right: 12px;
+        width: 95px;
+    }
+
+    .photoimage {
+        background: none no-repeat scroll center center / 140px 120px rgba(0, 0, 0, 0);
+        height: 125px;
+        margin: auto;
+        width: 145px;
+    }
+
+    .locationimage {
+        background: url("img/location.png") no-repeat scroll center center / 300px 200px rgba(0, 0, 0, 0);
+        height: 230px;
+        margin: auto;
+        padding: 10px;
+        width: 320px;
+    }
+
+    .drawericon {
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 32px;
+        width: 32px;
+        background-size: 100% 100%;
+        padding-right: 10px;
+    }
+
+    #people td {
+        border: 1px solid #9f9f9f;
+        text-align: center;
+        padding: 8px;
+    }
+
+    #photos td div {
+        background-position: center center;
+        background-size: 100% 100%;
+        border: 1px solid #b3b3b3;
+        margin-left: 7.6px;
+    }
+
+    .subpage {
+        padding: 10px;
+        text-align: justify;
+        overflow: auto;
+    }
+
+    #navpane .subpage {
+        padding: 0px;
+    }
+
+    .drawericon:before {
+        content: "\e76b";
+        font-size: 28px;
+        height: 26px;
+    }
+</style>

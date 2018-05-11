@@ -7,7 +7,7 @@
 <div class="panel-heading">
     <div class="media">
         <a class="pull-left" href="http://pivotal.io">
-            <img class="" src="~/images/icon_pivotal_generic@2x.png" title="Cloud Foundry" alt="PCF" width="40" height="40" />
+            <img class="" src="~/images/Services.png" title="Cloud Foundry" alt="PCF" width="40" height="40" />
         </a>
         <div class="media-body">
             <h2 class="media-heading">Cloud Patterns for .NET</h2>
@@ -23,7 +23,7 @@
 </div>
 <div class="media-object"><hr /></div>
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-5">
         <h4><b>Service Information</b></h4>
         <h5>Responding Fortune Service instance: <b>@ViewData["FortuneIndex"]</b></h5>
         <h5><b>Requested service endpoint sent to discovery service</b></h5>
@@ -36,7 +36,7 @@
         </div>
     </div>
     <div class="col-md-3">
-        <ej-chart id="container" can-resize="true" load="loadTheme">
+        <ej-chart id="chartInstances" can-resize="false" load="loadTheme">
             <e-primary-x-axis start-from-zero="false" range-padding="@ChartRangePadding.Auto">
                 <e-title text="Instance #"></e-title>
                 <e-range max="@(Model.GetServiceInstanceCounts().Max(w => w.Key) + 1);" min="-1" interval="1"></e-range>
