@@ -138,6 +138,14 @@
                                             <h4><b><a asp-area="" asp-controller="Attendee" asp-action="Index">Connections</a></b></h4>
                                         </td>
                                     </tr>
+                                    <tr class="flex-row">
+                                        <td width="48" height="48" margin="5,5">
+                                            <img src="~/images/Security.png" />
+                                        </td>
+                                        <td class="col-auto">
+                                            <h4><b><a asp-area="" asp-controller="Security" asp-action="Index">Security</a></b></h4>
+                                        </td>
+                                    </tr>
                                 </table>
                             </e-content-template>
                         </ej-navigation-drawer>
@@ -181,6 +189,7 @@
     #butdrawer {
         margin-top: 5px;
         margin-left: 5px;
+        cursor: pointer;
     }
 
     .navbar-right {
