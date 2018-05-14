@@ -20,12 +20,12 @@
     <div class="col-lg-12">
         <h4><b>Configuration Sources</b></h4>
         <center>
-            <a class="btn btn-primary" href="@(Model.ConfigData.AppBaseUrl)+ @ViewData["appId"])/settings" target="_blank"><b>Environment Variables</b></a>
+            <a class="btn btn-primary" href="@(Model.ConfigData.AppBaseUrl)@ViewData["appId"])/settings" target="_blank"><b>Environment Variables</b></a>
             <a class="btn btn-primary" href="@(Model.ConfigData.ManifestUrl)" target="_blank"><b>Manifest File</b></a>
             <a class="btn btn-primary" href="@(Model.ConfigData.GithubRepoUrl)/tree/master/Fortune-Teller-UI/appsettings.json" target="_blank"><b>appsettings.json</b></a>
             <a class="btn btn-primary" href="@Model.ConfigData.ConfigServerUrl" target="_blank"><b>Config Server</b></a>
             <a class="btn btn-primary" href="@Model.ConfigData.ConfigRepoUrl" target="_blank"><b>Config Repo</b></a>
-            <a class="btn btn-primary" href="@(Model.ConfigData.AppBaseUrl)+ @ViewData["appId"])/settings" target="_blank"><b>Build Info</b></a>
+            <a class="btn btn-primary" href="@(Model.ConfigData.AppBaseUrl)@ViewData["appId"])/settings" target="_blank"><b>Build Info</b></a>
             <a class="btn btn-primary" href="@(Model.ConfigData.GithubRepoUrl)/blob/master/Fortune-Teller-UI/git.properties" target="_blank"><b>Git Properties</b></a>
         </center>
     </div>
