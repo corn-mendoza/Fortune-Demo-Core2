@@ -31,9 +31,9 @@
         {
             <h6>@uri</h6>
         }
-        <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="Platform">Refresh &raquo;</a>
-        <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="ResetApplicationStats">Reset Stats &raquo;</a>
-        <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="Kill">Kill Instance &raquo;</a>
+        <a class="btn btn-primary" asp-area="" asp-controller="Workshop" asp-action="Platform">Refresh &raquo;</a>
+        <a class="btn btn-primary" asp-area="" asp-controller="Workshop" asp-action="ResetApplicationStats">Reset Stats &raquo;</a>
+        <a class="btn btn-primary" asp-area="" asp-controller="Workshop" asp-action="Kill">Kill Instance &raquo;</a>
     </div>
     @foreach (var _key in Model.AppInstanceCounts.Keys)
     {
@@ -67,19 +67,19 @@
     <div class="col-md-4">
         <h4>Logging on PAS</h4>
         <p>PAS works with your existing logging tools and enhances the capabilities when using the platform logging. Logging can be dynamically adjusted without having to restart the application.</p>
-        <a class="btn btn-default" href="@(Model.ConfigData.AppBaseUrl+Model.CloudFoundryApplication.ApplicationId)/logs" target="_blank"><b>Logging</b></a>
+        <a class="btn btn-primary" href="@(Model.ConfigData.AppBaseUrl+Model.CloudFoundryApplication.ApplicationId)/logs" target="_blank"><b>Logging</b></a>
         <hr />
     </div>
     <div class="col-md-4">
         <h4>Request and Response Tracing</h4>
         <p>Understanding the request and response details can be helpful in tracking down problems with the application. Steeltoe enables additional capabilities of the platform that trace details not just by application but by instance.</p>
-        <a class="btn btn-default" href="@(Model.ConfigData.AppBaseUrl+Model.CloudFoundryApplication.ApplicationId)/trace" target="_blank"><b>Request Tracing</b></a>
+        <a class="btn btn-primary" href="@(Model.ConfigData.AppBaseUrl+Model.CloudFoundryApplication.ApplicationId)/trace" target="_blank"><b>Request Tracing</b></a>
         <hr />
     </div>
     <div class="col-md-4">
         <h4>Real Metrics for Developers</h4>
         <p>Getting metrics for your applications has never been easier. PAS provides developers the ability to view key metrics and correlate events in the log to give a deeper insight into the inner workings of the application.</p>
-        <a class="btn btn-default" href="@(Model.ConfigData.PCFMetricsUrl+Model.CloudFoundryApplication.ApplicationId)" target="_blank"><b>PCF Metrics</b></a>
+        <a class="btn btn-primary" href="@(Model.ConfigData.PCFMetricsUrl+Model.CloudFoundryApplication.ApplicationId)" target="_blank"><b>PCF Metrics</b></a>
         <hr />
     </div>
 </div>
@@ -87,17 +87,17 @@
     <div class="col-md-4">
         <h4>Health Contributers</h4>
         <p>Complex applications needs the ability to monitor all of the possible sources for problems. PAS gives developers the ability to build applications that are resilient to failures.</p>
-        <a class="btn btn-default" href="@(Model.ConfigData.AppBaseUrl+Model.CloudFoundryApplication.ApplicationId)" target="_blank"><b>Health Contributers</b></a>
+        <a class="btn btn-primary" href="@(Model.ConfigData.AppBaseUrl+Model.CloudFoundryApplication.ApplicationId)" target="_blank"><b>Health Contributers</b></a>
     </div>
     <div class="col-md-4">
         <h4>Building a health checker</h4>
         <p>Creating a custom health checker for your application is easy with PAS and Steeltoe. Check out the source code to see how you can quickly get up and running with your own health checker.</p>
-        <a class="btn btn-default" href="@(Model.ConfigData.GithubRepoUrl)/blob/master/Fortune-Teller-UI/SqlServerHealthContributor.cs" target="_blank"><b>Source Code</b></a>
+        <a class="btn btn-primary" href="@(Model.ConfigData.GithubRepoUrl)/blob/master/Fortune-Teller-UI/SqlServerHealthContributor.cs" target="_blank"><b>Source Code</b></a>
     </div>
     <div class="col-md-4">
         <h4>Schedule jobs and tasks</h4>
         <p>PAS provides support for running batch jobs and other tasks such as data migrations. These activities can be scheduled through your own scheduling system or using Pivotal's scheduler.</p>
-        <a class="btn btn-default" href="@(Model.ConfigData.AppBaseUrl+Model.CloudFoundryApplication.ApplicationId)/tasks" target="_blank"><b>Tasks and Jobs</b></a>
+        <a class="btn btn-primary" href="@(Model.ConfigData.AppBaseUrl+Model.CloudFoundryApplication.ApplicationId)/tasks" target="_blank"><b>Tasks and Jobs</b></a>
     </div>
 </div>
 <style class="cssStyles">

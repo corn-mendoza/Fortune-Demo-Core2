@@ -12,14 +12,19 @@
         </div>
     </div>
     <h3>Leveraging Built-in Enterprise Grade Security</h3>
-    <p>Take advantage of the advanced security capabilities provided by Credhub. Credhub can manage, rotate, and provision new credentials without any intervention by the developer. Credhub functionality for .NET applications can be easily integrated using the Steeltoe Credhub library.</p>
+    <p>From single sign-on to password management, Pivotal Application Services has you covered. Utilize the built-in single sign-on capabilities of the platform or continue to use your existing UAA infrastructure. For password management, take advantage of the advanced security capabilities provided by Credhub. Credhub can manage, rotate, and provision new credentials without any intervention by the developer. Credhub functionality for .NET applications can be easily integrated using the Steeltoe Credhub library.</p>
 </div>
 <hr />
 <style>
-   .advanced {
+    .advanced {
         display: none;
     }
 </style>
+<div class="row">
+    <div class="col-lg-12">
+        <h4><b>Credhub Demo</b></h4>
+    </div>
+</div>
 <div class="row">
     <h2 class="col-xs-12 text-center">
         <button class="btn btn-obnoxious btn-primary" onclick="changeTheBulbColor()">Use CredHub to get a password</button>
@@ -77,7 +82,7 @@
         };
         $(".btn-obnoxious").after('<i id="loading" class="fa fa-spinner fa-spin"></i>');
         $.ajax({
-            url: "/home/CredHubColorize",
+            url: "/index/CredHubColorize",
             type: "POST",
             data: JSON.stringify(req),
             dataType: "json",

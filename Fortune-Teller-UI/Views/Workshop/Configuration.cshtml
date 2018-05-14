@@ -20,13 +20,13 @@
     <div class="col-lg-12">
         <h4><b>Configuration Sources</b></h4>
         <center>
-            <a class="btn btn-default" href="@(Model.ConfigData.AppBaseUrl)+ @ViewData["appId"])/settings" target="_blank"><b>Environment Variables</b></a>
-            <a class="btn btn-default" href="@(Model.ConfigData.ManifestUrl)" target="_blank"><b>Manifest File</b></a>
-            <a class="btn btn-default" href="@(Model.ConfigData.GithubRepoUrl)/tree/master/Fortune-Teller-UI/appsettings.json" target="_blank"><b>appsettings.json</b></a>
-            <a class="btn btn-default" href="@Model.ConfigData.ConfigServerUrl" target="_blank"><b>Config Server</b></a>
-            <a class="btn btn-default" href="@Model.ConfigData.ConfigRepoUrl" target="_blank"><b>Config Repo</b></a>
-            <a class="btn btn-default" href="@(Model.ConfigData.AppBaseUrl)+ @ViewData["appId"])/settings" target="_blank"><b>Build Info</b></a>
-            <a class="btn btn-default" href="@(Model.ConfigData.GithubRepoUrl)/blob/master/Fortune-Teller-UI/git.properties" target="_blank"><b>Git Properties</b></a>
+            <a class="btn btn-primary" href="@(Model.ConfigData.AppBaseUrl)+ @ViewData["appId"])/settings" target="_blank"><b>Environment Variables</b></a>
+            <a class="btn btn-primary" href="@(Model.ConfigData.ManifestUrl)" target="_blank"><b>Manifest File</b></a>
+            <a class="btn btn-primary" href="@(Model.ConfigData.GithubRepoUrl)/tree/master/Fortune-Teller-UI/appsettings.json" target="_blank"><b>appsettings.json</b></a>
+            <a class="btn btn-primary" href="@Model.ConfigData.ConfigServerUrl" target="_blank"><b>Config Server</b></a>
+            <a class="btn btn-primary" href="@Model.ConfigData.ConfigRepoUrl" target="_blank"><b>Config Repo</b></a>
+            <a class="btn btn-primary" href="@(Model.ConfigData.AppBaseUrl)+ @ViewData["appId"])/settings" target="_blank"><b>Build Info</b></a>
+            <a class="btn btn-primary" href="@(Model.ConfigData.GithubRepoUrl)/blob/master/Fortune-Teller-UI/git.properties" target="_blank"><b>Git Properties</b></a>
         </center>
     </div>
 </div>
@@ -64,7 +64,7 @@
     <div class="col-lg-12">
         <h4><b>Config Server Data</b></h4>
         <p>Configuration data loaded from a configuration server can be reloaded without having to push a new build or restart the application.</p>
-        <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="ReloadConfig">Reload</a>
+        <a class="btn btn-primary" asp-area="" asp-controller="Workshop" asp-action="ReloadConfig">Reload</a>
         <h5><b>AppBaseUrl</b> = @Model.ConfigData.AppBaseUrl</h5>
         <h5><b>AppsManagerUrl</b> = @Model.ConfigData.AppsManagerUrl</h5>
         <h5><b>ConfigRepoUrl</b> = @Model.ConfigData.ConfigRepoUrl</h5>

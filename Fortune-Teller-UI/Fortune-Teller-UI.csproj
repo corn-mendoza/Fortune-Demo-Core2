@@ -15,7 +15,6 @@
     <PackageReference Include="Pivotal.Discovery.ClientCore" Version="2.0.1" />
     <!--<PackageReference Include="Steeltoe.CloudFoundry.Connector.EFCore" Version="2.0.0-rc1" />-->
     <PackageReference Include="Steeltoe.CloudFoundry.ConnectorCore" version="2.0.0" />
-    <PackageReference Include="Steeltoe.CircuitBreaker.Hystrix.Core" version="2.0.0-dev-00084" />
     <PackageReference Include="Steeltoe.Security.DataProtection.RedisCore" version="2.0.0" />
     <PackageReference Include="Steeltoe.Security.Authentication.CloudFoundryCore" Version="2.0.0" />
     <PackageReference Include="Steeltoe.Security.DataProtection.CredHubCore" Version="2.0.0" />
@@ -31,6 +30,7 @@
     <PackageReference Include="Syncfusion.PMML.NETStandard20" Version="16.1200.0.26" />
     <PackageReference Include="Syncfusion.EJ.Export" Version="16.1600.0.26" />
     <PackageReference Include="RabbitMQ.Client" Version="5.1.0-pre2" />
+    <PackageReference Include="zxcvbn-core" Version="2.1.44" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(BUILD)' == ''">
@@ -85,6 +85,10 @@
     <Content Update="wwwroot\favicon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Services\" />
   </ItemGroup>
   
 </Project>

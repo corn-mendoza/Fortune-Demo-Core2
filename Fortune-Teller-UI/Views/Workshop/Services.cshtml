@@ -31,8 +31,8 @@
         <h5><b>Service endpoint sent back from discovery service</b></h5>
         <h5><a class="nav-link" href="@ViewData["FortuneDiscoveryUrl"]swagger" target="_blank">@ViewData["FortuneDiscoveryUrl"]</a></h5>
         <div class="panel-group">
-            <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="Refresh">Refresh</a>
-            <a class="btn btn-default" asp-area="" asp-controller="Workshop" asp-action="ResetServiceStats">Reset Stats</a>
+            <a class="btn btn-primary" asp-area="" asp-controller="Workshop" asp-action="Refresh">Refresh</a>
+            <a class="btn btn-primary" asp-area="" asp-controller="Workshop" asp-action="ResetServiceStats">Reset Stats</a>
         </div>
     </div>
     <div class="col-md-3">
@@ -72,12 +72,12 @@
     <div class="col-md-4">
         <h4>Handle issues with Circuit Breakers</h4>
         <p>Circuit breakers let applications handle unexpected errors with services. View the dashboard to help identify problems and resolve issues that affect the user's experience.</p>
-        <a class="btn-link" href="@Model.ConfigData.HystrixDashboardUrl" target="_blank">Hystrix Dashboard &raquo;</a>
+        <a class="btn-btn-primary" href="@Model.ConfigData.HystrixDashboardUrl" target="_blank">Hystrix Dashboard &raquo;</a>
         <p />
         <hr />
         <h4>Implementing Service Discovery</h4>
         <p>Implementing service discovery patterns will help improve the resilience of your applications. Steeltoe helps you easily implement service discovery in new and legacy .NET Framework and .NET Core applications.</p>
-        <a class="btn-link" href="@Model.ConfigData.EurekaDashboardUrl" target="_blank">Eureka Dashboard &raquo;</a>
+        <a class="btn-btn-primary" href="@Model.ConfigData.EurekaDashboardUrl" target="_blank">Eureka Dashboard &raquo;</a>
         <p />
         <hr />
         <h4>Web API Services found through discovery</h4>
@@ -92,7 +92,7 @@
     <div class="col-md-4">
         <h4>Steeltoe support for .NET Framework</h4>
         <p>Pivotal Application Services can support services written using .NET Framework. .NET Framework applications can also implement Cloud Native Patterns using Steeltoe.</p>
-        <a class="btn-link" href="@Model.ConfigData.SwaggerUrl" target="_blank">Fortune Service .NET4.6 using Swagger &raquo;</a>        
+        <a class="btn-btn-primary" href="@Model.ConfigData.SwaggerUrl" target="_blank">Fortune Service .NET4.6 using Swagger &raquo;</a>        
         <hr />
         <h4>Bound services for this application</h4>
         <p>Binding to services is one way .NET applications can integrate with functionality required for business applications. Developers can take advantage of services made available through the platform or continue to use existing services.</p>
@@ -105,7 +105,7 @@
         <hr />
         <h4>Available services on the marketplace</h4>
         <p>The marketplace is where you can access the services available to your organization. There is a large and ever growing number of vendors that have integrated their services into Pivotal Cloud Foundry. The marketplace can also be leveraged to distribute your application or services to others in your company.</p>
-        <a class="btn-link" href="@Model.ConfigData.MarketplaceUrl" target="_blank">Marketplace for PAS &raquo;</a>
+        <a class="btn-btn-primary" href="@Model.ConfigData.MarketplaceUrl" target="_blank">Marketplace for PAS &raquo;</a>
     </div>
     <div class="col-md-4">
         <h4>Create a web server load </h4>
@@ -115,7 +115,7 @@
               method="post">
             Number of calls:
             <input width="30" type="number" name="Count" value="100" />
-            <input type="submit" value="Go" />
+            <input type="submit" value="Go" class="btn btn-primary"/>
         </form>
         <div class="clearfix"><hr /></div>
         <h4>Last 10 Fortunes stored in cache</h4>
