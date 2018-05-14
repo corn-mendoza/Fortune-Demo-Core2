@@ -1,0 +1,99 @@
+﻿@model List<string>
+@{
+    ViewData["Title"] = "Security";
+}
+<div class="panel-heading">
+    <div class="media">
+        <a class="pull-left" href="http://pivotal.io">
+            <img class="" src="~/images/Security.png" title="Security" alt="PCF" width="40" height="40" />
+        </a>
+        <div class="media-body">
+            <h2 class="media-heading">Securing Applications for the Cloud</h2>
+        </div>
+    </div>
+    <h3>Leveraging Built-in Enterprise Grade Security</h3>
+    <p>Take advantage of the advanced security capabilities provided by Credhub. Credhub can manage, rotate, and provision new credentials without any intervention by the developer. Credhub functionality for .NET applications can be easily integrated using the Steeltoe Credhub library.</p>
+</div>
+<hr />
+<style>
+   .advanced {
+        display: none;
+    }
+</style>
+<div class="row">
+    <h2 class="col-xs-12 text-center">
+        <button class="btn btn-obnoxious btn-primary" onclick="changeTheBulbColor()">Use CredHub to get a password</button>
+    </h2>
+</div>
+<div class="row">
+    <h6 class="col-xs-12 text-center"><a href="#" onclick="toggleAdvanced()">Show/Hide Advanced Options</a></h6>
+</div>
+<div class="row">
+    <div class="col-xs-6 text-right"><label for="special" class="form-inline">Include Special Characters:</label> <input type="checkbox" name="special" id="special" class="form-inline" checked="checked" /></div>
+    <div class="col-xs-6"><label for="length" class="form-inline">Length:</label><input type="number" id="length" class="form-inline" value="5" /></div>
+</div>
+<div class="row advanced">
+    <div class="col-xs-4 text-right"><label for="upper" class="form-inline">Exclude Upper Case:</label> <input type="checkbox" name="upper" id="upper" class="form-inline" /></div>
+    <div class="col-xs-4 text-center"><label for="lower" class="form-inline">Exclude Lower Case:</label> <input type="checkbox" name="lower" id="lower" class="form-inline" /></div>
+    <div class="col-xs-4"><label for="number" class="form-inline">Exclude Numbers:</label> <input type="checkbox" name="number" id="number" class="form-inline" /></div>
+</div>
+<div class="row key">
+    <div class="col-xs-12 text-center">
+        <hr />
+        <table style="width:100%">
+            <tr>
+                <td style="text-align:right;width:40%">
+                    <h3>Password Strength Scale:</h3>
+                </td>
+                <td colspan="3" style="padding-left:5px;padding-top:10px;text-align:left;width:200px">
+                    @foreach (var c in Model)
+                    {<span class="colorkey" style="background-color:#@c"></span>}
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="text-left" style="width:65px">0%</td>
+                <td style="width:405px;">50%</td>
+                <td class="text-left">100%</td>
+                <td></td>
+            </tr>
+        </table>
+        <hr />
+    </div>
+</div>
+<table id="output" class="table table-responsive response">
+    <thead class="thead-dark"><tr><th>Password</th><th>Time to Crack</th><th style="width:200px">Strength score</th><th style="width:150px;">Color</th></tr></thead>
+    <tbody></tbody>
+</table>
+<script>
+    function changeTheBulbColor() {
+        var req = {
+            "length": $("#length").val(),
+            "exclude_upper": $("#upper").is(":checked"),
+            "exclude_lower": $("#lower").is(":checked"),
+            "exclude_number": $("#number").is(":checked"),
+            "include_special": $("#special").is(":checked")
+        };
+        $(".btn-obnoxious").after('<i id="loading" class="fa fa-spinner fa-spin"></i>');
+        $.ajax({
+            url: "/home/CredHubColorize",
+            type: "POST",
+            data: JSON.stringify(req),
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (rsp) {
+                $("#output tbody").prepend(
+                    "<tr><td class=\"password\">" + htmlEncode(rsp.textInput.split("|~|~|")[0]) + "</td><td>" + rsp.textInput.split("|~|~|")[1] + "</td><td>" + parseFloat(rsp.sentiment * 100).toFixed(2) + "%</td><td>#" + rsp.hexColor + " <span style='background-color:#" + rsp.hexColor + "'></span></td></tr>");
+                $("#loading").remove();
+            }
+        });
+    }
+    function htmlEncode(value) {
+        //create a in-memory div, set it's inner text(which jQuery automatically encodes)
+        //then grab the encoded contents back out.  The div never exists on the page.
+        return $('<div/>').text(value).html();
+    }
+    function toggleAdvanced() {
+        $(".advanced").fadeToggle();
+    }</script>
