@@ -1,0 +1,66 @@
+
+
+{
+
+  "name": "syncfusion-ej-global",
+
+  "version": "16.1.37",
+
+  "description": "Bower package of localized texts of the Syncfusion Essential JavaScript widgets in various languages.",
+	
+  "authors": [
+    "Syncfusion Inc"
+  ],
+  
+  "license": "https://www.syncfusion.com/content/downloads/syncfusion_license.pdf",
+	
+  "homepage": "https://github.com/syncfusion/ej-global#readme",
+
+  "ignore": [
+
+    ".npmignore",
+
+    "package.json",
+    
+    ".gitignore",
+
+    "demos",
+
+    "ej-global-all",
+	 
+	 "i18n/*",
+	 
+	 "!i18n/ej.culture.ar-AE.min.js",
+	 
+	 "!i18n/ej.culture.de-DE.min.js",
+	 
+	 "!i18n/ej.culture.en-US.min.js",
+	 
+	 "!i18n/ej.culture.es-ES.min.js",
+	 
+	 "!i18n/ej.culture.fr-FR.min.js",
+	 
+	 "!i18n/ej.culture.vi-VN.min.js",
+	 
+	 "!i18n/ej.culture.zh-CN.min.js",
+	 
+	 "l10n/*",
+	 
+	 "!l10n/ej.localetexts.ar-AE.min.js",
+	 
+	 "!l10n/ej.localetexts.de-DE.min.js",
+	 
+	 "!l10n/ej.localetexts.en-US.min.js",
+	 
+	 "!l10n/ej.localetexts.es-ES.min.js",
+	 
+	 "!l10n/ej.localetexts.fr-FR.min.js",
+	 
+	 "!l10n/ej.localetexts.vi-VN.min.js",
+	 
+	 "!l10n/ej.localetexts.zh-CN.min.js"
+   
+  ]
+
+}
+

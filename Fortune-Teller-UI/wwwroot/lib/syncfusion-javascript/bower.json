@@ -1,0 +1,40 @@
+
+
+{
+
+  "name": "syncfusion-javascript",
+
+  "version": "16.1.37",
+
+  "description": "Bower package of Syncfusion.JavaScript.",
+	
+  "authors": [
+    "Syncfusion Inc"
+  ],
+  
+  "license": "SEE LICENSE IN README.md",
+	
+  "homepage": "https://github.com/syncfusion/JavaScript-Widgets#readme",
+
+  "ignore": [
+
+    ".npmignore",
+
+    "package.json"
+
+  ],
+
+  "dependencies": {
+
+    "syncfusion-ej-global": "*",
+	
+	"jquery": "*",
+
+    "jquery-validation": "*",
+
+    "jsrender": "*"
+
+  }
+
+}
+
