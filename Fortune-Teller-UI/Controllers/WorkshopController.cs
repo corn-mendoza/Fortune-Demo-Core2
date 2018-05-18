@@ -146,9 +146,9 @@ namespace FortuneTeller.Controllers
         /// Steeltoe Page.
         /// </summary>
         /// <returns></returns>
-        public IActionResult Steeltoe()
+        public IActionResult Resources()
         {
-            _logger?.LogDebug("Steeltoe");
+            _logger?.LogDebug("Resource Page");
             return View();
         }
 

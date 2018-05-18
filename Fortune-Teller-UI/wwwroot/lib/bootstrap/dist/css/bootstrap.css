@@ -161,15 +161,16 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: #037366;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 
 a:hover {
-  color: #0056b3;
-  text-decoration: underline;
+  color: #037366;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 a:not([href]):not([tabindex]) {
@@ -2369,8 +2370,8 @@ fieldset:disabled a.btn {
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #0069d9;
-  border-color: #0062cc;
+  background-color: #2a804f;
+  border-color: #2c8653;
 }
 
 .btn-primary:focus, .btn-primary.focus {
