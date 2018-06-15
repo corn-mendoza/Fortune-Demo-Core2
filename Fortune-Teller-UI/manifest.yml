@@ -1,7 +1,7 @@
 ﻿---
 applications:
 - name: fortuneui
-  buildpack: https://github.com/cloudfoundry/dotnet-core-buildpack
+  buildpack: dotnet_core_buildpack
   instance: 2
   env:
     ASPNETCORE_ENVIRONMENT: Production
