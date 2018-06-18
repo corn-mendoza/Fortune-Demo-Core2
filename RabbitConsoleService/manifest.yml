@@ -1,7 +1,7 @@
 ﻿---
 applications:
 - name: rabbitservice
-  buildpack: dotnet_core_buildpack
+  buildpack: https://github.com/cloudfoundry/dotnet-core-buildpack
   instance: 1
   health-check-type: process
   no-route: true

@@ -2,7 +2,7 @@
 applications:
 - name: fortuneService
   random-route: true
-  buildpack: dotnet_core_buildpack
+  buildpack: https://github.com/cloudfoundry/dotnet-core-buildpack
   env:
     ASPNETCORE_ENVIRONMENT: Production
   services:
