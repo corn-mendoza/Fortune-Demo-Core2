@@ -19,11 +19,11 @@ Installing cf-uaac using Ruby and Gem:
 
 `$ sudo apt install build-essential`
 
-`$ sudo apt install ruby2.5-dev`
+`$ sudo apt install ruby-dev`
 
-`$ sudo apt install ruby2.5`
+`$ sudo apt install ruby`
 
-`$ gem install cf-uaac`
+`$ sudo gem install cf-uaac`
 
 
 #### Step 2: Configuring Application Security
