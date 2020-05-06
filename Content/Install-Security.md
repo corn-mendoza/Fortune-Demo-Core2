@@ -11,7 +11,7 @@ The fortune application utilizes the internal UAC of PCF for user authorization 
 #### Step 1: Setting up UAAC in Bash for Windows 10 WSL
 To complete the setup of security for the application, the cf-uaac program needs to be used. For Windows users, this can present a challenge as the utility runs on Linux. Windows 10 users can install the bash shell to complete the configuration.
 
-##### Installing cf-uaac using Ruby and Gem in WSL:
+##### Installing cf-uaac for WSL:
 
 `$ sudo apt-add-repository ppa:brightbox/ruby-ng`
 
@@ -25,7 +25,7 @@ To complete the setup of security for the application, the cf-uaac program needs
 
 `$ sudo gem install cf-uaac`
 
-##### For Windows Command or Powershell Use:
+##### Installing cf-uaac for Windows Command or Powershell Use:
 
 Pre-Req: Install Ruby with MSYS2 and open a new Powershell or Command Prompt to refresh PATH
 
