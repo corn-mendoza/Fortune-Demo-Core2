@@ -1,4 +1,4 @@
-# Installing Security Features
+# Installing cf-uaac and Security for TAS and TKGI
 
 ### Overview
 The fortune application utilizes the internal UAC of PCF for user authorization and access. By default, this feature is disabled in the code to simplify deployments as admin access is required to complete the configuration. To complete configuration of UAC, the following steps will need to be completed to duplicate the security features found in the Steeltoe workshop. Existing users can be given access by adding the user to the security groups below.
@@ -8,8 +8,8 @@ The fortune application utilizes the internal UAC of PCF for user authorization 
 `$ uaac member add read.fortunes {userid}`
 
 
-#### Step 1: Setting up UAAC in Bash for Windows 10 WSL
-To complete the setup of security for the application, the cf-uaac program needs to be used. For Windows users, this can present a challenge as the utility runs on Linux. Windows 10 users can install the bash shell to complete the configuration.
+#### Step 1: Setting up UAAC in Windows 10 
+To complete the setup of security for applications running in Tanzu Application Services or Tanzu Kubernetes Grid Internal, the cf-uaac program needs to be installed to access security features needed for user access control, including CredHub. 
 
 ##### Installing cf-uaac for WSL:
 
