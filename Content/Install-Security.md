@@ -25,7 +25,7 @@ Installing cf-uaac using Ruby and Gem in WSL:
 
 `$ sudo gem install cf-uaac`
 
-For Windows Command Use:
+#### For Windows Command Use:
 
 Pre-Req: Install Ruby with MSYS2
 
