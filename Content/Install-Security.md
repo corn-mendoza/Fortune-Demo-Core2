@@ -11,7 +11,7 @@ The fortune application utilizes the internal UAC of PCF for user authorization 
 #### Step 1: Setting up UAAC in Bash for Windows 10
 To complete the setup of security for the application, the cf-uaac program needs to be used. For Windows users, this can present a challenge as the utility runs on Linux. Windows 10 users can install the bash shell to complete the configuration.
 
-Installing cf-uaac using Ruby and Gem:
+Installing cf-uaac using Ruby and Gem in WSL:
 
 `$ sudo apt-add-repository ppa:brightbox/ruby-ng`
 
@@ -25,13 +25,13 @@ Installing cf-uaac using Ruby and Gem:
 
 `$ sudo gem install cf-uaac`
 
-For Windows:
+For Windows Command Use:
 
 Pre-Req: Install Ruby with MSYS2
 
- > gem install eventmachine --platform ruby
+ `> gem install eventmachine --platform ruby`
 
- > gem install cf-uaac
+ `> gem install cf-uaac`
 
 #### Step 2: Configuring Application Security
 To complete security configuration, use the cf-uaac command in the Linux shell to execute the following to enable the role "read.fortunes". You will need to have access to the UAA Admin Credentials to complete these tasks.
