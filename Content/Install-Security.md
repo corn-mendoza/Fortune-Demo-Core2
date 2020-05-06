@@ -25,6 +25,13 @@ Installing cf-uaac using Ruby and Gem:
 
 `$ sudo gem install cf-uaac`
 
+For Windows:
+
+`Install Ruby with MSYS2
+
+`> gem install eventmachine --platform ruby
+
+`> gem install cf-uaac
 
 #### Step 2: Configuring Application Security
 To complete security configuration, use the cf-uaac command in the Linux shell to execute the following to enable the role "read.fortunes". You will need to have access to the UAA Admin Credentials to complete these tasks.
