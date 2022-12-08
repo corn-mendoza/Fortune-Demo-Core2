@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="Pivotal.Extensions.Configuration.ConfigServerCore" Version="2.0.1" />
     <PackageReference Include="Pivotal.Discovery.ClientCore" Version="2.0.1" />
     <PackageReference Include="Steeltoe.Security.DataProtection.CredHubCore" Version="2.0.0" />
